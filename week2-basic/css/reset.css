@@ -13,6 +13,7 @@ body{
   padding-top: 2rem;
   overflow-x: hidden;
   height: 100%;
+  margin: 0;
 }
 body::before{
   content: "";
@@ -537,6 +538,15 @@ header{
   top: calc(50% - 6px);
 }
 
+footer{
+  background-color: #121212;
+}
+footer p{
+  font-size: 14px;
+  line-height: 8rem;
+  color: #FFFFFF;
+  text-align: center;
+}
 @media(min-width: 1600px){
   .container{
     padding-left: 8rem;
