@@ -13,3 +13,8 @@ button{border: 0;}
 .jusitfy-content-center{justify-content: center;}
 .align-items-center{align-items: center;}
 .flex-column{flex-direction: column;}
+
+.ml-0{margin-left: 0 !important;}
+.mr-0{margin-right: 0 !important;}
+.pr-0{padding-right: 0 !important;}
+.pl-0{padding-left: 0 !important;}
