@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&family=Homemade+Apple&family=Ibarra+Real+Nova:wght@400;500;600;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&family=Homemade+Apple&family=Ibarra+Real+Nova:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
 
 *{
   font-family: 'Hind Madurai', Arial, sans-serif;
@@ -438,6 +438,103 @@ header{
   color: #FFFFFF;
   font-size: 20px;
   background: linear-gradient(to right, #315316, #72A748);
+}
+
+.review{
+  margin: 8rem 0;
+}
+.review h3{
+  text-align: center;
+}
+.review .pic{
+  background-color: #EDC988;
+  background-image: url(../../assets/images/week-2/about.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+  display: block;
+  border-radius: 100px;
+  width: 110px;
+  height: 110px;
+  position: absolute;
+  top: -55px;
+}
+.review_cont{
+  position: relative;
+  margin: auto;
+  margin-top: 10rem;
+  width: 50%;
+  padding: 4rem;
+  box-shadow: 0px 18px 36px 0px #00000012;
+  border: 1px solid #EDEDED;
+}
+.review_cont::before{
+  content: "";
+  background-image: url(../../assets/images/week-2/leaf.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+  width: 22rem;
+  height: 22rem;
+  position: absolute;
+  transform: scaleY(-1);
+  rotate: 36deg;
+  left: -17rem;
+  top: -16rem;
+}
+.review_cont::after{
+  content: "";
+  background-image: url(../../assets/images/week-2/leaf.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+  width: 22rem;
+  height: 22rem;
+  position: absolute;
+  transform: scaleY(-1);
+  rotate: 36deg;
+  right: -16rem;
+  top: -3rem;
+}
+.review_cont .mention{
+  width: 70%;
+  margin: 2rem 0;
+  text-align: center;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 1.8;
+}
+.review_cont .name{
+  font-size: 20px;
+}
+.review_cont p{
+  font-size: 14px;
+  margin: 0.2rem;
+}
+.review .pagination{
+  margin: auto;
+  margin-top: 3rem;
+}
+.review .pagination .circle{
+  border: 1px solid #C4C4C4;
+  width: 16px;
+  height: 16px;
+  border-radius: 50px;
+  margin: 0 .2rem;
+  position: relative;
+}
+.review .pagination .circle.on::before{
+  content: "";
+  background: linear-gradient(to right, #315316, #72A748);
+  background-position: center center;
+  border-radius: 50px;
+  width: 80%;
+  height: 80%;
+  display: block;
+  position: absolute;
+  left: calc(50% - 6px);
+  top: calc(50% - 6px);
 }
 
 @media(min-width: 1600px){
