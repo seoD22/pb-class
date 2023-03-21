@@ -1,6 +1,14 @@
+li{list-style: none;}
+a{text-decoration: none; color: black;}
+button{border: 0;}
+
 .d-flex{display: flex;}
 .d-none{display: none;}
 .d-block{display: block;}
 
 .p-rel{position: relative;}
 .p-abs{position: absolute;}
+
+.justify-content-between{justify-content: space-between;}
+.jusitfy-content-center{justify-content: center;}
+.align-items-center{align-items: center;}

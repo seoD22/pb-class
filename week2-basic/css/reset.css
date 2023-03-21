@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&family=Homemade+Apple&family=Ibarra+Real+Nova:wght@400;500;600;700&display=swap');
+
+*{
+  font-family: 'Hind Madurai', Arial, sans-serif;
+  color:#121212;
+}
+
+.container{
+  min-width: 1440px;
+  max-width: 1920px;
+  padding-left: 110px;
+  padding-right: 110px;
+}
+
+header{
+  margin: auto;
+  padding: 0 2rem;
+  background-color: #FFFFFF;
+  box-shadow: 0px 18px 36px 0px #0000000D;
+  border-radius: 6px;
+}
+.logo h1{
+  font-family: 'Ibarra Real Nova';
+  font-weight: 600;
+  font-size: 32px;
+  margin-right: 6rem;
+}
+.nav{
+  margin-right: auto;
+}
+.nav li{
+  margin-right: 5rem;
+}
+.nav li a{
+  font-size: 20px;
+  color: #3E3E3E;
+}
+.nav li.on a{
+  color: #121212;
+}
+.arrow{
+  background-image: url(../../assets/images/week-2/icon/arrow_down.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+  width: 14px;
+  height: 6px;
+}
+.lang{
+  overflow: hidden;
+  /* height: 20px; */
+  margin-right: 1rem;
+}
+.cart{
+  background-image: url(../../assets/images/week-2/icon/cart.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+  width: 23px;
+  height: 24px;
+}
