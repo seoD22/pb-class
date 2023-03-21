@@ -4,6 +4,11 @@
   font-family: 'Hind Madurai', Arial, sans-serif;
   color:#121212;
 }
+h3{
+  font-family: 'Ibarra Real Nova';
+  font-weight: 700;
+  font-size: 48px;
+}
 body{
   padding-top: 2rem;
   overflow-x: hidden;
@@ -85,8 +90,6 @@ header{
   display: inline-block;
 }
 .main_text h3{
-  font-family: 'Ibarra Real Nova', Arial, sans-serif;
-  font-weight: 700;
   font-size: 64px;
   margin-bottom: 45px;
 }
@@ -185,9 +188,6 @@ header{
 }
 .founder h3{
   margin-top: 0;
-  font-family: 'Ibarra Real Nova';
-  font-weight: 700;
-  font-size: 48px;
 }
 .founder p{
   font-size: 18px;
@@ -268,9 +268,6 @@ header{
 }
 .cosmetics h3{
   text-align: center;
-  font-family: 'Ibarra Real Nova';
-  font-weight: 700;
-  font-size: 48px;
   margin-bottom: 5rem;
 }
 .cosmetics .product{
@@ -351,11 +348,6 @@ header{
   text-align: center;
   margin: auto;
 }
-.discount h3{
-  font-family: 'Ibarra Real Nova';
-  font-weight: 700;
-  font-size: 48px;
-}
 .discount p{
   font-size: 18px;
 }
@@ -382,6 +374,69 @@ header{
   line-height: 75px;;
   border-radius: 50px;
   color: #FFFFFF;
+  background: linear-gradient(to right, #315316, #72A748);
+}
+
+.unity{
+  margin: 8rem 0;
+}
+.unity h3{
+  width: 40%;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 3rem;
+}
+.unity .image_1,
+.unity .image_2{
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: block;
+  width: 780px;
+  height: 450px;
+}
+.unity .image_1{
+  background-image: url(../../assets/images/week-2/product/product_9.png);
+}
+.unity .image_2{
+  background-image: url(../../assets/images/week-2/product/product_10.png);
+}
+.unity h6{
+  font-family: 'Ibarra Real Nova';
+  font-size: 32px;
+  font-weight: 600;
+  margin: 1.5rem 0;
+}
+.unity p{
+  width: 800px;
+  margin: 0;
+  margin-bottom: 1rem;
+  font-size: 18px;
+}
+.unity .checks{
+  flex-wrap: wrap;
+}
+.unity .checks span{
+  width: 350px;
+  margin: .5rem 0;
+  font-size: 18px;
+}
+.unity .checks .check{
+  background-image: url(../../assets/images/week-2/icon/check.png);
+  background-size: contain;
+  background-position: center;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: .5rem;
+}
+.unity button{
+  width: 20%;
+  padding: 1rem 1rem;
+  border-radius: 50px;
+  margin-top: 1rem;
+  color: #FFFFFF;
+  font-size: 20px;
   background: linear-gradient(to right, #315316, #72A748);
 }
 
