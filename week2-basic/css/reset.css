@@ -4,23 +4,40 @@
   font-family: 'Hind Madurai', Arial, sans-serif;
   color:#121212;
 }
-
-.container{
-  min-width: 1440px;
-  max-width: 1920px;
-  padding-left: 110px;
-  padding-right: 110px;
+body{
+  padding-top: 2rem;
+  overflow-x: hidden;
+  height: 100%;
 }
-
-header{
+body::before{
+  content: "";
+  position: absolute;
+  background-color: #CEDEA2;
+  display: block;
+  width: 990px;
+  height: 990px;
+  right: -60px;
+  top: -430px;
+  z-index: -1;
+  border-radius: 500px;
+}
+.container{
   margin: auto;
+  min-width: 1400px;
+  max-width: 1920px;
+  box-sizing: border-box;
+}
+header{
+  box-sizing: border-box;
+  margin: auto;
+  width: 100%;
   padding: 0 2rem;
   background-color: #FFFFFF;
   box-shadow: 0px 18px 36px 0px #0000000D;
   border-radius: 6px;
 }
 .logo h1{
-  font-family: 'Ibarra Real Nova';
+  font-family: 'Ibarra Real Nova', Arial, sans-serif;
   font-weight: 600;
   font-size: 32px;
   margin-right: 6rem;
@@ -58,4 +75,75 @@ header{
   display: block;
   width: 23px;
   height: 24px;
+}
+
+.main{
+  padding-top: 5rem;
+}
+.main_text{
+  width: 38%;
+  display: inline-block;
+}
+.main_text h3{
+  font-family: 'Ibarra Real Nova', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 64px;
+}
+.main_text p{
+  font-size: 18px;
+  line-height: 1.5;
+}
+.main img{
+  width: 55%;
+  position: relative;
+}
+.main{position: relative;}
+.main::before{
+  content: "";
+  background-image: url(../../assets/images/week-2/leaf.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+  width: 27rem;
+  height: 27rem;
+  position: absolute;
+  top: 0;
+  left: 390px;
+}
+.main::after{
+  content: "";
+  background-image: url(../../assets/images/week-2/leaf.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+  width: 18rem;
+  height: 18rem;
+  position: absolute;
+  top: 3rem;
+  right: -20px;
+  rotate: -90deg;
+}
+.main button{
+  font-size: 20px;
+  line-height: 3;
+  width: 160px;
+  border-radius: 55px;
+  margin-right: 1rem;
+  border: solid 1px #121212;
+  background-color: transparent;
+}
+.main .shop{
+  color: white;
+  border: 0;
+  background: linear-gradient(to right, #315316, #72A748);
+}
+
+@media(min-width: 1600px){
+  .container{
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+  .main::before{
+    left: 570px;
+  }
 }
