@@ -338,6 +338,53 @@ header{
   border-radius: 50px;
 }
 
+.discount{
+  height: 50vh;
+  background: linear-gradient(to bottom, #FFFFFF, #F1F1F1);
+  background-image:url('../../assets/images/week-2/product/code_1.png'), url('../../assets/images/week-2/product/code_2.png');
+  background-position: 5%, 95%;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.discount .content{
+  width: 50%;
+  text-align: center;
+  margin: auto;
+}
+.discount h3{
+  font-family: 'Ibarra Real Nova';
+  font-weight: 700;
+  font-size: 48px;
+}
+.discount p{
+  font-size: 18px;
+}
+.discount .btn{
+  margin: auto;
+  width: 70%;
+  margin-top: 4rem;
+  background-color: #FFFFFF;
+  padding: 0 1.8rem;
+  line-height: 75px;;
+  text-align: left;
+  border-radius: 50px;
+  border: 2px solid #EEEEEE;
+  color: #888888;
+}
+.discount .btn button{
+  font-size: 20px;
+  width: 20%;
+  height: auto;
+  right: 0;
+  top: 0;
+  background-color: #FFFFFF;
+  padding: 0 1.8rem;
+  line-height: 75px;;
+  border-radius: 50px;
+  color: #FFFFFF;
+  background: linear-gradient(to right, #315316, #72A748);
+}
+
 @media(min-width: 1600px){
   .container{
     padding-left: 8rem;
@@ -345,5 +392,11 @@ header{
   }
   .main::before{
     left: 570px;
+  }
+}
+
+@media(max-width: 1440px){
+  body{
+    overflow-x: unset;
   }
 }
