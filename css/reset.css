@@ -12,3 +12,4 @@ button{border: 0;}
 .justify-content-between{justify-content: space-between;}
 .jusitfy-content-center{justify-content: center;}
 .align-items-center{align-items: center;}
+.flex-column{flex-direction: column;}
