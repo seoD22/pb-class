@@ -499,8 +499,6 @@ header{
   position: absolute;
   transform: scaleY(-1);
   transform: rotate(36deg);
-  left: -17rem;
-  top: -16rem;
 }
 .review h3::after{
   content: "";
@@ -513,8 +511,6 @@ header{
   position: absolute;
   transform: scaleY(-1);
   transform: rotate(36deg);
-  right: -16rem;
-  top: -3rem;
 }
 .review_cont .mention{
   width: 70%;
