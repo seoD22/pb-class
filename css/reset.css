@@ -1,6 +1,6 @@
 li{list-style: none;}
 a{text-decoration: none; color: black;}
-button{border: 0;}
+button{border: 0; cursor: pointer;}
 
 .d-flex{display: flex;}
 .d-none{display: none;}
