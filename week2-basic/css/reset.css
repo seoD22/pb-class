@@ -537,11 +537,94 @@ header{
   left: calc(50% - 6px);
   top: calc(50% - 6px);
 }
+.brand{
+  background-color: #CEDEA2;
+}
+.ft{
+  background-color: #315316;
+  height: 50vh;
+}
+.ft h5{
+  font-family: 'Ibarra Real Nova';
+  font-size: 32px;
+  font-weight: 600;
+  color: #FFFFFF;
+  margin-top: 6rem;
+  margin-bottom: .5rem;
+}
+.ft a,
+.ft p{
+  font-size: 18px;
+  color: #FFFFFF;
+  margin: 1rem 0;
+}
+.ft_1 p:nth-child(4){
+  margin-bottom: 2rem;
+}
+.ft li ul{
+  padding: 0;
+}
+.ft li ul li{
+  margin: 2rem 0;
+}
+.ft li ul li:nth-child(1){
+  margin: 24px 0;
+}
+.ft .lang{
+  align-items: baseline;
+}
+.ft .lang i{
+  background-image: url(../../assets/images/week-2/icon/arrow_white.png);
+  height: 10px;
+}
+.ft .lang > div{
+  margin-left: .7rem;
+  overflow: hidden;
+  height: 30px;
+}
+.ft .lang.show > div{
+  height: 100px;
+}
+.ft .lang.show .arrow{
+  rotate: 180deg;
+}
+.lang p{
+  margin: 0;
+}
+.sns span{
+  border: 1px solid #FFFFFF;
+  border-radius: 50px;
+  width: 50px;
+  height: 50px;
+  margin-right: 1rem;
+}
+.sns .facebook,
+.sns .tweet,
+.sns .tube,
+.sns .insta{
+  background-repeat: no-repeat;
+  background-size: 35%;
+  background-position: center center;
+}
+.sns .facebook{
+  background-image: url(../../assets/images/week-2/icon/facebook.png);
+  background-size: 18%;
+}
+.sns .tweet{
+  background-image: url(../../assets/images/week-2/icon/tweet.png);
+}
+.sns .tube{
+  background-image: url(../../assets/images/week-2/icon/youtube.png);
+}
+.sns .insta{
+  background-image: url(../../assets/images/week-2/icon/insta.png);
+}
 
 footer{
   background-color: #121212;
 }
 footer p{
+  margin: 0;
   font-size: 14px;
   line-height: 8rem;
   color: #FFFFFF;
