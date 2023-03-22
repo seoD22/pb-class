@@ -4,8 +4,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./week2-basic/css/reset.css">
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   <title>study_week-2</title>
 </head>
 <body >
@@ -258,7 +260,6 @@
             <button>Shop Now</button>
           </div>
         </div>
->>>>>>> b65c1ac05858fce76a1dcfc19f1a29beacf020e8
       </div>
     </div>
     <div class="discount">
@@ -312,7 +313,42 @@
     </div>
   </div>
   <div class="brand">
-    <div class="slides d-flex align-items-center justify-content-between">
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="../assets/images/week-2/brand/Kanba.png" alt=""></div>
+        <div class="swiper-slide"><img src="../assets/images/week-2/brand/Nirastate.png" alt=""></div>
+        <div class="swiper-slide"><img src="../assets/images/week-2/brand/Solaytic.png" alt=""></div>
+        <div class="swiper-slide"><img src="../assets/images/week-2/brand/Utosia.png" alt=""></div>
+        <div class="swiper-slide"><img src="../assets/images/week-2/brand/Earth2.0.png" alt=""></div>
+        <div class="swiper-slide"><img src="../assets/images/week-2/brand/Aven.png" alt=""></div>
+        <div class="swiper-slide"><img src="../assets/images/week-2/brand/Kyan.png" alt=""></div>
+        <div class="swiper-slide"><img src="../assets/images/week-2/brand/Amara.png" alt=""></div>
+        <div class="swiper-slide"><img src="../assets/images/week-2/brand/Kanba.png" alt=""></div>
+        <div class="swiper-slide"><img src="../assets/images/week-2/brand/Nirastate.png" alt=""></div>
+        <div class="swiper-slide"><img src="../assets/images/week-2/brand/Solaytic.png" alt=""></div>
+        <div class="swiper-slide"><img src="../assets/images/week-2/brand/Utosia.png" alt=""></div>
+        <div class="swiper-slide"><img src="../assets/images/week-2/brand/Earth2.0.png" alt=""></div>
+        <div class="swiper-slide"><img src="../assets/images/week-2/brand/Aven.png" alt=""></div>
+        <div class="swiper-slide"><img src="../assets/images/week-2/brand/Kyan.png" alt=""></div>
+        <div class="swiper-slide"><img src="../assets/images/week-2/brand/Amara.png" alt=""></div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        speed: 5000,
+        loop: true,
+        loopAdditionalSlides: 1,
+        slidesPerView: 7,
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+          delay: 0,
+          disableOnInteraction: false,
+        }
+      });
+    </script>
+    <!-- <div class="slides d-flex align-items-center justify-content-between">
       <div class="slide"><img src="../assets/images/week-2/brand/Kanba.png" alt=""></div>
       <div class="slide"><img src="../assets/images/week-2/brand/Nirastate.png" alt=""></div>
       <div class="slide"><img src="../assets/images/week-2/brand/Solaytic.png" alt=""></div>
@@ -321,7 +357,7 @@
       <div class="slide"><img src="../assets/images/week-2/brand/Aven.png" alt=""></div>
       <div class="slide"><img src="../assets/images/week-2/brand/Kyan.png" alt=""></div>
       <div class="slide"><img src="../assets/images/week-2/brand/Amara.png" alt=""></div>
-    </div>
+    </div> -->
   </div>
   <div class="ft">
     <ul class="container d-flex justify-content-between">
