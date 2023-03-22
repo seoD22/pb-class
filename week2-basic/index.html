@@ -298,7 +298,25 @@
     </div>
     <div class="review">
       <h3>What People Say About Us</h3>
-      <div class="review_cont d-flex
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">11</div>
+          <div class="swiper-slide">22</div>
+          <div class="swiper-slide">33</div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+      <script>
+        var swiper = new Swiper(".mySwiper", {
+          loop: true,
+          loopAdditionalSlides: 1,
+          slidesPerView: 7,
+          spaceBetween: 30,
+          centeredSlides: true,
+        });
+      </script>
+
+      <!-- <div class="review_cont d-flex
       flex-column align-items-center">
         <div class="pic"></div>
         <div class="mention">This is the great and best platform for yoga and meditation. I got a very good body at body now, my body shapes is fine now. I am very grateful to them. They are providing a great service.</div>
@@ -310,44 +328,9 @@
         <div class="circle on"></div>
         <div class="circle"></div>
       </div>
-    </div>
+    </div> -->
   </div>
   <div class="brand">
-    <div class="swiper mySwiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="../assets/images/week-2/brand/Kanba.png" alt=""></div>
-        <div class="swiper-slide"><img src="../assets/images/week-2/brand/Nirastate.png" alt=""></div>
-        <div class="swiper-slide"><img src="../assets/images/week-2/brand/Solaytic.png" alt=""></div>
-        <div class="swiper-slide"><img src="../assets/images/week-2/brand/Utosia.png" alt=""></div>
-        <div class="swiper-slide"><img src="../assets/images/week-2/brand/Earth2.0.png" alt=""></div>
-        <div class="swiper-slide"><img src="../assets/images/week-2/brand/Aven.png" alt=""></div>
-        <div class="swiper-slide"><img src="../assets/images/week-2/brand/Kyan.png" alt=""></div>
-        <div class="swiper-slide"><img src="../assets/images/week-2/brand/Amara.png" alt=""></div>
-        <div class="swiper-slide"><img src="../assets/images/week-2/brand/Kanba.png" alt=""></div>
-        <div class="swiper-slide"><img src="../assets/images/week-2/brand/Nirastate.png" alt=""></div>
-        <div class="swiper-slide"><img src="../assets/images/week-2/brand/Solaytic.png" alt=""></div>
-        <div class="swiper-slide"><img src="../assets/images/week-2/brand/Utosia.png" alt=""></div>
-        <div class="swiper-slide"><img src="../assets/images/week-2/brand/Earth2.0.png" alt=""></div>
-        <div class="swiper-slide"><img src="../assets/images/week-2/brand/Aven.png" alt=""></div>
-        <div class="swiper-slide"><img src="../assets/images/week-2/brand/Kyan.png" alt=""></div>
-        <div class="swiper-slide"><img src="../assets/images/week-2/brand/Amara.png" alt=""></div>
-      </div>
-      <div class="swiper-pagination"></div>
-    </div>
-    <script>
-      var swiper = new Swiper(".mySwiper", {
-        speed: 10000,
-        loop: true,
-        loopAdditionalSlides: 1,
-        slidesPerView: 7,
-        spaceBetween: 30,
-        centeredSlides: true,
-        autoplay: {
-          delay: 0,
-          disableOnInteraction: false,
-        }
-      });
-    </script>
     <!-- <div class="slides d-flex align-items-center justify-content-between">
       <div class="slide"><img src="../assets/images/week-2/brand/Kanba.png" alt=""></div>
       <div class="slide"><img src="../assets/images/week-2/brand/Nirastate.png" alt=""></div>
