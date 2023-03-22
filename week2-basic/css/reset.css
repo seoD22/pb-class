@@ -559,15 +559,14 @@ header{
 .brand{
   background-color: #CEDEA2;
 }
-/* .brand .slides{
+.brand .slides{
   overflow: hidden;
   height: 20vh;
 }
 .brand .slide{
   margin: auto;
-} */
-
-.brand img{
+}
+.brand .slide img{
   height: 45px;
 }
 
