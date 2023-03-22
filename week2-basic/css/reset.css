@@ -247,7 +247,7 @@ header{
   font-size: 28px;
   color: #FFFFFF;
   position: absolute;
-  rotate: 90deg;
+  transform: rotate(90deg);
   top: calc(50% - 17px);
   right: calc(50% - 17px);
 }
@@ -498,7 +498,7 @@ header{
   height: 22rem;
   position: absolute;
   transform: scaleY(-1);
-  rotate: 36deg;
+  transform: rotate(36deg);
   left: -17rem;
   top: -16rem;
 }
@@ -512,7 +512,7 @@ header{
   height: 22rem;
   position: absolute;
   transform: scaleY(-1);
-  rotate: 36deg;
+  transform: rotate(36deg);
   right: -16rem;
   top: -3rem;
 }
@@ -617,7 +617,7 @@ header{
   height: 100px;
 }
 .ft .lang.show .arrow{
-  rotate: 180deg;
+  transform: rotate(180deg);
 }
 .lang p{
   margin: 0;
