@@ -540,6 +540,18 @@ header{
 .brand{
   background-color: #CEDEA2;
 }
+.brand .slides{
+  overflow: hidden;
+  height: 20vh;
+}
+.brand .slide{
+  margin: auto;
+}
+.brand .slide img{
+  height: 45px;
+}
+
+
 .ft{
   background-color: #315316;
   height: 50vh;
