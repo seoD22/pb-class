@@ -1,5 +1,24 @@
   @import url('https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&family=Homemade+Apple&family=Ibarra+Real+Nova:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+li{list-style: none;}
+a{text-decoration: none; color: black;}
+button{border: 0; cursor: pointer;}
 
+.d-flex{display: flex;}
+.d-none{display: none;}
+.d-block{display: block;}
+
+.p-rel{position: relative;}
+.p-abs{position: absolute;}
+
+.justify-content-between{justify-content: space-between;}
+.jusitfy-content-center{justify-content: center;}
+.align-items-center{align-items: center;}
+.flex-column{flex-direction: column;}
+
+.ml-0{margin-left: 0 !important;}
+.mr-0{margin-right: 0 !important;}
+.pr-0{padding-right: 0 !important;}
+.pl-0{padding-left: 0 !important;}
 *{
   font-family: 'Hind Madurai', Arial, sans-serif;
   color:#121212;
