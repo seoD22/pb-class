@@ -1,6 +1,20 @@
+li{list-style: none;}
+a{text-decoration: none; color: black;}
+button{border: 0; cursor: pointer;}
+
 .d-flex{display: flex;}
 .d-none{display: none;}
 .d-block{display: block;}
 
 .p-rel{position: relative;}
 .p-abs{position: absolute;}
+
+.justify-content-between{justify-content: space-between;}
+.jusitfy-content-center{justify-content: center;}
+.align-items-center{align-items: center;}
+.flex-column{flex-direction: column;}
+
+.ml-0{margin-left: 0 !important;}
+.mr-0{margin-right: 0 !important;}
+.pr-0{padding-right: 0 !important;}
+.pl-0{padding-left: 0 !important;}
