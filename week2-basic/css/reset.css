@@ -559,17 +559,17 @@ header{
 .brand{
   background-color: #CEDEA2;
 }
-.brand .slides{
+/* .brand .slides{
   overflow: hidden;
   height: 20vh;
 }
 .brand .slide{
   margin: auto;
-}
-.brand .slide img{
+} */
+
+.brand img{
   height: 45px;
 }
-
 
 .ft{
   background-color: #315316;
@@ -661,6 +661,7 @@ footer p{
   color: #FFFFFF;
   text-align: center;
 }
+
 @media(min-width: 1600px){
   .container{
     padding-left: 8rem;
