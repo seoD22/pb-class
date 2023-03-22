@@ -532,7 +532,7 @@ header{
   margin: auto;
   margin-top: 3rem;
 }
-.review .pagination .circle{
+/* .review .pagination .circle{
   border: 1px solid #C4C4C4;
   width: 16px;
   height: 16px;
@@ -551,7 +551,7 @@ header{
   position: absolute;
   left: calc(50% - 6px);
   top: calc(50% - 6px);
-}
+} */
 .swiper-pagination-bullet{
   border: 1px solid #C4C4C4;
   width: 16px;
