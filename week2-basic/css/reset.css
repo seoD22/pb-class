@@ -548,6 +548,7 @@ header h1{
   transform: scaleY(-1) rotate(-31deg);
   top: 8rem;
   right: 5.5rem;
+  z-index: 10;
 }
 .review_cont .mention{
   width: 70%;
@@ -557,6 +558,7 @@ header h1{
   font-style: italic;
   font-weight: 500;
   line-height: 1.8;
+  z-index: 10;
 }
 .review_cont .name{
   font-size: 20px;
