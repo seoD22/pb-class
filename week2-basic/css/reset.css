@@ -4,23 +4,6 @@ li{list-style: none;}
 a{text-decoration: none; color: black;}
 button{border: 0; cursor: pointer;}
 
-.d-flex{display: flex;}
-.d-none{display: none;}
-.d-block{display: block;}
-
-.p-rel{position: relative;}
-.p-abs{position: absolute;}
-
-.justify-content-between{justify-content: space-between;}
-.jusitfy-content-center{justify-content: center;}
-.align-items-center{align-items: center;}
-.flex-column{flex-direction: column;}
-
-.ml-0{margin-left: 0 !important;}
-.mr-0{margin-right: 0 !important;}
-.pr-0{padding-right: 0 !important;}
-.pl-0{padding-left: 0 !important;}
-
 *{
   font-family: 'Hind Madurai', Arial, sans-serif;
   color:#121212;
@@ -55,6 +38,9 @@ body::before{
   box-sizing: border-box;
 }
 header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   box-sizing: border-box;
   margin: auto;
   width: 100%;
@@ -63,7 +49,7 @@ header{
   box-shadow: 0px 18px 36px 0px #0000000D;
   border-radius: 6px;
 }
-.logo h1{
+header h1{
   font-family: 'Ibarra Real Nova', Arial, sans-serif;
   font-weight: 600;
   font-size: 32px;
@@ -71,6 +57,7 @@ header{
 }
 .nav{
   margin-right: auto;
+  display: flex;
 }
 .nav li{
   margin-right: 5rem;
@@ -81,6 +68,10 @@ header{
 }
 .nav li.on a{
   color: #121212;
+}
+.nav + div{
+  display: flex;
+  align-items: center;
 }
 .arrow{
   background-image: url(../../assets/images/week-2/icon/arrow_down.png);
@@ -106,6 +97,8 @@ header{
 
 .main{
   padding-top: 5rem;
+  display: flex;
+  justify-content: space-between;
 }
 .main_text{
   width: 38%;
@@ -166,6 +159,7 @@ header{
 }
 
 .desc_pro{
+  display: flex;
   margin: 5rem 0;
 }
 .tables{
@@ -205,6 +199,9 @@ header{
   margin-bottom: 1rem;
 }
 .founder{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 50%;
   padding: 1rem 0;
 }
@@ -261,6 +258,8 @@ header{
   margin: 5rem 0;
 }
 .cosmetics .product > div{
+  display: flex;
+  flex-direction: column;
   width: 18%;
   padding: 2rem;
   margin: 1rem;
@@ -269,6 +268,15 @@ header{
   justify-content: flex-end;
   border: 1px solid #EEEEEE;
 }
+.cosmetics .product > div:nth-child(1),
+.cosmetics .product > div:nth-child(5){
+  margin-left: 0;
+}
+.cosmetics .product > div:nth-child(4),
+.cosmetics .product > div:nth-child(8){
+  margin-right: 0;
+}
+
 .cosmetics .product > div:hover{
   border: 1px solid transparent;
   box-shadow: 0px 18px 36px 0px #00000012;
@@ -294,6 +302,7 @@ header{
 }
 .cosmetics .product{
   flex-wrap: wrap;
+  display: flex;
 }
 .cosmetics h6{
   font-weight: 600;
@@ -312,7 +321,14 @@ header{
   margin: 0;
 }
 .cosmetics .st_bt{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-top: 1rem;
+}
+.cosmetics .st_bt > div{
+  display: flex;
+  align-items: center;
 }
 .stars {
   color: #aaa9a9; 
@@ -374,6 +390,7 @@ header{
   font-size: 18px;
 }
 .discount .btn{
+  position: relative;
   margin: auto;
   width: 70%;
   margin-top: 4rem;
@@ -386,6 +403,7 @@ header{
   color: #888888;
 }
 .discount .btn button{
+  position: absolute;
   font-size: 20px;
   width: 20%;
   height: auto;
@@ -407,6 +425,14 @@ header{
   text-align: center;
   margin: auto;
   margin-bottom: 3rem;
+}
+.unity > div{
+  display: flex;
+  justify-content: space-between;
+}
+.unity > div > div{
+  display: flex;
+  flex-direction: column;
 }
 .unity .image_1,
 .unity .image_2{
@@ -437,8 +463,11 @@ header{
 }
 .unity .checks{
   flex-wrap: wrap;
+  display: flex;
 }
 .unity .checks span{
+  display: flex;
+  align-items: center;
   width: 350px;
   margin: .5rem 0;
   font-size: 18px;
@@ -483,6 +512,9 @@ header{
   top: -55px;
 }
 .review_cont{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   position: relative;
   margin: auto;
   margin-top: 4rem;
@@ -537,26 +569,6 @@ header{
   margin: auto;
   margin-top: 3rem;
 }
-/* .review .pagination .circle{
-  border: 1px solid #C4C4C4;
-  width: 16px;
-  height: 16px;
-  border-radius: 50px;
-  margin: 0 .2rem;
-  position: relative;
-}
-.review .pagination .circle.on::before{
-  content: "";
-  background: linear-gradient(to right, #315316, #72A748);
-  background-position: center center;
-  border-radius: 50px;
-  width: 80%;
-  height: 80%;
-  display: block;
-  position: absolute;
-  left: calc(50% - 6px);
-  top: calc(50% - 6px);
-} */
 .swiper-pagination{
   display: flex;
   justify-content: center;
@@ -580,19 +592,6 @@ header{
   position: absolute;
 }
 
-/* .swiper-pagination-bullet.swiper-pagination-bullet-active::before{
-  content: "";
-  background: linear-gradient(to right, #315316, #72A748);
-  background-position: center center;
-  border-radius: 50px;
-  width: 80%;
-  height: 80%;
-  display: block;
-  position: absolute;
-  left: calc(50% - 6px);
-  top: calc(50% - 6px);
-} */
-
 .brand{
   background-color: #CEDEA2;
 }
@@ -610,6 +609,14 @@ header{
 .ft{
   background-color: #315316;
   height: 50vh;
+}
+.ft .container{
+  display: flex;
+  justify-content: space-between;
+}
+.ft .ft_1{
+  display: flex;
+  flex-direction: column;
 }
 .ft h5{
   font-family: 'Ibarra Real Nova';
@@ -638,6 +645,7 @@ header{
   margin: 24px 0;
 }
 .ft .lang{
+  display: flex;
   align-items: baseline;
 }
 .ft .lang i{
