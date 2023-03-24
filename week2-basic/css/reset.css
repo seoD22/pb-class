@@ -147,7 +147,7 @@ header{
   position: absolute;
   top: 3rem;
   right: -20px;
-  rotate: -90deg;
+  transform: rotate(-90deg);
 }
 .main button{
   font-size: 20px;
@@ -248,7 +248,7 @@ header{
   font-size: 28px;
   color: #FFFFFF;
   position: absolute;
-  rotate: 90deg;
+  transform: rotate(90deg);
   top: calc(50% - 17px);
   right: calc(50% - 17px);
 }
@@ -483,13 +483,13 @@ header{
 .review_cont{
   position: relative;
   margin: auto;
-  margin-top: 10rem;
+  margin-top: 4rem;
   width: 50%;
   padding: 4rem;
   box-shadow: 0px 18px 36px 0px #00000012;
   border: 1px solid #EDEDED;
 }
-.review_cont::before{
+.review h3::before{
   content: "";
   background-image: url(../../assets/images/week-2/leaf.png);
   background-repeat: no-repeat;
@@ -499,11 +499,9 @@ header{
   height: 22rem;
   position: absolute;
   transform: scaleY(-1);
-  rotate: 36deg;
-  left: -17rem;
-  top: -16rem;
+  transform: rotate(36deg);
 }
-.review_cont::after{
+.review h3::after{
   content: "";
   background-image: url(../../assets/images/week-2/leaf.png);
   background-repeat: no-repeat;
@@ -513,9 +511,7 @@ header{
   height: 22rem;
   position: absolute;
   transform: scaleY(-1);
-  rotate: 36deg;
-  right: -16rem;
-  top: -3rem;
+  transform: rotate(36deg);
 }
 .review_cont .mention{
   width: 70%;
@@ -537,7 +533,7 @@ header{
   margin: auto;
   margin-top: 3rem;
 }
-.review .pagination .circle{
+/* .review .pagination .circle{
   border: 1px solid #C4C4C4;
   width: 16px;
   height: 16px;
@@ -556,7 +552,25 @@ header{
   position: absolute;
   left: calc(50% - 6px);
   top: calc(50% - 6px);
+} */
+.swiper-pagination-bullet{
+  border: 1px solid #C4C4C4;
+  width: 16px;
+  height: 16px;
 }
+.swiper-pagination-bullet.swiper-pagination-bullet-active::before{
+  content: "";
+  background: linear-gradient(to right, #315316, #72A748);
+  background-position: center center;
+  border-radius: 50px;
+  width: 80%;
+  height: 80%;
+  display: block;
+  position: absolute;
+  left: calc(50% - 6px);
+  top: calc(50% - 6px);
+}
+
 .brand{
   background-color: #CEDEA2;
 }
@@ -570,7 +584,6 @@ header{
 .brand .slide img{
   height: 45px;
 }
-
 
 .ft{
   background-color: #315316;
@@ -618,7 +631,7 @@ header{
   height: 100px;
 }
 .ft .lang.show .arrow{
-  rotate: 180deg;
+  transform: rotate(180deg);
 }
 .lang p{
   margin: 0;
@@ -662,6 +675,7 @@ footer p{
   color: #FFFFFF;
   text-align: center;
 }
+
 @media(min-width: 1600px){
   .container{
     padding-left: 8rem;
