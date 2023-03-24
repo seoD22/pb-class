@@ -466,6 +466,7 @@ header{
 }
 .review h3{
   text-align: center;
+  position: relative;
 }
 .review .pic{
   background-color: #EDC988;
@@ -498,8 +499,9 @@ header{
   width: 22rem;
   height: 22rem;
   position: absolute;
-  transform: scaleY(-1);
-  transform: rotate(36deg);
+  transform: scaleY(-1) rotate(-38deg);
+  top: -7rem;
+  left: 4rem;
 }
 .review h3::after{
   content: "";
