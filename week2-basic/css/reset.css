@@ -260,7 +260,7 @@ header h1{
 .cosmetics .product > div{
   display: flex;
   flex-direction: column;
-  width: 18%;
+  width: 300px;
   padding: 2rem;
   margin: 1rem;
   margin-bottom: 4rem;
