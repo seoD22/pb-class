@@ -390,6 +390,9 @@ header h1{
 .discount p{
   font-size: 18px;
 }
+.discount form{
+  position: relative;
+}
 .discount input[type="text"]{
   position: relative;
   margin: auto;
@@ -415,6 +418,9 @@ header h1{
   line-height: 75px;;
   border-radius: 50px;
   color: #FFFFFF;
+  cursor: pointer;
+  border: 0;
+  margin-top: 4rem;
   background: linear-gradient(to right, #315316, #72A748);
 }
 
