@@ -260,7 +260,7 @@ header h1{
 .cosmetics .product > div{
   display: flex;
   flex-direction: column;
-  width: 300px;
+  width: 18%;
   padding: 2rem;
   margin: 1rem;
   margin-bottom: 4rem;
@@ -390,7 +390,7 @@ header h1{
 .discount p{
   font-size: 18px;
 }
-.discount .btn{
+.discount input[type="text"]{
   position: relative;
   margin: auto;
   width: 70%;
@@ -403,7 +403,7 @@ header h1{
   border: 2px solid #EEEEEE;
   color: #888888;
 }
-.discount .btn button{
+.discount input[type="submit"]{
   position: absolute;
   font-size: 20px;
   width: 20%;
