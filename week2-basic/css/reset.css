@@ -500,7 +500,7 @@ header{
   height: 22rem;
   position: absolute;
   transform: scaleY(-1) rotate(-38deg);
-  top: -7rem;
+  top: -6rem;
   left: 4rem;
 }
 .review h3::after{
@@ -512,8 +512,9 @@ header{
   width: 22rem;
   height: 22rem;
   position: absolute;
-  transform: scaleY(-1);
-  transform: rotate(36deg);
+  transform: scaleY(-1) rotate(-31deg);
+  top: 8rem;
+  right: 5.5rem;
 }
 .review_cont .mention{
   width: 70%;
@@ -560,7 +561,7 @@ header{
   width: 16px;
   height: 16px;
 }
-.swiper-pagination-bullet.swiper-pagination-bullet-active::before{
+/* .swiper-pagination-bullet.swiper-pagination-bullet-active::before{
   content: "";
   background: linear-gradient(to right, #315316, #72A748);
   background-position: center center;
@@ -571,7 +572,7 @@ header{
   position: absolute;
   left: calc(50% - 6px);
   top: calc(50% - 6px);
-}
+} */
 
 .brand{
   background-color: #CEDEA2;
