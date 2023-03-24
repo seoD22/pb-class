@@ -560,6 +560,8 @@ header{
   border: 1px solid #C4C4C4;
   width: 16px;
   height: 16px;
+  border-radius: 50px;
+  margin: 0 .3rem;
 }
 /* .swiper-pagination-bullet.swiper-pagination-bullet-active::before{
   content: "";
