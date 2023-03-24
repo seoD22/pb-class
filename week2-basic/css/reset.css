@@ -569,8 +569,15 @@ header{
   border-radius: 50px;
   margin: 0 .3rem;
 }
-.swiper-pagination-bullet-active{
-  background-color: red;
+.swiper-pagination-bullet-active::before{
+  content: "";
+  background: linear-gradient(to right, #315316, #72A748);
+  background-position: center center;
+  border-radius: 50px;
+  width: 80%;
+  height: 80%;
+  display: block;
+  position: absolute;
 }
 
 /* .swiper-pagination-bullet.swiper-pagination-bullet-active::before{
