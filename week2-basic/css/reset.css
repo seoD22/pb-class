@@ -556,6 +556,9 @@ header{
   left: calc(50% - 6px);
   top: calc(50% - 6px);
 } */
+.swiper-pagination{
+  display: flex;
+}
 .swiper-pagination-bullet{
   border: 1px solid #C4C4C4;
   width: 16px;
