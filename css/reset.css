@@ -1,20 +1,57 @@
+@font-face {
+  font-family: 'GmarketSansMedium';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
 li{list-style: none;}
 a{text-decoration: none; color: black;}
 button{border: 0; cursor: pointer;}
+*{
+  font-family: 'Noto Sans KR', sans-serif;
+  letter-spacing: -0.5px;
+  color: #222;
+}
 
-.d-flex{display: flex;}
-.d-none{display: none;}
-.d-block{display: block;}
+.container{
+  min-width: 1440px;
+  max-width: 1920px;
+  padding: 0 6rem;
+}
 
-.p-rel{position: relative;}
-.p-abs{position: absolute;}
-
-.justify-content-between{justify-content: space-between;}
-.jusitfy-content-center{justify-content: center;}
-.align-items-center{align-items: center;}
-.flex-column{flex-direction: column;}
-
-.ml-0{margin-left: 0 !important;}
-.mr-0{margin-right: 0 !important;}
-.pr-0{padding-right: 0 !important;}
-.pl-0{padding-left: 0 !important;}
+body{margin: 0;}
+header{
+  background-color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header ul{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: auto;
+}
+header li{
+  margin: 0 2rem;
+  width: 100px;
+  text-align: center;
+}
+header a{
+  text-transform: uppercase;
+  color: white;
+  font-weight: 300;
+}
+header li:hover a{
+  font-weight: 800;
+}
+.main_banner{
+  height: 80vh;
+  background-color: aqua;
+}
