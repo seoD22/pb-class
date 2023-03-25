@@ -9,6 +9,7 @@
 li{list-style: none;}
 a{text-decoration: none; color: black;}
 button{border: 0; cursor: pointer;}
+h2{text-transform: capitalize; font-size: 60px; margin-top: 100px;}
 *{
   font-family: 'Noto Sans KR', sans-serif;
   letter-spacing: -0.5px;
@@ -51,7 +52,27 @@ header a{
 header li:hover a{
   font-weight: 800;
 }
+
 .main_banner{
-  height: 80vh;
+  height: 90vh;
   background-color: aqua;
+}
+
+.portfolio ul{
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin: 0;
+  padding: 0;
+}
+.portfolio li{
+  width: 550px;
+}
+.portfolio .por_img{
+  background-color: aquamarine;
+  height: 450px;
+}
+.portfolio p{
+  height: 50px;
+  background-color: beige;
 }
