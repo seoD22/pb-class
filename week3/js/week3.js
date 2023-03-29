@@ -1,4 +1,14 @@
 window.onload=function(){
+  // modal 열림
+  document.querySelector('#log-in').addEventListener('click', function(){
+    document.querySelector('.modal').classList.add('show')
+  })
+  // modal 닫힘
+  document.querySelector('.close').addEventListener('click', function(){
+    document.querySelector('.modal').classList.remove('show')
+  })
+
+  // tab 버튼
   const tab_btn = document.querySelectorAll('.btn')
   const tab_cont = document.querySelectorAll('.cont')
 
@@ -14,4 +24,6 @@ window.onload=function(){
       tab_cont[idx].classList.add('on')
     })
   })
+
+
 }

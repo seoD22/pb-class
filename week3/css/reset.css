@@ -7,10 +7,11 @@ ul{padding: 0; margin: 0;}
 *{font-family: 'Noto Sans KR', sans-serif; letter-spacing: -0.5px; color: #222;}
 .container{
   max-width: 1920px;
-  padding: 0 6rem;
+  padding: 2rem 6rem;
 }
 
 body{position: relative; margin: 0;}
+body > .container{position:relative;}
 header{
   display: flex;
   align-items: start;
@@ -45,7 +46,7 @@ header .dep_1 > li > a{
 }
 
 .tab{
-  margin: 1rem 0;
+  margin: 1rem 0 0 0;
 }
 .tab_btns{
   display: flex;
@@ -65,12 +66,12 @@ header .dep_1 > li > a{
   border-bottom: 1px solid transparent;
 }
 .content{
-  margin-bottom: 5rem;
   position: relative;
   padding: 1rem 0;
   border: 1px solid #888;
   border-top: 0;
-  height: 800px;
+  height: 530px;
+  padding-bottom: 5rem;
 }
 .cont{
   position: absolute;
@@ -94,13 +95,51 @@ header .dep_1 > li > a{
   background-color: red;
 }
 
-body.show::before{
-  content: "";
-  background-color: #222;
-  opacity: .8;
+.modal.show{
+  background-color: #222222b2;
   position: absolute;
-  display: inline-block;
+  display: flex;
   z-index: 10;
-  width: 100%;
-  height: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal .login{
+  display: none;
+}
+.modal.show .login{
+  display: block;
+  background-color: white;
+  position: relative;
+  z-index: 11;
+  opacity: 1;
+  width: 500px;
+  height: 500px;
+}
+
+.login .close{
+  background-color: transparent;
+  position: absolute;
+  right: 0;
+  height: 50px;
+  width: 50px;
+}
+.login .close::before,
+.login .close::after
+{
+  content: "";
+  background-color: black;
+  display: block;
+  height: 2px;
+  width: 40px;
+}
+.login .close::before{
+  transform: rotate(-45deg);
+}
+.login .close::after{
+  transform: rotate(45deg);
 }
