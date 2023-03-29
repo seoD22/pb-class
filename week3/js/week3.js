@@ -10,6 +10,7 @@ window.onload=function(){
   document.querySelector('.dimmed').addEventListener('click', function(){
     document.querySelector('.modal').classList.remove('show')
   })
+
   // tab 버튼
   const tab_btn = document.querySelectorAll('.btn')
   const tab_cont = document.querySelectorAll('.cont')
@@ -26,6 +27,4 @@ window.onload=function(){
       tab_cont[idx].classList.add('on')
     })
   })
-
-
 }

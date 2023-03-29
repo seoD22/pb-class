@@ -613,14 +613,29 @@ header h1{
 }
 .brand .slides{
   overflow: hidden;
+}
+.brand .image-box{
+  display: flex;
+  align-items: center;
   height: 20vh;
+  width: 4166px;
+  animation: bannermove 25s linear infinite;
 }
 .brand .slide{
-  margin: auto;
+  margin: 3.5rem;
 }
 .brand .slide img{
   height: 45px;
 }
+@keyframes bannermove {
+  0% {
+      transform: translate(0, 0);
+  }
+  100% {
+      transform: translate(-50%, 0);
+  }
+}
+
 
 .ft{
   background-color: #315316;
