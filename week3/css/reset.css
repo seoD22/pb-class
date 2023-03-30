@@ -61,7 +61,6 @@ header .dep_1 > li > a{
   text-align: center;
 }
 .btn.on{
-  background-color: paleturquoise;
   border-color: #222;
   border-bottom: 1px solid transparent;
 }
