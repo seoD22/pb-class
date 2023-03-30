@@ -1,9 +1,9 @@
 window.addEventListener("scroll", function(){
-  var sections = document.querySelectorAll(".reveal")
-  for (var i = 0; i < sections.length; i++) {
-      var windowHeight = window.innerHeight;
-      var elementTop = sections[i].getBoundingClientRect().top;
-      var elementVisible = 150;
+  const sections = document.querySelectorAll(".reveal")
+  for (let i = 0; i < sections.length; i++) {
+    let windowHeight = window.innerHeight;
+    let elementTop = sections[i].getBoundingClientRect().top;
+    let elementVisible = 150;
       
       if (elementTop < windowHeight - elementVisible) {
         sections[i].classList.add("active");
