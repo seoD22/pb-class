@@ -1,30 +1,23 @@
-window.onload=function(){
+window.onload=()=>{
+  const modal = document.querySelector('.modal')
+    function modal_show(){
+    modal.classList.add('show');
+  }
+  function modal_del(){
+    modal.classList.remove('show');
+  }
+  function clicker(el){
+    document.querySelector(el).addEventListener('click', modal_show)
+  }
+  function clicker_del(el){
+    document.querySelector(el).addEventListener('click', modal_del)
+  }
   // modal 열림
-  document.querySelector('#log-in').addEventListener('click', function(){
-    document.querySelector('.modal').classList.add('show')
-  })
+  clicker('#log-in')
   // modal 닫힘
-  document.querySelector('.close').addEventListener('click', function(){
-    document.querySelector('.modal').classList.remove('show')
-  })
-  document.querySelector('.dimmed').addEventListener('click', function(){
-    document.querySelector('.modal').classList.remove('show')
-  })
+  clicker_del('.close')
+  clicker_del('.dimmed')
 
   // tab 버튼
-  const tab_btn = document.querySelectorAll('.btn')
-  const tab_cont = document.querySelectorAll('.cont')
-
-  tab_btn.forEach((it, idx)=>{
-    it.addEventListener('click', function(){
-      tab_btn.forEach((item)=> {
-        item.classList.remove('on')
-      })
-      tab_cont.forEach((item)=> {
-        item.classList.remove('on')
-      })
-      tab_btn[idx].classList.add('on')
-      tab_cont[idx].classList.add('on')
-    })
-  })
+  
 }

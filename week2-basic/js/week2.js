@@ -1,4 +1,4 @@
-window.onload = function(){
+window.onload = ()=>{
   let observer = new IntersectionObserver((e)=>{
     e.forEach((el)=>{
       if(el.isIntersecting){

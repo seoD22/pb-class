@@ -1,4 +1,4 @@
-window.addEventListener("scroll", function(){
+window.addEventListener("scroll", ()=>{
   const sections = document.querySelectorAll(".reveal")
   for (let i = 0; i < sections.length; i++) {
     let windowHeight = window.innerHeight;
