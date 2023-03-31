@@ -1,23 +1,24 @@
 window.onload=()=>{
-  const modal = document.querySelector('.modal')
-    function modal_show(){
-    modal.classList.add('show');
-  }
-  function modal_del(){
-    modal.classList.remove('show');
-  }
-  function clicker(el){
-    document.querySelector(el).addEventListener('click', modal_show)
-  }
-  function clicker_del(el){
-    document.querySelector(el).addEventListener('click', modal_del)
-  }
-  // modal 열림
-  clicker('#log-in')
-  // modal 닫힘
-  clicker_del('.close')
-  clicker_del('.dimmed')
+  window.addEventListener('click', (e) => {
+    // console.log(e.target)
 
-  // tab 버튼
-  
+    // modal
+    if(e.target.id == 'log-in'){
+      document.querySelector('.modal').classList.add('show')
+    }
+    if((e.target.classList == 'dimmed') || (e.target.classList == 'close')){
+      document.querySelector('.modal').classList.remove('show')
+    }
+  })
+
+  // tab
+  const tab_btn = document.querySelectorAll('.btn')
+  tab_btn.forEach((v, i)=>{
+    v.addEventListener('click', (e)=>{
+      tab_btn.forEach((vv, ii)=>{
+        vv.classList.remove('on')
+      })
+      e.target.classList.add('on')
+    })
+  })
 }
