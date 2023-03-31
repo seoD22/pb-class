@@ -16,13 +16,13 @@ header{
   display: flex;
   align-items: start;
   justify-content: space-between;
-  padding: 2rem;
   background-color: aquamarine;
 }
 h1{
   margin: 0;
   margin-right: 2rem;
   line-height: 1;
+  padding: 2rem;
 }
 header .dep_1{
   margin-right: auto;
@@ -31,9 +31,11 @@ header .dep_1{
   height: 38px;
   overflow: hidden;
   transition: .4s;
+  padding: 2rem 0;
+  width: 30%;
 }
 header .dep_1:hover{
-  height: 150px;
+  height: 170px;
 }
 header .dep_1 > li{
   margin: .5rem 1rem;
@@ -41,7 +43,7 @@ header .dep_1 > li{
 header .dep_1 > li > a{
   font-size: 20px;
   display: block;
-  margin-bottom: .8rem;
+  margin-bottom: 2.4rem;
   line-height: 1;
 }
 
