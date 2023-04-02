@@ -3,11 +3,12 @@ window.onload=()=>{
     // console.log(e.target)
 
     // modal
+    const modal = document.querySelector('.modal')
     if(e.target.id == 'log-in'){
-      document.querySelector('.modal').classList.add('show')
+      modal.classList.add('show')
     }
     if((e.target.classList == 'dimmed') || (e.target.classList == 'close')){
-      document.querySelector('.modal').classList.remove('show')
+      modal.classList.remove('show')
     }
   })
 
