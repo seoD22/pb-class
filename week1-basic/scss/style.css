@@ -51,6 +51,9 @@ header .navi a {
   color: white;
   font-weight: 200;
 }
+header .navi.on a {
+  color: black;
+}
 header .user {
   text-align: right;
 }
@@ -241,9 +244,6 @@ header .user .user_img::before {
   overflow: hidden;
   display: inline-block;
   -webkit-text-fill-color: #FFA800;
-}
-#hotels .content .star-ratings-fill span {
-  margin-right: 10px;
 }
 #hotels .content .star-ratings-base {
   z-index: 0;
@@ -457,14 +457,3 @@ footer ul {
 }
 
 /* animation */
-.reveal {
-  position: relative;
-  transform: translateY(150px);
-  opacity: 0;
-  transition: 2s all ease;
-}
-
-.reveal.active {
-  transform: translateY(0);
-  opacity: 1;
-}

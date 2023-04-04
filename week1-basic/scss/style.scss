@@ -37,6 +37,11 @@ header{
       color: white;
       font-weight: 200;
     }
+    &.on{
+      a{
+        color: black;
+      }
+    }
   }
   .user{
     text-align: right;
@@ -230,9 +235,6 @@ header{
       overflow: hidden;
       display: inline-block;
       -webkit-text-fill-color: #FFA800;
-    }
-    .star-ratings-fill span{
-      margin-right: 10px;
     }
     .star-ratings-base {
       z-index: 0;
@@ -461,13 +463,13 @@ footer{
 }
 
 /* animation */
-.reveal{
-  position: relative;
-  transform: translateY(150px);
-  opacity: 0;
-  transition: .6s all ease;
-}
-.reveal.active{
-  transform: translateY(0);
-  opacity: 1;
-}
+// .reveal{
+//   position: relative;
+//   transform: translateY(150px);
+//   opacity: 0;
+//   transition: .6s all ease;
+// }
+// .reveal.active{
+//   transform: translateY(0);
+//   opacity: 1;
+// }
