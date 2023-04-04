@@ -17,7 +17,8 @@ window.onload = ()=>{
     // 네비바 스타일
     window.addEventListener('scroll', ()=>{
       const header = document.querySelector('.header')
-      const contentTop = document.querySelector('#popular').getBoundingClientRect().height
+      const content = document.querySelector('#popular')
+      const contentTop = content.offsetTop
       scroll_class(header, contentTop)
       console.log(contentTop)
     })
