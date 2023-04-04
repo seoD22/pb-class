@@ -8,7 +8,7 @@ window.onload = ()=>{
       }
     })
   },
-  {threshold: .7})
+  {threshold: .2})
   for(let i = 0 ; i < 6; i++){
     observer.observe(reveal[i])
     // console.log(reveal[i].dataset.thres)
