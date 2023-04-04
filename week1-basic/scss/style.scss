@@ -32,15 +32,31 @@ header{
       transform: translateX(10px);
     }
   }
+  &.on{
+    background-color: rgba(255, 255, 255, 0.814);
+    padding-bottom: 2rem;
+    .logo{
+      background-image: url(../img/logo_2rism_black.png);
+    }
+    .navi{
+      a{
+        color: black;
+        font-weight: 400;
+      }
+    }
+    .user{
+      p{
+        color: black;
+      }
+      strong{
+        color: black;
+      }
+    } 
+  }
   .navi{
     a{
       color: white;
       font-weight: 200;
-    }
-    &.on{
-      a{
-        color: black;
-      }
     }
   }
   .user{

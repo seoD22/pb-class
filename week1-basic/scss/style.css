@@ -47,12 +47,26 @@ header .logo::before {
   right: 0;
   transform: translateX(10px);
 }
+header.on {
+  background-color: rgba(255, 255, 255, 0.814);
+  padding-bottom: 2rem;
+}
+header.on .logo {
+  background-image: url(../img/logo_2rism_black.png);
+}
+header.on .navi a {
+  color: black;
+  font-weight: 400;
+}
+header.on .user p {
+  color: black;
+}
+header.on .user strong {
+  color: black;
+}
 header .navi a {
   color: white;
   font-weight: 200;
-}
-header .navi.on a {
-  color: black;
 }
 header .user {
   text-align: right;

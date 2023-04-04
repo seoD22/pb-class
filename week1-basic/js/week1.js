@@ -15,13 +15,15 @@
 
   // 네비바 스타일
   window.addEventListener('scroll', ()=>{
-    const navi = document.querySelector('.navi')
-    if(document.documentElement.scrollTop > 790){
-      // console.log(document.documentElement.scrollTop)
-      navi.classList.add('on')
-    }else{ navi.classList.remove('on')}
+    const header = document.querySelector('.header')
+    scroll_class(header, 790)
   })
-
+  const scroll_class = (el, nm)=>{
+    if(document.documentElement.scrollTop > nm){
+      // console.log(document.documentElement.scrollTop)
+      el.classList.add('on')
+    }else{ el.classList.remove('on')}
+  }
 
   // 스크롤 이벤트
   // 스크롤 값 확인
@@ -29,6 +31,7 @@
     const currentScrollValue = document.documentElement.scrollTop;
     // console.log(currentScrollValue);
   });
+
   // navigator
   const navi_scroll = document.querySelectorAll('.navi li')
   navi_scroll.forEach((el, index)=>{
