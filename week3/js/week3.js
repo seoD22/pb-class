@@ -13,13 +13,19 @@ window.onload=()=>{
   })
 
   // tab
-  const tab_btn = document.querySelectorAll('.btn')
-  tab_btn.forEach((v, i)=>{
-    v.addEventListener('click', (e)=>{
-      tab_btn.forEach((vv, ii)=>{
-        vv.classList.remove('on')
+  const tab_btn = document.querySelectorAll('.btn');
+  const cont = document.querySelectorAll('.cont');
+  tab_btn.forEach((el, idx)=>{
+    el.addEventListener('click', (e)=>{
+      cont.forEach((ele, index)=>{
+        ele.classList.remove('on')
       })
-      e.target.classList.add('on')
+      cont.item(idx).classList.add('on')
+      tab_btn.forEach((vv, ii)=>{
+        vv.classList.remove('on');
+      })
+      e.target.classList.add('on');
+    
     })
   })
 }
