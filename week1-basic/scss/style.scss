@@ -38,10 +38,8 @@ header{
       background-image: url(../img/logo_2rism_black.png);
     }
     .navi{
-      a{
-        color: black;
-        font-weight: 400;
-      }
+      color: black;
+      font-weight: 400;
     }
     .user{
       p{
@@ -53,10 +51,9 @@ header{
     } 
   }
   .navi{
-    a{
-      color: white;
-      font-weight: 200;
-    }
+    color: white;
+    font-weight: 200;
+    cursor: pointer;
   }
   .user{
     text-align: right;

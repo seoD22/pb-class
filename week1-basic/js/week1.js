@@ -16,13 +16,13 @@ window.onload = ()=>{
   
     // 네비바 스타일
     window.addEventListener('scroll', ()=>{
-      const header = document.querySelector('.header')
-      const content = document.querySelector('#popular')
-      const contentTop = content.offsetTop
-      scroll_class(header, contentTop)
-      console.log(contentTop)
+      const $header = document.querySelector('.header')
+      const $content = document.querySelector('#popular')
+      const contentTop = $content.offsetTop
+      scroll_class($header, contentTop)
+      // console.log(contentTop)
     })
-  
+
     const scroll_class = (el, nm)=>{
       if(document.documentElement.scrollTop > nm){
         // console.log(document.documentElement.scrollTop)
@@ -32,4 +32,14 @@ window.onload = ()=>{
   
     // 네비게이터 스크롤 이벤트
     // 스크롤 값 확인
+    const $mainBtn = document.querySelector('.nav_1')
+    const $section = document.querySelectorAll('section')
+    const sectionScrollY = $section.forEach((el, idx)=>{
+      console.log(el.scrollTop)
+    })
+
+    $mainBtn.addEventListener('click', ()=>{
+      window.scrollTo({top:0, left:0, behavior:'smooth'})
+    })
 }
+  
