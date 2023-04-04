@@ -3,29 +3,29 @@ window.onload=()=>{
     // console.log(e.target)
 
     // modal
-    const modal = document.querySelector('.modal')
+    const $modal = document.querySelector('.modal');
     if(e.target.id == 'log-in'){
-      modal.classList.add('show')
+      $modal.classList.add('show');
     }
     if((e.target.classList == 'dimmed') || (e.target.classList == 'close')){
-      modal.classList.remove('show')
+      $modal.classList.remove('show');
     }
   })
 
-  // tab
-  const tab_btn = document.querySelectorAll('.btn');
-  const cont = document.querySelectorAll('.cont');
-  tab_btn.forEach((el, idx)=>{
+  // tab, content 
+  const $tab_btn = document.querySelectorAll('.btn');
+  const $cont = document.querySelectorAll('.cont');
+  const removeClass = (arr, cls)=>{
+    arr.forEach((el, idx)=>{
+      el.classList.remove(cls);
+    })
+  }
+  $tab_btn.forEach((el, idx)=>{
     el.addEventListener('click', (e)=>{
-      cont.forEach((ele, index)=>{
-        ele.classList.remove('on')
-      })
-      cont.item(idx).classList.add('on')
-      tab_btn.forEach((vv, ii)=>{
-        vv.classList.remove('on');
-      })
+      removeClass($cont, 'on')
+      $cont.item(idx).classList.add('on');
+      removeClass($tab_btn, 'on')
       e.target.classList.add('on');
-    
     })
   })
 }
