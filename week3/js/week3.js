@@ -20,11 +20,12 @@ window.onload=()=>{
       el.classList.remove(cls);
     })
   }
+
   $tab_btn.forEach((el, idx)=>{
     el.addEventListener('click', (e)=>{
-      removeClass($cont, 'on')
+      removeClass($cont, 'on');
+      removeClass($tab_btn, 'on');
       $cont.item(idx).classList.add('on');
-      removeClass($tab_btn, 'on')
       e.target.classList.add('on');
     })
   })
