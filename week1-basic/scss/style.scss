@@ -62,6 +62,10 @@ header{
         color: red;
         font-weight: 500;
       }
+      &.active{
+        color: red;
+        font-weight: 700;
+      }
     }
   }
   .user{

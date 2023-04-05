@@ -1,4 +1,5 @@
 window.onload = ()=>{
+  const $header = document.querySelector('.header');
   window.addEventListener('scroll', ()=>{
     const $reveal = document.querySelectorAll(".reveal")
     for (let i = 0; i < $reveal.length; i++) {
@@ -14,7 +15,6 @@ window.onload = ()=>{
     }
 
     // 네비바 스타일
-    const $header = document.querySelector('.header');
     const $content = document.querySelector('#popular');
     const contentTop = $content.offsetTop; 
     scroll_class($header, 100);
@@ -32,18 +32,12 @@ window.onload = ()=>{
     const $mainBtn = document.querySelector('.nav_1');
     const $navBtn = document.querySelectorAll('.navi li');
     const $section = document.querySelectorAll('section');
-    // const sectionOffset = $section.forEach((el, idx)=>{
-    //   el.offsetTop
-    //   // console.log(el.offsetTop)
-    // })
 
-    let currentScrollValue = document.documentElement.scrollTop;
-
-    // 네비버튼 클릭 시 클래스 추가
+    // 네비버튼 클릭 시 클래스 추가 및 스크롤 이동
     $navBtn.forEach((el, idx)=>{
       el.addEventListener('click', (e)=>{
         // console.log(e.target.dataset.scroll)
-        window.scrollTo(0, $section[idx].offsetTop - 160);
+        window.scrollTo(0, $section[idx].offsetTop - $header.clientHeight);
         $navBtn.forEach((ele, index)=>{
           ele.classList.remove('on')
         })
@@ -51,11 +45,24 @@ window.onload = ()=>{
       });
     });
 
-    // home버튼 클릭 시 메인으로 스크롤
-    // $mainBtn.addEventListener('click', ()=>{
-    //   window.scrollTo(0, 0)
-    // })
-
-
+    // 스크롤 시 네비스타일
+    window.addEventListener('scroll', ()=>{
+      $section.forEach((el, idx)=>{
+        el.getBoundingClientRect().top
+        // console.log(el.getBoundingClientRect().top)
+      })
+      for (let i = 0; i < $section.length; i++) {
+        let windowHeight = window.innerHeight;
+        let elementTop = $section[i].getBoundingClientRect().top;
+        
+        if (elementTop < windowHeight ) {
+          $navBtn.forEach((ele, index)=>{
+            ele.classList.remove('on')
+          })
+          $navBtn[i].classList.add('on');
+        }
+      }
+    })
+    
 }
   
