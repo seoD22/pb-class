@@ -1,15 +1,15 @@
 window.onload = ()=>{
   window.addEventListener('scroll', ()=>{
-    const sections = document.querySelectorAll(".reveal")
-    for (let i = 0; i < sections.length; i++) {
+    const $reveal = document.querySelectorAll(".reveal")
+    for (let i = 0; i < $reveal.length; i++) {
       let windowHeight = window.innerHeight;
-      let elementTop = sections[i].getBoundingClientRect().top;
+      let elementTop = $reveal[i].getBoundingClientRect().top;
       let elementVisible = 150;
         
         if (elementTop < windowHeight - elementVisible) {
-          sections[i].classList.add("active");
+          $reveal[i].classList.add("active");
         } else {
-          sections[i].classList.remove("active");
+          $reveal[i].classList.remove("active");
         }
     }
   });
@@ -34,20 +34,17 @@ window.onload = ()=>{
     const $mainBtn = document.querySelector('.nav_1')
     const $navBtn = document.querySelectorAll('.navi li')
     const $section = document.querySelectorAll('section')
+    const sectionOffset = $section.forEach((el, idx)=>{
+      console.log(el.offsetTop)
+    })
     const sectionScrollY = $section.forEach((el, idx)=>{
       el.dataset.scroll
     })
     let currentScrollValue = document.documentElement.scrollTop;
 
-    //y값 구하기
-    // window.addEventListener('scroll', ()=>{
-    //   console.log(window.scrollY)
-    // })
-
     // 네비버튼 클릭 시 클래스 추가
     $navBtn.forEach((el, idx)=>{
       el.addEventListener('click', (e)=>{
-        // console.log(e.target)
         // console.log(e.target.dataset.scroll)
         const dataScroll = e.target.dataset.scroll
         window.scrollTo(0, dataScroll)
@@ -59,9 +56,9 @@ window.onload = ()=>{
     })
 
     // home버튼 클릭 시 메인으로 스크롤
-    $mainBtn.addEventListener('click', ()=>{
-      window.scrollTo(0, 0)
-    })
+    // $mainBtn.addEventListener('click', ()=>{
+    //   window.scrollTo(0, 0)
+    // })
 
 
 }
