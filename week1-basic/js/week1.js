@@ -5,7 +5,6 @@ window.onload = ()=>{
       let windowHeight = window.innerHeight;
       let elementTop = $reveal[i].getBoundingClientRect().top;
       let elementVisible = 150;
-        
         if (elementTop < windowHeight - elementVisible) {
           $reveal[i].classList.add("active");
         } else {
@@ -19,7 +18,7 @@ window.onload = ()=>{
       const $header = document.querySelector('.header')
       const $content = document.querySelector('#popular')
       const contentTop = $content.offsetTop
-      scroll_class($header, contentTop)
+      scroll_class($header, 100)
       // console.log(contentTop)
     })
 
@@ -35,7 +34,8 @@ window.onload = ()=>{
     const $navBtn = document.querySelectorAll('.navi li')
     const $section = document.querySelectorAll('section')
     const sectionOffset = $section.forEach((el, idx)=>{
-      console.log(el.offsetTop)
+      el.offsetTop
+      // console.log(el.offsetTop)
     })
     const sectionScrollY = $section.forEach((el, idx)=>{
       el.dataset.scroll
@@ -46,6 +46,7 @@ window.onload = ()=>{
     $navBtn.forEach((el, idx)=>{
       el.addEventListener('click', (e)=>{
         // console.log(e.target.dataset.scroll)
+        console.log(sectionOffset)
         const dataScroll = e.target.dataset.scroll
         window.scrollTo(0, dataScroll)
         $navBtn.forEach((ele, index)=>{

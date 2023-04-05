@@ -17,6 +17,9 @@ header{
   align-items: start;
   justify-content: space-between;
   background-color: aquamarine;
+  position: absolute;
+  width: 90%;
+  z-index: 100;
 }
 h1{
   margin: 0;
@@ -48,7 +51,7 @@ header .dep_1 > li > a{
 }
 
 .tab{
-  margin: 1rem 0 0 0;
+  margin: 140px 0 0 0;
 }
 .tab_btns{
   display: flex;
