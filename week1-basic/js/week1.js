@@ -34,12 +34,23 @@ window.onload = ()=>{
     const $mainBtn = document.querySelector('.nav_1')
     const $navBtn = document.querySelectorAll('.navi li')
     const $section = document.querySelectorAll('section')
+    const sectionScrollY = $section.forEach((el, idx)=>{
+      el.dataset.scroll
+    })
     let currentScrollValue = document.documentElement.scrollTop;
+
+    //y값 구하기
+    // window.addEventListener('scroll', ()=>{
+    //   console.log(window.scrollY)
+    // })
 
     // 네비버튼 클릭 시 클래스 추가
     $navBtn.forEach((el, idx)=>{
       el.addEventListener('click', (e)=>{
         // console.log(e.target)
+        // console.log(e.target.dataset.scroll)
+        const dataScroll = e.target.dataset.scroll
+        window.scrollTo(0, dataScroll)
         $navBtn.forEach((ele, index)=>{
           ele.classList.remove('on')
         })
@@ -51,5 +62,7 @@ window.onload = ()=>{
     $mainBtn.addEventListener('click', ()=>{
       window.scrollTo(0, 0)
     })
+
+
 }
   
