@@ -32,10 +32,10 @@ window.onload = ()=>{
     const $mainBtn = document.querySelector('.nav_1');
     const $navBtn = document.querySelectorAll('.navi li');
     const $section = document.querySelectorAll('section');
-    const sectionOffset = $section.forEach((el, idx)=>{
-      el.offsetTop
-      // console.log(el.offsetTop)
-    })
+    // const sectionOffset = $section.forEach((el, idx)=>{
+    //   el.offsetTop
+    //   // console.log(el.offsetTop)
+    // })
 
     let currentScrollValue = document.documentElement.scrollTop;
 
@@ -43,15 +43,13 @@ window.onload = ()=>{
     $navBtn.forEach((el, idx)=>{
       el.addEventListener('click', (e)=>{
         // console.log(e.target.dataset.scroll)
-        console.log(sectionOffset);
-        const dataScroll = e.target.dataset.scroll
-        window.scrollTo(0, dataScroll);
+        window.scrollTo(0, $section[idx].offsetTop - 160);
         $navBtn.forEach((ele, index)=>{
           ele.classList.remove('on')
         })
         e.target.classList.add('on')
-      }) 
-    })
+      });
+    });
 
     // home버튼 클릭 시 메인으로 스크롤
     // $mainBtn.addEventListener('click', ()=>{
