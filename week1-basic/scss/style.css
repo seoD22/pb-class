@@ -73,16 +73,13 @@ header .navi {
   cursor: pointer;
 }
 header .navi li {
-  width: 100px;
   text-align: center;
 }
 header .navi li.on {
   color: red;
-  font-weight: 500;
 }
 header .navi li.active {
   color: red;
-  font-weight: 700;
 }
 header .user {
   text-align: right;

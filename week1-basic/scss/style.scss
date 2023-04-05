@@ -56,15 +56,12 @@ header{
     font-weight: 200;
     cursor: pointer;
     li{
-      width: 100px;
       text-align: center;
       &.on{
         color: red;
-        font-weight: 500;
       }
       &.active{
         color: red;
-        font-weight: 700;
       }
     }
   }
