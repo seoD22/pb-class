@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Poppins", sans-serif;
 }
@@ -67,6 +71,14 @@ header .navi {
   color: white;
   font-weight: 200;
   cursor: pointer;
+}
+header .navi li {
+  width: 100px;
+  text-align: center;
+}
+header .navi li.on {
+  color: red;
+  font-weight: 500;
 }
 header .user {
   text-align: right;

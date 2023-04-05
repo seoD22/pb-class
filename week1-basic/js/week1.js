@@ -31,15 +31,25 @@ window.onload = ()=>{
     }
   
     // 네비게이터 스크롤 이벤트
-    // 스크롤 값 확인
     const $mainBtn = document.querySelector('.nav_1')
+    const $navBtn = document.querySelectorAll('.navi li')
     const $section = document.querySelectorAll('section')
-    const sectionScrollY = $section.forEach((el, idx)=>{
-      console.log(el.scrollTop)
+    let currentScrollValue = document.documentElement.scrollTop;
+
+    // 네비버튼 클릭 시 클래스 추가
+    $navBtn.forEach((el, idx)=>{
+      el.addEventListener('click', (e)=>{
+        // console.log(e.target)
+        $navBtn.forEach((ele, index)=>{
+          ele.classList.remove('on')
+        })
+        e.target.classList.add('on')
+      }) 
     })
 
+    // home버튼 클릭 시 메인으로 스크롤
     $mainBtn.addEventListener('click', ()=>{
-      window.scrollTo({top:0, left:0, behavior:'smooth'})
+      window.scrollTo(0, 0)
     })
 }
   
