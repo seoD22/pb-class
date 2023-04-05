@@ -5,22 +5,21 @@ window.onload = ()=>{
       let windowHeight = window.innerHeight;
       let elementTop = $reveal[i].getBoundingClientRect().top;
       let elementVisible = 150;
-        if (elementTop < windowHeight - elementVisible) {
-          $reveal[i].classList.add("active");
-        } else {
-          $reveal[i].classList.remove("active");
-        }
+
+      if (elementTop < windowHeight - elementVisible) {
+        $reveal[i].classList.add("active");
+      } else {
+        $reveal[i].classList.remove("active");
+      }
     }
-  });
-  
+
     // 네비바 스타일
-    window.addEventListener('scroll', ()=>{
-      const $header = document.querySelector('.header')
-      const $content = document.querySelector('#popular')
-      const contentTop = $content.offsetTop
-      scroll_class($header, 100)
-      // console.log(contentTop)
-    })
+    const $header = document.querySelector('.header')
+    const $content = document.querySelector('#popular')
+    const contentTop = $content.offsetTop
+    scroll_class($header, 100)
+    // console.log(contentTop)
+  });
 
     const scroll_class = (el, nm)=>{
       if(document.documentElement.scrollTop > nm){
