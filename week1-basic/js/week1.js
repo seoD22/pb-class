@@ -18,7 +18,7 @@ window.onload = ()=>{
 
     // 네비 스타일
     // 헤더 클래스
-    if(document.documentElement.scrollTop > 700){
+    if(document.body.scrollTop > 700 || document.documentElement.scrollTop > 700){
       $header.classList.add('on');
     }else{ 
       $header.classList.remove('on');
@@ -27,7 +27,7 @@ window.onload = ()=>{
     // 네비 클래스
     for (let i = 0; i < $section.length; i++) {
       let elementTop = $section[i].getBoundingClientRect().top + 700;
-      
+
       if (elementTop < windowHeight ) {
         $navBtn.forEach((ele, index)=>{
           ele.classList.remove('on');
