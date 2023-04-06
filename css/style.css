@@ -1,0 +1,94 @@
+section{
+  padding: 30px;
+  margin: auto;
+  max-width: 1920px;
+  
+}
+.container{
+  padding: 0 30px;
+  margin: auto;
+  max-width: 1920px;
+}
+
+/* header */
+header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+h1{
+  margin-right: 40px;
+  cursor: pointer;
+}
+.navi{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: auto;
+}
+.navi li{
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+/* portfolio section */
+.list{
+  display: flex;
+  flex-wrap: wrap;
+}
+.list li{
+  position: relative;
+  margin: 10px 0;
+  width: 33.33%;
+}
+.portImg{
+  background-color: bisque;
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 98%;
+  height: 300px;
+  border-radius: 30px;
+}
+li:nth-child(1) .portImg{
+  background-image:url(../assets/images/main/portfolio/week1.png);
+}
+li:nth-child(2) .portImg{
+  background-image: url(../assets/images/main/portfolio/week2.png);
+}
+.list li:nth-child(2) .portImg,
+.list li:nth-child(2) .dimmed{
+  margin: auto;
+}
+.list li:nth-child(3) .portImg,
+.list li:nth-child(3) .dimmed{
+  margin-left: auto;
+}
+.dimmed{
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  width: 98%;
+  height: 300px;
+  border-radius: 30px;
+  left: 0; right: 0;
+  transition: .3s;
+}
+.list li:hover .dimmed{
+  opacity: 1;
+}
+
+/* PC (1024px)*/ 
+@media all and (min-width:1024px) {
+  
+} 
+
+/* tablet(768px ~ 1023px)*/ 
+@media all and (min-width:768px) and (max-width:1023px) {
+  
+} 
+
+/* mobile(480px ~ 767px)*/ 
+@media all and (max-width:767px) {
+  
+}

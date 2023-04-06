@@ -10,7 +10,9 @@ p{margin: 0;}
   padding-left: 279px;
   padding-right: 279px;
 }
-
+body::-webkit-scrollbar{
+  display: none;
+}
 header{
   .logo{
     background-image: url(../img/logo_2rism.png);
