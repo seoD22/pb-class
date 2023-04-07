@@ -6,16 +6,24 @@
 }
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
 
-body{background-color: #f7f6f1; margin: 0;}
-li{list-style: none;}
-a{text-decoration: none; color: #191919;}
-button{border: 0; cursor: pointer;}
-h2{text-transform: capitalize; font-size: 60px; margin-top: 200px; margin-bottom: 30px;}
-p{margin: 0;}
-ul{padding: 0; margin: 0;}
 *{
   font-family: 'Noto Sans KR', sans-serif;
   letter-spacing: -0.5px;
   color: #191919;
   box-sizing: border-box;
 }
+html{scroll-behavior: smooth;}
+
+body{background-color: #f7f6f1; margin: 0;}
+
+li{list-style: none;}
+
+a{text-decoration: none; color: #191919;}
+
+button{border: 0; cursor: pointer;}
+
+h2{text-transform: capitalize; font-size: 60px; margin-top: 200px; margin-bottom: 30px;}
+
+p{margin: 0;}
+
+ul{padding: 0; margin: 0;}
