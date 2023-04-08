@@ -47,7 +47,15 @@ h1{font-family: 'GmarketSansMedium', sans-serif; cursor: pointer;}
   }
 }
 
-/* kakao QR */
+/* fixed */
+.fixed{  
+  opacity: 0;
+  animation-name: opacity_ani;
+  animation-delay: 2.2s;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
 .kakao{
   position: fixed;
   bottom: 10px;
@@ -55,12 +63,20 @@ h1{font-family: 'GmarketSansMedium', sans-serif; cursor: pointer;}
 }
 .kakao img{
   width: 120px;
-  opacity: 0;
-  animation-name: opacity_ani;
-  animation-delay: 2.2s;
-  animation-duration: 1s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
+}
+.fixed .text{
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
+.text{
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 20px;
+  cursor: default;
+}
+.text:hover{
+  opacity: .8;
 }
 
 /* header */
@@ -179,6 +195,14 @@ header::after{
   section{ padding: 0 30px; }
   .container{ padding: 0 30px; }
 
+  .kakao img{
+    width: 70px;
+  }
+  .text{
+    font-weight: 700;
+    font-size: 15px;
+  }
+
   header{
     padding: 0 30px;
   }
@@ -189,4 +213,6 @@ header::after{
   header ul{
     display: none;
   }
+
+
 }
