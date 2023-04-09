@@ -50,16 +50,20 @@ h1{font-family: 'GmarketSansMedium', sans-serif; cursor: pointer;}
 /* fixed */
 .fixed{  
   opacity: 0;
+  position: relative;
+  z-index: 999;
   animation-name: opacity_ani;
   animation-delay: 2.2s;
   animation-duration: 1s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
+/* kakao QR */
 .kakao{
   position: fixed;
   bottom: 10px;
   left: 10px;
+  z-index: 1;
 }
 .kakao img{
   width: 120px;
@@ -68,15 +72,23 @@ h1{font-family: 'GmarketSansMedium', sans-serif; cursor: pointer;}
   position: fixed;
   bottom: 10px;
   right: 10px;
+  z-index: 1;
 }
-.text{
+.fixed .text p{
   text-transform: uppercase;
   font-weight: 700;
   font-size: 20px;
   cursor: default;
+  mix-blend-mode: difference;
 }
-.text:hover{
-  opacity: .8;
+.fixed .text:hover{
+  opacity: .6;
+  opacity: 0;
+  animation-name: opacity_ani;
+  animation-delay: 2.2s;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 
 /* header */
@@ -129,7 +141,7 @@ header h1:hover .logo_wrapper{
 header ul{
   display: flex;
   margin-right: auto;
-  margin-left: 190px;
+  margin-left: 210px;
   opacity: 0;
   animation-name: opacity_ani;
   animation-delay: 2.2s;
@@ -155,6 +167,96 @@ header::after{
   animation-fill-mode: forwards;
 }
 
+/* banner */
+.main_banner{
+  position: relative;
+  height: 88vh;
+  overflow: hidden;
+}
+.main_banner::after{
+  content: "";
+  background-color: #191919;
+  height: 1px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  animation-name: navi_width;
+  animation-delay: 1s;
+  animation-duration: .6s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+.video_wrapper{
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  overflow: hidden;
+  z-index: -1;
+}
+.video_wrapper .video{ 
+  background-image: url(../img/clouds.gif);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 100vw;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+.bannerText p{
+  color: transparent;
+  line-height: .8;
+  font-size: 990px;
+  font-family: 'Bebas Neue';
+  font-weight: 900;
+  text-align: center;
+}
+
+/* slide */
+.slide{
+  height: 200px;
+}
+
+
+/* tablet */
+@media(max-width: 1511px){
+  section{ padding: 0 100px; }
+  .container{ padding: 0 100px; }
+
+  header{
+    padding: 0 100px;
+  }
+
+  .bannerText p{
+    font-size: 750px;
+  }
+}
+
+/* mobile */
+@media(max-width: 1023px){
+  section{ padding: 0 30px; }
+  .container{ padding: 0 30px; }
+
+  header{
+    padding: 0 30px;
+  }
+  header h1{
+    font-size: 20px;
+    height: 28px;
+  }
+  header ul{
+    display: none;
+  }
+
+  .main_banner{
+    height: 30vh;
+  }
+  .bannerText p{
+    font-size: 257px;
+  }
+}
+
+/* keyframe */
 @keyframes navi_width{
   from{
     width: 0;
@@ -178,41 +280,4 @@ header::after{
   to{
     opacity: 1;
   }
-}
-
-/* tablet */
-@media(max-width: 1511px){
-  section{ padding: 0 100px; }
-  .container{ padding: 0 100px; }
-
-  header{
-    padding: 0 100px;
-  }
-}
-
-/* mobile */
-@media(max-width: 1023px){
-  section{ padding: 0 30px; }
-  .container{ padding: 0 30px; }
-
-  .kakao img{
-    width: 70px;
-  }
-  .text{
-    font-weight: 700;
-    font-size: 15px;
-  }
-
-  header{
-    padding: 0 30px;
-  }
-  header h1{
-    font-size: 20px;
-    height: 28px;
-  }
-  header ul{
-    display: none;
-  }
-
-
 }
