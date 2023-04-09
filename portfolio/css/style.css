@@ -222,6 +222,9 @@ header::after{
     padding: 0 100px;
   }
 
+  .main_banner{
+    height: 88vh;
+  }
   .video_wrapper .video p{
     font-size: 750px;
   }
@@ -244,7 +247,7 @@ header::after{
   }
 
   .main_banner{
-    height: 30vh;
+    height: 30.5vh;
   }
   .video_wrapper .video p{
     font-size: 257px;
