@@ -170,7 +170,7 @@ header::after{
 /* banner */
 .main_banner{
   position: relative;
-  height: 88vh;
+  height: 91vh;
   overflow: hidden;
 }
 .main_banner::after{
@@ -191,25 +191,26 @@ header::after{
   width: 100vw;
   height: 100vh;
   position: absolute;
-  overflow: hidden;
   z-index: -1;
 }
 .video_wrapper .video{ 
   background-image: url(../img/clouds.gif);
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   background-position: center;
   width: 100vw;
   background-clip: text;
   -webkit-background-clip: text;
 }
-.bannerText p{
+.video_wrapper .video p{
+  text-transform: uppercase;
   color: transparent;
   line-height: .8;
-  font-size: 990px;
+  font-size: 1150px;
   font-family: 'Bebas Neue';
   font-weight: 900;
   text-align: center;
+  letter-spacing: -4px;
 }
 
 /* slide */
