@@ -83,7 +83,6 @@ h1{font-family: 'GmarketSansMedium', sans-serif; cursor: pointer;}
 }
 .fixed .text:hover{
   opacity: .6;
-  opacity: 0;
   animation-name: opacity_ani;
   animation-delay: 2.2s;
   animation-duration: 1s;
@@ -211,13 +210,8 @@ header::after{
   font-weight: 900;
   text-align: center;
   letter-spacing: -4px;
+  animation: bannerTextMove 25s linear infinite;
 }
-
-/* slide */
-.slide{
-  height: 200px;
-}
-
 
 /* tablet */
 @media(max-width: 1511px){
@@ -228,7 +222,7 @@ header::after{
     padding: 0 100px;
   }
 
-  .bannerText p{
+  .video_wrapper .video p{
     font-size: 750px;
   }
 }
@@ -252,7 +246,7 @@ header::after{
   .main_banner{
     height: 30vh;
   }
-  .bannerText p{
+  .video_wrapper .video p{
     font-size: 257px;
   }
 }
@@ -280,5 +274,21 @@ header::after{
   }
   to{
     opacity: 1;
+  }
+}
+@keyframes bannermove {
+  0% {
+      transform: translate(0, 0);
+  }
+  100% {
+      transform: translate(-50%, 0);
+  }
+}
+@keyframes bannerTextMove {
+  from {
+    text-indent: 0;
+  }
+  to {
+    text-indent: -195vw;
   }
 }
