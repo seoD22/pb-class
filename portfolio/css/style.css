@@ -1,5 +1,5 @@
 section{ padding: 0 200px; }
-h1{font-family: 'GmarketSansMedium', sans-serif; cursor: pointer;}
+h1, h1 *{font-family: 'GmarketSansMedium', sans-serif; cursor: pointer;}
 .container{ padding: 0 200px; }
 
 /* Loading */
@@ -100,7 +100,7 @@ header{
   overflow:hidden
 }
 header h1{
-  height: 50px;
+  height: 36px;
   transform: translateY(100px);
   font-size: 30px;
   transition: .5s ;
@@ -125,13 +125,13 @@ header h1 .logo_wrapper > div{
   backface-visibility: hidden;
 }
 header h1 .logo1{
-  transform: translateZ(20px);
+  transform: translateZ(18px);
 }
 header h1 .logo2{
   color: transparent;
   text-transform: uppercase;
   transform: rotateX(-90deg);
-  bottom: -22px;
+  bottom: -18px;
   -webkit-text-stroke: 1px #191919;
 }
 header h1:hover .logo_wrapper{
@@ -198,6 +198,11 @@ header::after{
   letter-spacing: -4px;
   animation: bannerTextMove 25s linear infinite;
 }
+
+/* contact */
+
+
+
 
 /* tablet */
 @media(max-width: 1511px){
