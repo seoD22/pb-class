@@ -49,14 +49,14 @@ h1, h1 *{font-family: 'GmarketSansMedium', sans-serif; cursor: pointer;}
 
 /* fixed */
 .fixed{  
-  opacity: 0;
+  opacity: 1;
   position: relative;
   z-index: 999;
-  animation-name: opacity_ani;
+  /* animation-name: opacity_ani;
   animation-delay: 2.2s;
   animation-duration: 1s;
   animation-iteration-count: 1;
-  animation-fill-mode: forwards;
+  animation-fill-mode: forwards; */
 }
 /* kakao QR */
 .kakao{
@@ -88,6 +88,9 @@ h1, h1 *{font-family: 'GmarketSansMedium', sans-serif; cursor: pointer;}
   animation-duration: 1s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
+}
+.fixed.none{
+  display: none;
 }
 
 /* header */
@@ -254,7 +257,7 @@ header::after{
   font-weight: 200;
 }
 .contact a:hover h3{
-  transform: translateX(-120px);
+  transform: translateX(-110px);
 }
 .contact a:hover h3:before{
   width: 100%;
