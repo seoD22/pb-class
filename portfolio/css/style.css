@@ -169,11 +169,11 @@ header::after{
 /* banner */
 .main_banner{
   position: relative;
-  height: 91vh;
+  height: 88vh;
   overflow: hidden;
 }
 .main_banner::after{
-  content: "";
+  /* content: "";
   background-color: #191919;
   height: 1px;
   position: absolute;
@@ -184,7 +184,7 @@ header::after{
   animation-duration: .6s;
   animation-iteration-count: 1;
   animation-timing-function: ease-in;
-  animation-fill-mode: forwards;
+  animation-fill-mode: forwards; */
 }
 .video_wrapper{
   width: 100vw;
@@ -205,7 +205,7 @@ header::after{
   text-transform: uppercase;
   color: transparent;
   line-height: .8;
-  font-size: 1150px;
+  font-size: 873px;
   font-family: 'Bebas Neue';
   font-weight: 900;
   text-align: center;
@@ -223,7 +223,7 @@ header::after{
   }
 
   .main_banner{
-    height: 76vh;
+    height: 77vh;
   }
   .video_wrapper .video p{
     font-size: 750px;
@@ -247,7 +247,7 @@ header::after{
   }
 
   .main_banner{
-    height: 26vh;
+    height: 27vh;
   }
   .video_wrapper .video p{
     font-size: 257px;
