@@ -200,9 +200,67 @@ header::after{
 }
 
 /* contact */
-
-
-
+.contact a,
+.contact p{
+  text-align: center;
+}
+.contact a{
+  display: block;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact .blend{
+  mix-blend-mode: unset;
+}
+.contact h3{
+  font-size: 80px;
+  font-weight: 500;
+  background-color: #f7f6f1;
+  color: #191919;
+  margin: 0;
+  z-index: 1;
+  position: relative;
+  transform: translateX(0);
+  transition: .5s;
+}
+.contact h3::before{
+  content: "오픈채팅방으로 이동";
+  -webkit-text-stroke: 2px #191919;
+  position: absolute;
+  color: #ffffff;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  transition: .5s;
+}
+.contact .arrow{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  border: 2px solid;
+  width: 90px;
+  border-radius: 30px;
+  top: 37px;
+  right: 224px;
+  transition: .5s;
+  opacity: 0;
+}
+.contact .material-symbols-sharp{
+  font-size: 45px;
+  font-weight: 200;
+}
+.contact a:hover h3{
+  transform: translateX(-120px);
+}
+.contact a:hover h3:before{
+  width: 100%;
+}
+.contact a:hover .arrow{
+  opacity: 1;
+}
 
 /* tablet */
 @media(max-width: 1511px){
@@ -299,3 +357,11 @@ header::after{
     text-indent: -195vw;
   }
 }
+/* @keyframes textAnimate {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+} */
