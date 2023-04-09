@@ -219,6 +219,7 @@ header::after{
   font-weight: 500;
   background-color: #f7f6f1;
   color: #191919;
+  white-space: nowrap;
   margin: 0;
   z-index: 1;
   position: relative;
@@ -277,6 +278,13 @@ header::after{
   .video_wrapper .video p{
     font-size: 750px;
   }
+
+  .contact a:hover h3{
+    transform: translateX(0);
+  }
+  .contact .arrow{
+    display: none;
+  }
 }
 
 /* mobile */
@@ -314,7 +322,20 @@ header::after{
   .video_wrapper .video p{
     font-size: 257px;
   }
-}
+
+  .contact h3{
+    font-size: 30px;
+  }
+  .contact h3::before{
+    -webkit-text-stroke: 1px #191919;
+  }
+  .contact a:hover h3{
+    transform: translateX(0);
+  }
+  .contact .arrow{
+    display: none;
+  }
+} 
 
 /* keyframe */
 @keyframes navi_width{
