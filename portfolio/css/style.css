@@ -117,6 +117,10 @@ h1, h1 *{font-family: 'GmarketSansMedium', sans-serif; cursor: pointer;}
   position: relative;
   bottom: 0;
 }
+.topBtn:hover{
+  transition-delay: .15s;
+  filter: drop-shadow(0px 0px 6px black);
+}
 .topBtn:hover .material-symbols-sharp{
   animation: topBtnAnimate .2s linear forwards;
 }
