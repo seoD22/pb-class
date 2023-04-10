@@ -109,6 +109,8 @@ h1, h1 *{font-family: 'GmarketSansMedium', sans-serif; cursor: pointer;}
 }
 .topBtn.none{
   opacity: 0;
+  z-index: -1;
+  bottom: -100%;
 }
 .topBtn .material-symbols-sharp{
   font-weight: 200;
@@ -313,6 +315,7 @@ footer{
   justify-content: center;
   height: 40px;
   color: #969696;
+  margin-top: 180px;
 }
 
 
@@ -339,6 +342,10 @@ footer{
   }
   .contact .arrow{
     display: none;
+  }
+
+  footer{
+    margin-top: 150px;
   }
 }
 
@@ -389,6 +396,14 @@ footer{
   }
   .contact .arrow{
     display: none;
+  }
+  .contact p{
+    font-size: 15px;
+    margin: 8px 0;
+  }
+
+  footer{
+    margin-top: 50px;
   }
 } 
 
