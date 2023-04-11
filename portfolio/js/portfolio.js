@@ -33,6 +33,9 @@ window.addEventListener('scroll', ()=>{
     $fixed.classList.add('none');
     $topBtn.classList.add('none');
   }
+
+  // scroll 이벤트 함수
+  document.body.style.setProperty('--scroll', window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
 })
 
 // topBtn click 이벤트

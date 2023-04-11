@@ -1,5 +1,6 @@
 section{ padding: 0 200px; }
 h1, h1 *{font-family: 'GmarketSansMedium', sans-serif; cursor: pointer;}
+h2{margin-top: 120px; font-family: 'GmarketSansMedium', sans-serif;}
 .container{ padding: 0 200px; }
 
 /* Loading */
@@ -243,7 +244,28 @@ header::after{
 
 /* introduce */
 .introduce .pic{
-
+  background-image: url(../img/seohee.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 310px;
+  height: 400px;
+  margin-top: 50px;
+  position: relative;
+}
+.introduce .pic::before{
+  content: "positive";
+  position: absolute;
+  text-transform: uppercase;
+  color: #cecece42  ;
+  filter: drop-shadow(0 0 3px #cecece);
+  font-size: 100px;
+  font-weight: 600;
+  z-index: -1;
+  right: -100%;
+  white-space: pre;
+  animation: introScroll .2s linear forwards;
+  animation-play-state: paused;
+  animation-delay: calc(var(--scroll) * -1s);
 }
 
 /* contact */
@@ -465,5 +487,13 @@ footer{
   }
   100% {
     bottom: 0;
+  }
+}
+@keyframes introScroll {
+  from {
+    right: -263%;
+  }
+  to {
+    right: -100%;;
   }
 }
