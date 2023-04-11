@@ -4,10 +4,12 @@ const $html = document.querySelector('html');
 const $body = document.querySelector('body');
 const $fixed = document.querySelector('.fixed');
 const $topBtn = document.querySelector('.topBtn');
+const $section = document.querySelectorAll('section')
 
 $html.style.overflow = 'hidden'; //로딩 중 스크롤 방지
 
 window.addEventListener('load', ()=>{
+  scrollTo(0, 0)
   setTimeout(() => { //로딩속도 구현
     $loader.classList.remove('loader');
     $html.style.overflow = 'auto'; //스크롤 방지 해제
@@ -32,6 +34,14 @@ window.addEventListener('scroll', ()=>{
   }else{
     $fixed.classList.add('none');
     $topBtn.classList.add('none');
+  }
+
+  for(let i = 0; i<$section.length; i++){
+    if(scrollTop  + 400 >= $section[i].offsetTop){
+      $section[i].classList.add('reveal')
+    }else{
+      $section[i].classList.remove('reveal')
+    }
   }
 
   // scroll 이벤트 함수

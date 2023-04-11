@@ -261,11 +261,14 @@ header::after{
   font-size: 100px;
   font-weight: 600;
   z-index: -1;
-  right: -100%;
+  right: -263%;
   white-space: pre;
   animation: introScroll .2s linear forwards;
   animation-play-state: paused;
   animation-delay: calc(var(--scroll) * -1s);
+}
+.introduce.reveal .pic::before{
+
 }
 
 /* contact */
