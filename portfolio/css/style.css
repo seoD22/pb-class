@@ -208,6 +208,11 @@ header::after{
   position: relative;
   height: 88vh;
   overflow: hidden;
+  transition: 2.5s;
+  transition-delay: 2s;
+}
+.main_banner.none{
+  height: 0;
 }
 .video_wrapper{
   width: 100vw;
@@ -234,6 +239,11 @@ header::after{
   text-align: center;
   letter-spacing: -4px;
   animation: bannerTextMove 25s linear infinite;
+}
+
+/* introduce */
+.introduce .pic{
+
 }
 
 /* contact */
@@ -308,6 +318,7 @@ header::after{
 /* footer */
 footer{
   background-color: #ffffff;
+  text-transform: uppercase;
   font-size: 12px;
   font-weight: 300;
   display: flex;

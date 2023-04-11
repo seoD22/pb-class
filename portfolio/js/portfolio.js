@@ -1,4 +1,5 @@
 const $loader = document.querySelector('.loader');
+const $main = document.querySelector('.main_banner');
 const $html = document.querySelector('html');
 const $body = document.querySelector('body');
 const $fixed = document.querySelector('.fixed');
@@ -10,6 +11,7 @@ window.addEventListener('load', ()=>{
   setTimeout(() => { //로딩속도 구현
     $loader.classList.remove('loader');
     $html.style.overflow = 'auto'; //스크롤 방지 해제
+    $main.classList.remove('none')
   }, 1000);
 })
 
