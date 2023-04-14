@@ -4,7 +4,7 @@ const $html = document.querySelector('html');
 const $body = document.querySelector('body');
 const $fixed = document.querySelector('.fixed');
 const $topBtn = document.querySelector('.topBtn');
-const $section = document.querySelectorAll('section')
+const $section = document.querySelectorAll('section');
 
 $html.style.overflow = 'hidden'; //로딩 중 스크롤 방지
 
@@ -22,7 +22,20 @@ window.addEventListener('scroll', ()=>{
   const scrollTop = document.documentElement.scrollTop;
   const innerHeight = document.documentElement.clientHeight;
   const bodyBottom = $body.scrollHeight;
-  // console.log(scroll)
+
+  const options = {
+    threshold: [0.5] 
+  }
+  const io = new IntersectionObserver((entries)=>{
+    // entries[0].target.classList.add('show')
+    entries.forEach((entry, idx)=>{
+      if(entry.isIntersecting){
+        entry.target.classList.add('show');
+      }else{
+        entry.target.classList.remove('show');
+      }
+    })
+  }, options)
 
   // fixed
   if(scrollTop + innerHeight >= bodyBottom){  // scroll 맨 아래 감지
@@ -37,11 +50,12 @@ window.addEventListener('scroll', ()=>{
   }
 
   for(let i = 0; i<$section.length; i++){
-    if(scrollTop  + 400 >= $section[i].offsetTop){
-      $section[i].classList.add('reveal')
-    }else{
-      $section[i].classList.remove('reveal')
-    }
+    io.observe($section[i]) // 모든 section을 observe에 등록
+    // if(scrollTop  + 400 >= $section[i].offsetTop){
+    //   $section[i].classList.add('reveal')
+    // }else{
+    //   $section[i].classList.remove('reveal')
+    // }
   }
 
   // scroll 이벤트 함수
