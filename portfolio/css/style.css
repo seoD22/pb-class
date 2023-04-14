@@ -244,6 +244,10 @@ header::after{
 }
 
 /* introduce */
+.introduce > div{
+  display: flex;
+  justify-content: space-between;
+}
 .introduce .pic{
   background-image: url(../img/seohee.png);
   background-repeat: no-repeat;
@@ -260,12 +264,13 @@ header::after{
 .introduce .pic p{
   position: relative;
   text-transform: uppercase;
-  color: #cecece42  ;
+  color: #cecece2b  ;
   filter: drop-shadow(0 0 3px #cecece);
-  font-size: 100px;
+  font-size: 110px;
   font-weight: 600;
   white-space: pre;
   z-index: -1;
+  line-height: 1;
 }
 .introduce .pic p:nth-child(1){
   right: -160px;
@@ -275,6 +280,47 @@ header::after{
 }
 .introduce .pic p:nth-child(3){
   right: -230px;
+}
+.introduce .text{
+  width: 533px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.introduce .text p:nth-child(1){
+  font-size: 50px;
+  font-weight: 700;
+}
+.introduce .text a{
+  text-align: center;
+  font-size: 35px;
+  font-weight: 600;
+  width: 220px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.introduce .text a:hover span{
+  position: relative;
+}
+.introduce .text a:hover span:nth-child(1){
+  animation: bounce .2s ease-in forwards;
+  animation-delay: .1s;
+}
+.introduce .text a:hover span:nth-child(2){
+  animation: bounce .2s ease-in forwards;
+  animation-delay: .2s;
+}
+.introduce .text a:hover span:nth-child(3){
+  animation: bounce .2s ease-in forwards;
+  animation-delay: .3s;
+}
+.introduce .text a:hover span:nth-child(4){
+  animation: bounce .2s ease-in forwards;
+  animation-delay: .4s;
+}
+.introduce .text a:hover span:nth-child(5){
+  animation: bounce .2s ease-in forwards;
+  animation-delay: .5s;
 }
 
 /*.introduce.reveal .pic::before{
@@ -433,6 +479,9 @@ h2{
   header ul{
     display: none;
   }
+  header h1 .logo2{
+    bottom: -20px;
+  }
 
   .main_banner{
     height: 27vh;
@@ -519,6 +568,18 @@ h2{
   to {
     right: -100%;
   }
+}
+@keyframes bounce {
+  0% {
+    bottom: 0;
+  }
+  50% {
+    bottom: -5px;
+  }
+  100% {
+    bottom: 0;
+  }
+
 }
 /* @keyframes showAnimate {
   from {
