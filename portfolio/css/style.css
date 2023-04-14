@@ -445,6 +445,9 @@ h2{
     font-size: 750px;
   }
 
+  .introduce .pic p{
+    font-size: 80px;
+  }
   .introduce .text p:nth-child(1){
     font-size: 45px;
   }
