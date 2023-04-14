@@ -5,6 +5,7 @@ const $body = document.querySelector('body');
 const $fixed = document.querySelector('.fixed');
 const $topBtn = document.querySelector('.topBtn');
 const $section = document.querySelectorAll('section');
+const $resumeBtn = document.querySelector('.resumeBtn');
 
 $html.style.overflow = 'hidden'; //로딩 중 스크롤 방지
 
@@ -51,15 +52,16 @@ window.addEventListener('scroll', ()=>{
 
   for(let i = 0; i<$section.length; i++){
     io.observe($section[i]) // 모든 section을 observe에 등록
-    // if(scrollTop  + 400 >= $section[i].offsetTop){
-    //   $section[i].classList.add('reveal')
-    // }else{
-    //   $section[i].classList.remove('reveal')
-    // }
   }
 
   // scroll 이벤트 함수
   document.body.style.setProperty('--scroll', window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
+})
+
+// 이력서 다운 버튼
+$resumeBtn.addEventListener('click', ()=>{
+  $resumeBtn.textContent = "🖤감사합니다🖤";
+  document.querySelectorAll('.resumebtn span').textContent = "";
 })
 
 // topBtn click 이벤트
