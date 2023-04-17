@@ -498,7 +498,7 @@ h2.show {
   }
 
   .main_banner{
-    height: 77vh;
+    height: 93vh;
   }
   .video_wrapper p{
     font-size: 750px;
@@ -530,12 +530,7 @@ h2.show {
   .container{ padding: 0 30px; }
 
   .kakao{
-    bottom: 30px;
-    right: 10px;
-    left: unset;
-  }
-  .kakao img{
-    width: 80px;
+    display: none;
   }
   .fixed .text p{
     font-size: 15px;
@@ -557,7 +552,7 @@ h2.show {
   }
 
   .main_banner{
-    height: 27vh;
+    height: 32vh;
   }
   .video_wrapper p{
     font-size: 257px;
@@ -572,21 +567,36 @@ h2.show {
   }
   .introduce .text{
     opacity: 1;
-    width: 410px;
+    width: 372px;
     margin-top: 30px;
   }
   .introduce .text p:nth-child(1){
-    font-size: 38px;
+    font-size: 35px;
     text-align: center;
   }
   .introduce .text p:nth-child(2){
     margin: 30px 0;
   }
 
-  .portfolio .por_img{
-    width: 420px;
-    height: 315px;
+  .portfolio li{
+    display: block;
+    margin-bottom: 170px;
   }
+  .portfolio .por_img{
+    width: 370px;
+    height: 274px;
+  }
+  .portfolio .text{
+    margin: 25px 0;
+    text-align: left;
+  }
+  .portfolio .title{
+    font-size: 30px;
+  }
+  .portfolio .des{
+    font-size: 15px;
+  }
+
 
   .contact h3{
     font-size: 30px;
