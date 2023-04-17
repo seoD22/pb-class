@@ -238,8 +238,8 @@ header::after{
 }
 .video_wrapper p{
   text-transform: uppercase;
-  line-height: .8;
-  font-size: 873px;
+  line-height: .83;
+  font-size: 847px;
   font-family: 'Bebas Neue';
   font-weight: 900;
   text-align: center;
@@ -343,9 +343,13 @@ header::after{
   z-index: 10;
 }
 .portfolio li{
+  display: flex;
   margin-bottom: 250px;
   opacity: 0;
   transition: .8s;
+}
+.portfolio li:last-child{
+  margin-bottom: 0;
 }
 .portfolio li.show{
   opacity: 1;
@@ -360,7 +364,7 @@ header::after{
 .portfolio .title{
   font-size: 50px;
   font-weight: 500;
-  margin: 15px 0;
+  line-height: 1;
 }
 .portfolio .des {
   font-size: 17px;
@@ -369,10 +373,25 @@ header::after{
   transition: .8s;
   transition-delay: .5s;
   opacity: 0;
+  margin: 10px 0;
+}
+.portfolio li.right {
+  margin-left: auto;
+  justify-content: end;
+}
+.portfolio li.right .por_img{
+  order: 1;
+}
+.portfolio li.right .text{
+  order: 0;
+  text-align: right;
 }
 .portfolio li.show .des {
   transform: translateY(0);
   opacity: 1;
+}
+.portfolio .text{
+  margin: 0 50px;
 }
 
 /* contact */

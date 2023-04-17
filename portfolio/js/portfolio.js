@@ -69,6 +69,9 @@ window.addEventListener('scroll', ()=>{
   }
   for(let i = 0; i<$portfolioList.length; i++){
     io_por.observe($portfolioList[i]);
+    if(i%2 == 1){
+      $portfolioList[i].classList.add('right')
+    }
   }
 
   // scroll 이벤트 함수
