@@ -5,6 +5,7 @@ const $body = document.querySelector('body');
 const $fixed = document.querySelector('.fixed');
 const $topBtn = document.querySelector('#topBtn');
 const $section = document.querySelectorAll('section');
+const $h2 = document.querySelectorAll('section h2')
 const $resumeBtn = document.querySelector('#resumeBtn');
 
 $html.style.overflow = 'hidden'; //로딩 중 스크롤 방지
@@ -25,10 +26,9 @@ window.addEventListener('scroll', ()=>{
   const bodyBottom = $body.scrollHeight;
 
   const options = {
-    threshold: [0.5] 
+    threshold: [1] 
   }
   const io = new IntersectionObserver((entries)=>{
-    // entries[0].target.classList.add('show')
     entries.forEach((entry, idx)=>{
       if(entry.isIntersecting){
         entry.target.classList.add('show');
@@ -50,8 +50,8 @@ window.addEventListener('scroll', ()=>{
     $topBtn.classList.add('none');
   }
 
-  for(let i = 0; i<$section.length; i++){
-    io.observe($section[i]) // 모든 section을 observe에 등록
+  for(let i = 0; i<$h2.length; i++){
+    io.observe($h2[i]); // 모든 h2를 observe에 등록
   }
 
   // scroll 이벤트 함수
