@@ -61,6 +61,7 @@ h2{margin-top: 120px; font-family: 'GmarketSansMedium', sans-serif;}
   bottom: 10px;
   left: 10px;
   z-index: 1;
+  transition: .4s;
 }
 .kakao img{
   width: 120px;
@@ -70,6 +71,7 @@ h2{margin-top: 120px; font-family: 'GmarketSansMedium', sans-serif;}
   bottom: 10px;
   right: 10px;
   z-index: 1;
+  transition: .4s;
 }
 .fixed .text p{
   text-transform: uppercase;
@@ -89,14 +91,20 @@ h2{margin-top: 120px; font-family: 'GmarketSansMedium', sans-serif;}
 .fixed.none{
   opacity: 0;
 }
-.topBtn{
+.fixed.none .text{
+  bottom: -100%;
+}
+.fixed.none .kakao{
+  bottom: -100%;
+}
+#topBtn{
   position: relative;
   opacity: 1;
   position: fixed;
   bottom: 10px;
   right: 10px;
   z-index: 1000;
-  transition: .3s;
+  transition: .4s;
   cursor: pointer;
   border: 1px solid #191919;
   width: 40px;
@@ -108,23 +116,23 @@ h2{margin-top: 120px; font-family: 'GmarketSansMedium', sans-serif;}
   background-color: #191919;
   overflow: hidden;
 }
-.topBtn.none{
+#topBtn.none{
   opacity: 0;
   z-index: -1;
   bottom: -100%;
 }
-.topBtn .material-symbols-sharp{
+#topBtn .material-symbols-sharp{
   font-weight: 200;
   transform: rotate(-90deg);
   color: #f7f6f1;
   position: relative;
   bottom: 0;
 }
-.topBtn:hover{
+#topBtn:hover{
   transition-delay: .15s;
   filter: drop-shadow(0px 0px 6px black);
 }
-.topBtn:hover .material-symbols-sharp{
+#topBtn:hover .material-symbols-sharp{
   animation: topBtnAnimate .2s linear forwards;
 }
 
@@ -329,11 +337,21 @@ header::after{
   animation-delay: .5s;
 }
 
-/*.introduce.reveal .pic::before{
-  animation: introScroll .2s linear forwards;
-  animation-play-state: paused;
-  animation-delay: calc(var(--scroll) * -1s);
-} */
+/* portfolio */
+.portfolio h2{
+  position: sticky;
+  top: 5%;
+}
+.portfolio li{
+  margin-bottom: 250px;
+}
+.portfolio .por_img{
+  background-image: url(../../assets/images/main/portfolio/week1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 400px;
+  height: 250px;
+}
 
 /* contact */
 .contact a,
@@ -612,15 +630,4 @@ h2{
   100% {
     bottom: 0;
   }
-
 }
-/* @keyframes showAnimate {
-  from {
-    opacity: 0;
-    transform: translateX(-100%)
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0)
-  }
-} */

@@ -12,7 +12,7 @@
   color: #191919;
   box-sizing: border-box;
 }
-/* html{scroll-behavior: smooth;} */
+html{scroll-behavior: smooth;}
 
 body{background-color: #f7f6f1; margin: 0;}
 
