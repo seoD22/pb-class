@@ -2,6 +2,9 @@ section{ padding: 0 200px;}
 h1, h1 *{font-family: 'GmarketSansMedium', sans-serif; cursor: pointer;}
 h2{margin-top: 120px; font-family: 'GmarketSansMedium', sans-serif;}
 .container{ padding: 0 200px; }
+video::-webkit-media-controls-fullscreen-button {
+	display: none;
+}
 
 /* Loading */
 .loader{
@@ -216,7 +219,7 @@ header::after{
 /* banner */
 .main_banner{
   position: relative;
-  height: 88vh;
+  height: 90vh;
   overflow: hidden;
   transition: 2.5s;
   transition-delay: 2s;
@@ -225,8 +228,6 @@ header::after{
   height: 0;
 }
 .video_wrapper{
-  width: 100vw;
-  height: 100vh;
   position: relative;
   z-index: -1;
 }
@@ -339,9 +340,15 @@ header::after{
 .portfolio h2{
   position: sticky;
   top: 5%;
+  z-index: 10;
 }
 .portfolio li{
   margin-bottom: 250px;
+  opacity: 0;
+  transition: .8s;
+}
+.portfolio li.show{
+  opacity: 1;
 }
 .portfolio .por_img{
   background-image: url(../../assets/images/main/portfolio/week1.png);
@@ -355,9 +362,17 @@ header::after{
   font-weight: 500;
   margin: 15px 0;
 }
-.portfolio p {
+.portfolio .des {
   font-size: 17px;
   font-weight: 300;
+  transform: translateY(-200%);
+  transition: .8s;
+  transition-delay: .5s;
+  opacity: 0;
+}
+.portfolio li.show .des {
+  transform: translateY(0);
+  opacity: 1;
 }
 
 /* contact */
@@ -466,7 +481,7 @@ h2.show {
   .main_banner{
     height: 77vh;
   }
-  .video_wrapper .video p{
+  .video_wrapper p{
     font-size: 750px;
   }
 
@@ -525,7 +540,7 @@ h2.show {
   .main_banner{
     height: 27vh;
   }
-  .video_wrapper .video p{
+  .video_wrapper p{
     font-size: 257px;
   }
 
@@ -547,6 +562,11 @@ h2.show {
   }
   .introduce .text p:nth-child(2){
     margin: 30px 0;
+  }
+
+  .portfolio .por_img{
+    width: 420px;
+    height: 315px;
   }
 
   .contact h3{
