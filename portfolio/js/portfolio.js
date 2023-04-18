@@ -78,27 +78,15 @@ window.addEventListener('scroll', ()=>{
   document.body.style.setProperty('--scroll', window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
 })
 
-// window.addEventListener('click', (e)=>{
-//   console.log(e.target.id)
-//   // 이력서 다운 버튼
-//   if(e.target.id == 'resumeBtn'){
-//     $resumeBtn.textContent = "🖤감사합니다🖤";
-//     document.querySelectorAll('.resumebtn span').textContent = "";
-//   };
-//   // topBtn click 이벤트
-//   if(e.target.id == 'topBtn'){
-//     window.scrollTo(0, 0)
-//   }
-// })
+window.addEventListener('click', (e)=>{
 
-// 이력서 다운 버튼
-$resumeBtn.addEventListener('click', ()=>{
-  $resumeBtn.textContent = "🖤감사합니다🖤";
-  document.querySelectorAll('.resumebtn span').textContent = "";
-})
-
-// topBtn click 이벤트
-$topBtn.addEventListener('click', ()=>{
-  window.scrollTo(0, 0)
+  console.log(e.target)
+  if((e.target.parentElement.id || e.target.id) === 'resumeBtn'){
+    $resumeBtn.textContent = "🖤감사합니다🖤";
+    document.querySelectorAll('.resumebtn span').textContent = "";
+  }
+  if ((e.target.parentElement.id || e.target.id) === 'topBtn'){
+    window.scrollTo(0, 0)
+  }
 })
 

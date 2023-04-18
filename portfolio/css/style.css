@@ -267,7 +267,6 @@ header::after{
   flex-direction: column;
   justify-content: space-between;
 }
-
 .introduce .pic p{
   position: relative;
   text-transform: uppercase;
@@ -338,6 +337,8 @@ header::after{
 
 /* portfolio */
 .portfolio h2{
+  filter: invert(1);
+  mix-blend-mode: exclusion;
   position: sticky;
   top: 5%;
   z-index: 10;
