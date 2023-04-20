@@ -71,7 +71,7 @@ window.addEventListener('scroll', ()=>{
   for(let i = 0; i<$portfolioList.length; i++){
     io_por.observe($portfolioList[i]);
     if(i%2 == 1){
-      $portfolioList[i].classList.add('right')
+      $portfolioList[i].classList.add('right');
     }
   }
 
@@ -80,13 +80,30 @@ window.addEventListener('scroll', ()=>{
 })
 
 window.addEventListener('click', (e)=>{
-  // console.log(e.target)
+  // 이력서 다운
   if((e.target.parentElement.id || e.target.id) === 'resumeBtn'){
     $resumeBtn.textContent = "🖤감사합니다🖤";
     document.querySelectorAll('.resumebtn span').textContent = "";
   }
+  // Top 버튼
   if ((e.target.parentElement.id || e.target.id) === 'topBtn'){
-    window.scrollTo(0, 0)
+    window.scrollTo(0, 0);
   }
-})
+});
 
+// swiper
+var swiper = new Swiper(".mySwiper", {
+  // loop: true,
+  slidesPerView: 2.5,
+  spaceBetween: 20,
+  breakpoints: {
+    768: {
+        slidesPerView: 4,  //브라우저가 768보다 클 때
+        spaceBetween: 30,
+    },
+    1200: {
+        slidesPerView: 4.5,  //브라우저가 1200보다 클 때
+        spaceBetween: 30,
+    }
+  }
+});

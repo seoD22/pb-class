@@ -297,7 +297,7 @@ header::after{
   flex-direction: column;
   justify-content: space-between;
   transition: 1s;
-  transition-delay: .8s;
+  transition-delay: .1s;
 }
 .introduce .text p:nth-child(1){
   font-size: 50px;
@@ -395,7 +395,39 @@ header::after{
   margin: 0 50px;
 }
 
+/* study */
+.study{
+  padding: 0;
+}
+.study h2{
+  padding: 0 200px;
+}
+.study .mySwiper{
+  padding: 10px;
+}
+.study .swiper-slide{
+  position: relative;
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0px 7px 15px 0 rgba(0,0,0,0.15);
+  transition: all 0.3s;
+}
+.study .notionItem{
+  /* width: 300px; */
+  height: 400px;
+  display: block;
+  left: 0;
+  top: 0;
+  border-radius: 20px;
+  z-index: 1;
+  transition: all 0.3s;
+}
+
 /* contact */
+.contact{
+  padding: 200px 0;
+}
 .contact a,
 .contact p{
   text-align: center;
@@ -475,7 +507,6 @@ footer{
   justify-content: center;
   height: 40px;
   color: #969696;
-  margin-top: 180px;
 }
 
 /* section observer */
@@ -584,14 +615,16 @@ h2.show {
     margin-bottom: 170px;
   }
   .portfolio .por_img{
-    width: 370px;
     height: 274px;
     margin: auto;
   }
   .portfolio .text{
-    width: 370px;
     margin: 25px auto;
     text-align: left !important;
+  }
+  .portfolio .por_img,
+  .portfolio .text{
+    width: 370px;
   }
   .portfolio .title{
     font-size: 30px;
@@ -621,6 +654,7 @@ h2.show {
     margin-top: 50px;
   }
 } 
+
 
 /* keyframe */
 @keyframes navi_width{
