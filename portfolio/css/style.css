@@ -287,7 +287,7 @@ header::after{
 .introduce .pic p:nth-child(3){
   right: -230px;
 }
-.introduce .show + div .text{
+.introduce .text.show{
   opacity: 1;
 } 
 .introduce .text{
@@ -363,7 +363,7 @@ header::after{
   height: 400px;
 }
 .portfolio .title{
-  font-size: 50px;
+  font-size: 40px;
   font-weight: 500;
   line-height: 1;
 }
@@ -499,7 +499,7 @@ h2.show {
   }
 
   .main_banner{
-    height: 93vh;
+    height: 86vh;
   }
   .video_wrapper p{
     font-size: 750px;
@@ -527,7 +527,7 @@ h2.show {
 /* mobile */
 @media(max-width: 1023px){
   section{ padding: 0 30px; }
-  h2{font-size: 50px; margin-top: 70px; opacity: 1;}
+  h2{font-size: 50px; margin-top: 100px; opacity: 1; text-align: center;}
   .container{ padding: 0 30px; }
 
   .kakao{
@@ -553,7 +553,7 @@ h2.show {
   }
 
   .main_banner{
-    height: 32vh;
+    height: 29vh;
   }
   .video_wrapper p{
     font-size: 257px;
@@ -586,10 +586,12 @@ h2.show {
   .portfolio .por_img{
     width: 370px;
     height: 274px;
+    margin: auto;
   }
   .portfolio .text{
-    margin: 25px 0;
-    text-align: left;
+    width: 370px;
+    margin: 25px auto;
+    text-align: left !important;
   }
   .portfolio .title{
     font-size: 30px;

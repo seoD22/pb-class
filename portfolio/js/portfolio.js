@@ -66,6 +66,7 @@ window.addEventListener('scroll', ()=>{
 
   for(let i = 0; i<$h2.length; i++){
     io.observe($h2[i]); // 모든 h2를 observe에 등록
+    io.observe(document.querySelector('.introduce .text'))
   }
   for(let i = 0; i<$portfolioList.length; i++){
     io_por.observe($portfolioList[i]);
@@ -79,8 +80,7 @@ window.addEventListener('scroll', ()=>{
 })
 
 window.addEventListener('click', (e)=>{
-
-  console.log(e.target)
+  // console.log(e.target)
   if((e.target.parentElement.id || e.target.id) === 'resumeBtn'){
     $resumeBtn.textContent = "🖤감사합니다🖤";
     document.querySelectorAll('.resumebtn span').textContent = "";
