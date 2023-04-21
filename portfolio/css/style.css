@@ -612,6 +612,15 @@ h2.show {
     font-size: 45px;
   }
 
+  .study .swiper-slide:hover{
+    transform: unset;
+    box-shadow: unset;
+  }
+  .study .swiper-slide-active{
+    transform: translateY(-5px);
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.2);
+  }
+
   .contact a:hover h3{
     transform: translateX(0);
   }
@@ -704,6 +713,14 @@ h2.show {
 
   .study h2{
     padding: 0;
+  }
+  .study .swiper-slide:hover{
+    transform: unset;
+    box-shadow: unset;
+  }
+  .study .swiper-slide-active{
+    transform: translateY(-5px);
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.2);
   }
 
   .contact h3{
