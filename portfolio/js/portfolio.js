@@ -94,9 +94,13 @@ window.addEventListener('click', (e)=>{
 // swiper
 var swiper = new Swiper(".mySwiper", {
   // loop: true,
-  slidesPerView: 2.5,
+  slidesPerView: 1.3,
   spaceBetween: 20,
   breakpoints: {
+    600:{
+      slidesPerView: 2.4,  //브라우저가 768보다 클 때
+      spaceBetween: 30,
+    },
     768: {
         slidesPerView: 4,  //브라우저가 768보다 클 때
         spaceBetween: 30,

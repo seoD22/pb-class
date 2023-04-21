@@ -1,6 +1,6 @@
 section{ padding: 0 200px;}
 h1, h1 *{font-family: 'GmarketSansMedium', sans-serif; cursor: pointer;}
-h2{margin-top: 120px; font-family: 'GmarketSansMedium', sans-serif;}
+h2{margin-top: 120px; font-family: 'GmarketSansMedium', sans-serif; white-space: nowrap;}
 .container{ padding: 0 200px; }
 video::-webkit-media-controls-fullscreen-button {
 	display: none;
@@ -336,6 +336,9 @@ header::after{
 }
 
 /* portfolio */
+.portfolio{
+  margin-bottom: 250px;
+}
 .portfolio h2{
   filter: invert(1);
   mix-blend-mode: exclusion;
@@ -444,6 +447,9 @@ header::after{
   text-transform: uppercase;
   font-weight: 200;
   margin-right: 7px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .notionItem .title{
   font-size: 20px;
@@ -696,6 +702,9 @@ h2.show {
     font-size: 15px;
   }
 
+  .study h2{
+    padding: 0;
+  }
 
   .contact h3{
     font-size: 30px;
