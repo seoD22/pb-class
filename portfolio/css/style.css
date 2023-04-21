@@ -403,7 +403,7 @@ header::after{
   padding: 0 200px;
 }
 .study .mySwiper{
-  padding: 10px;
+  padding: 20px;
 }
 .study .swiper-slide{
   position: relative;
@@ -413,15 +413,78 @@ header::after{
   box-shadow: 0px 7px 15px 0 rgba(0,0,0,0.15);
   transition: all 0.3s;
 }
+.study .swiper-slide:hover{
+  transform: translateY(-5px);
+  box-shadow: 5px 5px 20px rgba(0,0,0,0.2);
+}
 .study .notionItem{
-  /* width: 300px; */
   height: 400px;
-  display: block;
   left: 0;
   top: 0;
   border-radius: 20px;
   z-index: 1;
   transition: all 0.3s;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.notionItem .txtBox{
+  padding: 25px;
+}
+.notionItem .top{
+  display: flex;
+}
+.notionItem .label{
+  background-color: #191919;
+  border-radius: 20px;
+  color: #f7f6f1;
+  width: fit-content;
+  padding: 3px 10px;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 200;
+  margin-right: 7px;
+}
+.notionItem .title{
+  font-size: 20px;
+  font-weight: 600;
+  margin: 12px 0;
+}
+.notionItem .tag{
+  font-size: 13px;
+  font-weight: 400;
+  color: #aaa;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.notionItem .bg{
+  flex-grow: 1;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.swiper-slide:nth-child(1) .notionItem .bg{
+  background-image: url(../img/study/1_bg.jpg);
+  background-position: left center;
+}
+.swiper-slide:nth-child(2) .notionItem .bg{
+  background-image: url(../img/study/2_bg.jpg);
+}
+.swiper-slide:nth-child(3) .notionItem .bg{
+  background-image: url(../img/study/3_bg.jpg);
+}
+.swiper-slide:nth-child(4) .notionItem .bg{
+  background-image: url(../img/study/4_bg.png);
+}
+.swiper-slide:nth-child(5) .notionItem .bg{
+  background-image: url(../img/study/5_bg.jpg);
+}
+.swiper-slide:nth-child(6) .notionItem .bg{
+  background-image: url(../img/study/6_bg.jpg);
+}
+.swiper-slide:nth-child(7) .notionItem .bg{
+  background-image: url(../img/study/7_bg.jpg);
 }
 
 /* contact */
@@ -473,7 +536,7 @@ header::after{
   width: 90px;
   border-radius: 30px;
   top: 37px;
-  right: 224px;
+  right: 424px;
   transition: .5s;
   opacity: 0;
 }

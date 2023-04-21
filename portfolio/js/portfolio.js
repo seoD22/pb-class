@@ -102,8 +102,8 @@ var swiper = new Swiper(".mySwiper", {
         spaceBetween: 30,
     },
     1200: {
-        slidesPerView: 4.5,  //브라우저가 1200보다 클 때
-        spaceBetween: 30,
+        slidesPerView: 4.8,  //브라우저가 1200보다 클 때
+        spaceBetween: 50,
     }
   }
 });
