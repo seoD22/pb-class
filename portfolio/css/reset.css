@@ -28,6 +28,41 @@ p{margin: 0;}
 
 ul{padding: 0; margin: 0;}
 
+/* 전체화면 버튼 */
+video::-webkit-media-controls-fullscreen-button{
+  display: none;
+}
+
+/* 일시정지, 재생 버튼 */
+video::-webkit-media-controls-play-button{
+  display: none;
+}
+
+/* 재생 슬라이드..? */
+video::-webkit-media-controls-timeline{
+  display: none;
+}
+
+/* 현재 진행 시간 */
+video::-webkit-media-controls-current-time-display{
+  display: none;
+}
+
+/* 전체 시간 */
+video::-webkit-media-controls-time-remaining-display{
+  display: none;
+}
+
+/* 음소거 버튼 */
+video::-webkit-media-controls-mute-button{
+  display: none;
+}
+
+/* 볼륨 조절 슬라이드 */
+video::-webkit-media-controls-volume-slider{
+  display: none;
+}
+
 /* swiper */
 .swiper,
 swiper-container {
