@@ -8,6 +8,9 @@ const $section = document.querySelectorAll('section');
 const $h2 = document.querySelectorAll('section h2');
 const $resumeBtn = document.querySelector('#resumeBtn');
 const $portfolioList = document.querySelectorAll('.portfolio li');
+const $header = document.querySelector('header')
+const $navi = document.querySelectorAll('.navi li')
+const $contact = document.querySelector('.contact')
 
 $html.style.overflow = 'hidden'; //로딩 중 스크롤 방지
 
@@ -20,11 +23,20 @@ window.addEventListener('load', ()=>{
   }, 1000);
 })
 
+// 네비게이션
+// 네비 버튼 클릭 시 이동
+for(let i = 0; i<$navi.length; i++){
+  $navi[i].addEventListener('click', ()=>{
+    window.scrollTo(0, $section[i].offsetTop - 100)
+  })
+}
+
 // scroll event
 window.addEventListener('scroll', ()=>{
   const scrollTop = document.documentElement.scrollTop;
   const innerHeight = document.documentElement.clientHeight;
   const bodyBottom = $body.scrollHeight;
+  const contactHeight = $contact.clientHeight;
 
   const options = {
     threshold: [1]
@@ -40,7 +52,7 @@ window.addEventListener('scroll', ()=>{
   }, options);
 
   const option_por = {
-    threshold: [.4]
+    threshold: [.7]
   }
   const io_por = new IntersectionObserver((entries)=>{
     entries.forEach((entry, idx)=>{
@@ -53,23 +65,26 @@ window.addEventListener('scroll', ()=>{
   }, option_por);
 
   // fixed
-  if(scrollTop + innerHeight >= bodyBottom){  // scroll 맨 아래 감지
+  if(scrollTop + innerHeight + contactHeight >= bodyBottom){  // scroll 맨 아래 감지
     $topBtn.classList.remove('none');
     $fixed.classList.add('none');
   }else if(scrollTop >= 100){
     $fixed.classList.remove('none');
     $topBtn.classList.add('none');
+    $header.classList.add('fix');
   }else{
     $fixed.classList.add('none');
     $topBtn.classList.add('none');
+    $header.classList.remove('fix');
   }
 
+  // intersection Observer 
   for(let i = 0; i<$h2.length; i++){
-    io.observe($h2[i]); // 모든 h2를 observe에 등록
+    io.observe($h2[i]); // 모든 h2 등록
     io.observe(document.querySelector('.introduce .text'))
   }
   for(let i = 0; i<$portfolioList.length; i++){
-    io_por.observe($portfolioList[i]);
+    io_por.observe($portfolioList[i]); // 포폴 li 등록
     if(i%2 == 1){
       $portfolioList[i].classList.add('right');
     }
@@ -81,12 +96,13 @@ window.addEventListener('scroll', ()=>{
 
 window.addEventListener('click', (e)=>{
   // 이력서 다운
+  console.log(e.target)
   if((e.target.parentElement.id || e.target.id) === 'resumeBtn'){
     $resumeBtn.textContent = "🖤감사합니다🖤";
     document.querySelectorAll('.resumebtn span').textContent = "";
   }
   // Top 버튼
-  if ((e.target.parentElement.id || e.target.id) === 'topBtn'){
+  if (((e.target.parentElement.id || e.target.id) === 'topBtn') || (e.target.id === 'logo')){
     window.scrollTo(0, 0);
   }
 });
