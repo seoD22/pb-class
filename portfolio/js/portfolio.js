@@ -101,11 +101,11 @@ var swiper = new Swiper(".mySwiper", {
       slidesPerView: 2.4,  //브라우저가 768보다 클 때
       spaceBetween: 30,
     },
-    768: {
-        slidesPerView: 4,  //브라우저가 768보다 클 때
+    1100: {
+        slidesPerView: 3.8,  //브라우저가 768보다 클 때
         spaceBetween: 30,
     },
-    1200: {
+    1400: {
         slidesPerView: 4.8,  //브라우저가 1200보다 클 때
         spaceBetween: 50,
     }

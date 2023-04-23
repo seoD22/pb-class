@@ -221,15 +221,17 @@ header::after{
   position: relative;
   height: 90vh;
   overflow: hidden;
-  transition: 2.5s;
-  transition-delay: 2s;
 }
-.main_banner.none{
+.main_banner.none .video_wrapper{
   height: 0;
 }
-.video_wrapper{
+.main_banner .video_wrapper{
+  height: inherit;
+  overflow: hidden;
   position: relative;
   z-index: -1;
+  transition: 2.5s;
+  transition-delay: 2s;
 }
 .video_wrapper video{
   width: 100%;
@@ -611,14 +613,14 @@ h2.show {
   .introduce .text p:nth-child(1){
     font-size: 45px;
   }
-
-  .study .swiper-slide:hover{
-    transform: unset;
-    box-shadow: unset;
-  }
+  
   .study .swiper-slide-active{
     transform: translateY(-5px);
     box-shadow: 5px 5px 20px rgba(0,0,0,0.2);
+  }
+  .study .swiper-slide:hover{
+    transform: translateY(0);
+    box-shadow: 0px 7px 15px 0 rgba(0,0,0,0.15);
   }
 
   .contact a:hover h3{
@@ -715,8 +717,8 @@ h2.show {
     padding: 0;
   }
   .study .swiper-slide:hover{
-    transform: unset;
-    box-shadow: unset;
+    transform: translateY(0);
+    box-shadow: 0px 7px 15px 0 rgba(0,0,0,0.15);
   }
   .study .swiper-slide-active{
     transform: translateY(-5px);
