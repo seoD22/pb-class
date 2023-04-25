@@ -233,7 +233,7 @@ header::after{
 /* banner */
 .main_banner{
   position: relative;
-  height: 90vh;
+  height: 650px;
   overflow: hidden;
 }
 .main_banner.none .video_wrapper{
@@ -680,7 +680,7 @@ h2.show {
   }
 
   .main_banner{
-    height: 29vh;
+    height: 200px;
   }
   .video_wrapper p{
     font-size: 257px;
