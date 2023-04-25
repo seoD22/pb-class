@@ -8,28 +8,42 @@ const $section = document.querySelectorAll('section');
 const $h2 = document.querySelectorAll('section h2');
 const $resumeBtn = document.querySelector('#resumeBtn');
 const $portfolioList = document.querySelectorAll('.portfolio li');
-const $header = document.querySelector('header')
-const $navi = document.querySelectorAll('.navi li')
-const $contact = document.querySelector('.contact')
+const $header = document.querySelector('header');
+const $navi = document.querySelectorAll('.navi li');
+const $contact = document.querySelector('.contact');
 
 $html.style.overflow = 'hidden'; //로딩 중 스크롤 방지
 
 window.addEventListener('load', ()=>{
-  scrollTo(0, 0)
+  scrollTo(0, 0);
   setTimeout(() => { //로딩속도 구현
     $loader.classList.remove('loader');
     $html.style.overflow = 'auto'; //스크롤 방지 해제
-    $main.classList.remove('none')
+    $main.classList.remove('none');
   }, 1000);
 })
 
 // 네비게이션
-// 네비 버튼 클릭 시 이동
 for(let i = 0; i<$navi.length; i++){
+  let sectionTop = $section[i].getBoundingClientRect().top;
+  let elementVisible = $section[i].getBoundingClientRect().height;
+  const navbarHeight = $header.getBoundingClientRect().height;
+  const windowHeight = window.innerHeight;
+  // 네비 버튼 클릭 시 이동
   $navi[i].addEventListener('click', ()=>{
-    window.scrollTo(0, $section[i].offsetTop - 100)
+    window.scrollTo(0, $section[i].offsetTop - navbarHeight);
+  })
+
+  // 위치에 따라 클래스 적용
+  window.addEventListener('scroll', ()=>{
+    let windowscrollY = window.scrollY;
+    // console.log(sectionTop, windowHeight, windowscrollY )
+    if(windowscrollY < sectionTop ){
+      $navi[i].classList.add('active');
+    }
   })
 }
+
 
 // scroll event
 window.addEventListener('scroll', ()=>{

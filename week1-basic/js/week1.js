@@ -8,7 +8,6 @@ window.onload = ()=>{
     for (let i = 0; i < $section.length; i++) {
       let elementTop = $section[i].getBoundingClientRect().top;
       let elementVisible = 150;
-
       if (elementTop < windowHeight - elementVisible) {
         $section[i].classList.add("active");
       } else {

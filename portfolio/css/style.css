@@ -417,6 +417,7 @@ header::after{
 /* study */
 .study{
   padding: 0;
+  margin-bottom: 100px;
 }
 .study h2{
   padding: 0 200px;
@@ -512,6 +513,7 @@ header::after{
 /* contact */
 .contact{
   padding: 180px 0;
+  padding-top: 80px;
 }
 .contact a,
 .contact p{
