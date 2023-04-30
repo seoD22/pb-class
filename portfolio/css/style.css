@@ -792,6 +792,7 @@ h2.show {
     margin-bottom: 170px;
   }
   .portfolio .por_imgs{
+    display: block;
     height: 274px;
     margin: auto;
   }
