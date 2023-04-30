@@ -1,9 +1,28 @@
+/* body{
+  cursor: none;
+}
 section{ padding: 0 200px;}
 h1, h1 *{font-family: 'GmarketSansMedium', sans-serif; cursor: pointer;}
 h2{margin-top: 120px; font-family: 'GmarketSansMedium', sans-serif; white-space: nowrap;}
 .container{ padding: 0 200px; }
 video::-webkit-media-controls-fullscreen-button {
 	display: none;
+} */
+
+/* cursor custom */
+.cursor{
+  width: 3rem;
+  height: 3rem;
+  border: 2px solid;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1000;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: all 0.3s ease;
+  transform-origin: 100% 100%;
+  backdrop-filter: sepia(20%);
+  background-size: cover;
 }
 
 /* Loading */

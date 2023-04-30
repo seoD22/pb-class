@@ -1,4 +1,5 @@
 const $loader = document.querySelector('.loader');
+const $cursor = document.querySelector('.cursor');
 const $main = document.querySelector('.main_banner');
 const $html = document.querySelector('html');
 const $body = document.querySelector('body');
@@ -22,6 +23,14 @@ window.addEventListener('load', ()=>{
     $main.classList.remove('none');
   }, 1000);
 })
+
+// 마우스커서
+window.addEventListener('mousemove', cursor);
+
+function cursor(e){
+  $cursor.style.top = e.pageY + 'px';
+  $cursor.style.left = e.pageX + 'px';
+}
 
 // 네비게이션
 for(let i = 0; i<$navi.length; i++){
@@ -115,7 +124,6 @@ window.addEventListener('scroll', ()=>{
 
 window.addEventListener('click', (e)=>{
   // 이력서 다운
-  console.log(e.target)
   if((e.target.parentElement.id || e.target.id) === 'resumeBtn'){
     $resumeBtn.textContent = "🖤감사합니다🖤";
     document.querySelectorAll('.resumebtn span').textContent = "";
