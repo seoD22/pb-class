@@ -1,4 +1,5 @@
 const $loader = document.querySelector('.loader');
+const $navLink = document.querySelectorAll('header li');
 const $cursor = document.querySelector('.cursor');
 const $main = document.querySelector('.main_banner');
 const $html = document.querySelector('html');
@@ -31,6 +32,22 @@ function cursor(e){
   $cursor.style.top = e.pageY + 'px';
   $cursor.style.left = e.pageX + 'px';
 }
+
+$resumeBtn.addEventListener('mouseleave', ()=>{
+  $cursor.classList.remove('link-grow');
+})
+$resumeBtn.addEventListener('mouseover', ()=>{
+  $cursor.classList.add('link-grow');
+})
+
+$navLink.forEach((link)=>{
+  link.addEventListener('mouseleave', ()=>{
+    $cursor.classList.remove('link-grow');
+  })
+  link.addEventListener('mouseover', ()=>{
+    $cursor.classList.add('link-grow');
+  })
+})
 
 // 네비게이션
 for(let i = 0; i<$navi.length; i++){

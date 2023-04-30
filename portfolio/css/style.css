@@ -1,28 +1,35 @@
-/* body{
-  cursor: none;
+body, a{ cursor: none; }
+body::-webkit-scrollbar{
+  display: none;
 }
 section{ padding: 0 200px;}
-h1, h1 *{font-family: 'GmarketSansMedium', sans-serif; cursor: pointer;}
+h1, h1 *{font-family: 'GmarketSansMedium', sans-serif;}
 h2{margin-top: 120px; font-family: 'GmarketSansMedium', sans-serif; white-space: nowrap;}
 .container{ padding: 0 200px; }
 video::-webkit-media-controls-fullscreen-button {
 	display: none;
-} */
+}
 
 /* cursor custom */
 .cursor{
-  width: 3rem;
-  height: 3rem;
-  border: 2px solid;
+  width: 2rem;
+  height: 2rem;
   border-radius: 50%;
   position: absolute;
   z-index: 1000;
   transform: translate(-50%, -50%);
   pointer-events: none;
-  transition: all 0.3s ease;
   transform-origin: 100% 100%;
-  backdrop-filter: sepia(20%);
+  background-color: #19191952;
   background-size: cover;
+  transition: all .3s ease;
+  transition-property: background, transform;
+}
+.link-grow{
+  transform: scale(1.5);
+  background-color: #191919;
+  filter: invert(1);
+  mix-blend-mode: difference;
 }
 
 /* Loading */
@@ -99,7 +106,6 @@ video::-webkit-media-controls-fullscreen-button {
   text-transform: uppercase;
   font-weight: 700;
   font-size: 20px;
-  cursor: default;
   mix-blend-mode: difference;
 }
 .fixed .text:hover{
@@ -127,7 +133,6 @@ video::-webkit-media-controls-fullscreen-button {
   right: 10px;
   z-index: 1000;
   transition: .4s;
-  cursor: pointer;
   border: 1px solid #191919;
   width: 40px;
   height: 40px;
@@ -172,7 +177,7 @@ header.fix{
   background-color: #f7f6f1;
   left: 0;
   right: 0;
-  z-index: 1000;
+  z-index: 999;
 }
 header h1{
   height: 36px;
@@ -229,7 +234,7 @@ header ul li{
   position: relative;
 }
 header ul li a{
-  font-weight: 100;
+  font-weight: 500;
   text-transform: uppercase;
 }
 header ul li::before{
@@ -244,7 +249,6 @@ header ul li::before{
   rotate: -10deg;
   top: 10px;
   transition: .3s;
-  cursor: pointer;
 }
 header ul li:hover{
   opacity: .7;
