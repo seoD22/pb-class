@@ -1,5 +1,5 @@
 const $loader = document.querySelector('.loader');
-const $navLink = document.querySelectorAll('header li');
+const $cursorLink = document.querySelectorAll('.cursorFilter');
 const $cursor = document.querySelector('.cursor');
 const $main = document.querySelector('.main_banner');
 const $html = document.querySelector('html');
@@ -10,7 +10,6 @@ const $section = document.querySelectorAll('section');
 const $h2 = document.querySelectorAll('section h2');
 const $resumeBtn = document.querySelector('#resumeBtn');
 const $portfolioList = document.querySelectorAll('.portfolio li');
-const $portfolioPic = document.querySelectorAll('.por_imgs')
 const $header = document.querySelector('header');
 const $navi = document.querySelectorAll('.navi li');
 const $contact = document.querySelector('.contact');
@@ -46,15 +45,7 @@ function cursorEvent_add(){
   $cursor.classList.add('link-grow');
 }
 
-$resumeBtn.addEventListener('mouseleave', cursorEvent_remove);
-$resumeBtn.addEventListener('mouseover', cursorEvent_add);
-
-$navLink.forEach((link)=>{
-  link.addEventListener('mouseleave', cursorEvent_remove);
-  link.addEventListener('mouseover', cursorEvent_add);
-})
-
-$portfolioPic.forEach((link)=>{
+$cursorLink.forEach((link)=>{
   link.addEventListener('mouseleave', cursorEvent_remove);
   link.addEventListener('mouseover', cursorEvent_add);
 })
@@ -99,8 +90,6 @@ window.addEventListener('scroll', ()=>{
     entries.forEach((entry, idx)=>{
       if(entry.isIntersecting){
         entry.target.classList.add('show');
-      }else{
-        entry.target.classList.remove('show');
       }
     })
   }, options);
