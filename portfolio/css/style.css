@@ -218,13 +218,20 @@ header ul li::before{
   display: block;
   position: absolute;
   bottom: -3px;
-  width: 0;
-  height: 1px;
+  width: 100%;
+  height: 5px;
   background-color: #191919;
+  opacity: 0;
+  rotate: -10deg;
+  top: 10px;
   transition: .3s;
+  cursor: pointer;
+}
+header ul li:hover{
+  opacity: .7;
 }
 header ul li.scene::before{
-  width: 100%;
+  opacity: .3;
 }
 header::after{
   content: "";
@@ -386,12 +393,25 @@ header::after{
 .portfolio li.show{
   opacity: 1;
 }
+.por_imgs{
+  width: 550px;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 30px;
+  box-shadow: 0px 2px 10px 0 rgba(0,0,0,0.15);
+}
 .por_img{
+  width: 100%;
+  height: 100%;
   background-image: url(../../assets/images/main/portfolio/week1.png);
   background-repeat: no-repeat;
   background-size: cover;
-  width: 550px;
-  height: 400px;
+  background-position: top center;
+  transform: scale(1);
+  transition: .3s;
+}
+.por_imgs:hover .por_img{
+  transform: scale(1.1);
 }
 .portfolio li:nth-child(1) .por_img{
   background-image: url(../../assets/images/main/portfolio/week1.png);
@@ -406,8 +426,9 @@ header::after{
   background-image: url(../../assets/images/main/portfolio/portfolio_2.png);
 }
 .portfolio .title{
-  font-size: 40px;
-  font-weight: 500;
+  font-family: 'GmarketSansMedium', sans-serif;
+  font-size: 35px;
+  font-weight: 600;
   line-height: 1;
 }
 .portfolio .des {
@@ -423,7 +444,7 @@ header::after{
   margin-left: auto;
   justify-content: end;
 }
-.portfolio li.right .por_img{
+.portfolio li.right .por_imgs{
   order: 1;
 }
 .portfolio li.right .text{
