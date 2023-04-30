@@ -207,13 +207,24 @@ header ul{
 }
 header ul li{
   margin: 0 10px;
+  position: relative;
 }
 header ul li a{
   font-weight: 100;
   text-transform: uppercase;
 }
-header ul li a.view{
-  font-weight: 500;
+header ul li::before{
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -3px;
+  width: 0;
+  height: 1px;
+  background-color: #191919;
+  transition: .3s;
+}
+header ul li.scene::before{
+  width: 100%;
 }
 header::after{
   content: "";

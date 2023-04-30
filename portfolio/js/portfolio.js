@@ -29,17 +29,22 @@ for(let i = 0; i<$navi.length; i++){
   let elementVisible = $section[i].getBoundingClientRect().height;
   const navbarHeight = $header.getBoundingClientRect().height;
   const windowHeight = window.innerHeight;
+  // console.log($h2[0].getBoundingClientRect().height) // 80
+
   // 네비 버튼 클릭 시 이동
   $navi[i].addEventListener('click', ()=>{
     window.scrollTo(0, $section[i].offsetTop - navbarHeight);
   })
 
-  // 위치에 따라 클래스 적용
+  // 스크롤 위치에 따라 클래스 적용
   window.addEventListener('scroll', ()=>{
-    let windowscrollY = window.scrollY;
-    // console.log(sectionTop, windowHeight, windowscrollY )
-    if(windowscrollY < sectionTop ){
-      $navi[i].classList.add('active');
+    windowscrollY = window.pageYOffset;
+    if(windowscrollY > sectionTop - navbarHeight - 200 && windowscrollY <= sectionTop + elementVisible - navbarHeight - 200){
+      $section[i].classList.add('scene');
+      $navi[i].classList.add('scene');
+    }else{
+      $section[i].classList.remove('scene');
+      $navi[i].classList.remove('scene');
     }
   })
 }
