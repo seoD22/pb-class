@@ -24,6 +24,7 @@ video::-webkit-media-controls-fullscreen-button {
   background-size: cover;
   transition: all .3s ease;
   transition-property: background, transform;
+  
 }
 .link-grow{
   transform: scale(1.5);
@@ -458,7 +459,7 @@ header::after{
   font-size: 17px;
   font-weight: 300;
   transform: translateY(-200%);
-  transition: .8s;
+  transition: 1s;
   transition-delay: .5s;
   opacity: 0;
   margin: 10px 0;
@@ -790,7 +791,7 @@ h2.show {
     display: block;
     margin-bottom: 170px;
   }
-  .portfolio .por_img{
+  .portfolio .por_imgs{
     height: 274px;
     margin: auto;
   }
@@ -798,7 +799,7 @@ h2.show {
     margin: 25px auto;
     text-align: left !important;
   }
-  .portfolio .por_img,
+  .portfolio .por_imgs,
   .portfolio .text{
     width: 370px;
   }

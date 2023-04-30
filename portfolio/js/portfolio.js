@@ -10,6 +10,7 @@ const $section = document.querySelectorAll('section');
 const $h2 = document.querySelectorAll('section h2');
 const $resumeBtn = document.querySelector('#resumeBtn');
 const $portfolioList = document.querySelectorAll('.portfolio li');
+const $portfolioPic = document.querySelectorAll('.por_imgs')
 const $header = document.querySelector('header');
 const $navi = document.querySelectorAll('.navi li');
 const $contact = document.querySelector('.contact');
@@ -28,25 +29,34 @@ window.addEventListener('load', ()=>{
 // 마우스커서
 window.addEventListener('mousemove', cursor);
 
+let mouseX;
+let mouseY;
 function cursor(e){
+  mouseX = e.pageX;
+  mouseY = e.pageY;
   $cursor.style.top = e.pageY + 'px';
   $cursor.style.left = e.pageX + 'px';
 }
 
-$resumeBtn.addEventListener('mouseleave', ()=>{
+function cursorEvent_remove(){
   $cursor.classList.remove('link-grow');
-})
-$resumeBtn.addEventListener('mouseover', ()=>{
+}
+
+function cursorEvent_add(){
   $cursor.classList.add('link-grow');
-})
+}
+
+$resumeBtn.addEventListener('mouseleave', cursorEvent_remove);
+$resumeBtn.addEventListener('mouseover', cursorEvent_add);
 
 $navLink.forEach((link)=>{
-  link.addEventListener('mouseleave', ()=>{
-    $cursor.classList.remove('link-grow');
-  })
-  link.addEventListener('mouseover', ()=>{
-    $cursor.classList.add('link-grow');
-  })
+  link.addEventListener('mouseleave', cursorEvent_remove);
+  link.addEventListener('mouseover', cursorEvent_add);
+})
+
+$portfolioPic.forEach((link)=>{
+  link.addEventListener('mouseleave', cursorEvent_remove);
+  link.addEventListener('mouseover', cursorEvent_add);
 })
 
 // 네비게이션
@@ -55,7 +65,6 @@ for(let i = 0; i<$navi.length; i++){
   let elementVisible = $section[i].getBoundingClientRect().height;
   const navbarHeight = $header.getBoundingClientRect().height;
   const windowHeight = window.innerHeight;
-  // console.log($h2[0].getBoundingClientRect().height) // 80
 
   // 네비 버튼 클릭 시 이동
   $navi[i].addEventListener('click', ()=>{
