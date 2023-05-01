@@ -13,7 +13,9 @@ const $portfolioList = document.querySelectorAll('.portfolio li');
 const $header = document.querySelector('header');
 const $navi = document.querySelectorAll('.navi li');
 const $contact = document.querySelector('.contact');
-const $burgerBtn = document.querySelector('header button')
+const $burgerBtn = document.querySelector('header button');
+const $burgerMenu = document.querySelector('.burgerMenu');
+const $burgerList = document.querySelector('.hamburger');
 
 $html.style.overflow = 'hidden'; //로딩 중 스크롤 방지
 
@@ -23,6 +25,7 @@ window.addEventListener('load', ()=>{
     $loader.classList.remove('loader');
     $html.style.overflow = 'auto'; //스크롤 방지 해제
     $main.classList.remove('none');
+    $burgerBtn.classList.remove('none')
   }, 1000);
 })
 
@@ -78,7 +81,12 @@ for(let i = 0; i<$navi.length; i++){
 
 // 햄버거 버튼
 $burgerBtn.addEventListener('click', ()=>{
-  $burgerBtn.classList.toggle('close')
+  $burgerBtn.classList.toggle('close');
+  $burgerMenu.classList.toggle('show');
+  $body.classList.toggle('noScroll')
+  setTimeout(() => {
+    $burgerList.classList.toggle('show');
+  }, 800);
 })
 
 
