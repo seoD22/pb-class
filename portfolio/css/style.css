@@ -12,8 +12,8 @@ video::-webkit-media-controls-fullscreen-button {
 
 /* cursor custom */
 .cursor{
-  width: 2rem;
-  height: 2rem;
+  width: 1.5rem;
+  height: 1.5rem;
   border-radius: 50%;
   position: absolute;
   z-index: 1000;
@@ -219,7 +219,7 @@ header h1 .logo2{
 header h1:hover .logo_wrapper{
   transform: rotateX(90deg);
 }
-header ul{
+header .navi{
   display: flex;
   margin-right: auto;
   margin-left: 210px;
@@ -230,15 +230,15 @@ header ul{
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
-header ul li{
+header .navi li{
   margin: 0 10px;
   position: relative;
 }
-header ul li a{
+header .navi li a{
   font-weight: 500;
   text-transform: uppercase;
 }
-header ul li::before{
+header .navi li::before{
   content: "";
   display: block;
   position: absolute;
@@ -251,10 +251,10 @@ header ul li::before{
   top: 10px;
   transition: .3s;
 }
-header ul li:hover{
+header .navi li:hover{
   opacity: .7;
 }
-header ul li.scene::before{
+header .navi li.scene::before{
   opacity: .3;
 }
 header::after{
@@ -270,6 +270,9 @@ header::after{
   animation-iteration-count: 1;
   animation-timing-function: ease-in;
   animation-fill-mode: forwards;
+}
+header .hamburger{
+  display: none;
 }
 
 /* banner */
@@ -690,11 +693,62 @@ h2.show {
 
 /* tablet */
 @media(max-width: 1511px){
+  body, a{ cursor: unset }
   section{ padding: 0 100px; }
   .container{ padding: 0 100px; }
+  .cursor{display: none;}
 
   header{
     padding: 0 100px;
+  }
+  header button{
+    background-color: transparent;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  header button.close .burgerline:nth-child(1){
+    animation-name: burgerBtn_1;
+    animation-duration: .3s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+  }
+  header button.close .burgerline:nth-child(2){
+    position: relative;
+    top: -1px;
+    animation-name: burgerBtn_2;
+    animation-duration: .3s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+  }
+  .hamburger{
+    display: block;
+  }
+  .burgerline{
+    height: .1rem;
+    width: 100%;
+    background-color: #191919;
+    transition: .1s ease-out;
+  }
+  .burgerline:nth-child(1){
+    margin-bottom: 4px;
+    animation-name: burgerBtnRe_1;
+    animation-duration: .3s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+  }
+  .burgerline:nth-child(2){
+    margin-top: 4px;
+    animation-name: burgerBtnRe_2;
+    animation-duration: .3s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
   }
 
   .main_banner{
@@ -734,9 +788,12 @@ h2.show {
 
 /* mobile */
 @media(max-width: 1023px){
+  body{ cursor: unset }
+  a{cursor: pointer;}
   section{ padding: 0 30px; }
   h2{font-size: 50px; margin-top: 100px; opacity: 1; text-align: center;}
   .container{ padding: 0 30px; }
+  .cursor{display: none;}
 
   .kakao{
     display: none;
@@ -753,7 +810,7 @@ h2.show {
     font-size: 20px;
     height: 28px;
   }
-  header ul{
+  header .navi{
     display: none;
   }
   header h1 .logo2{
@@ -911,5 +968,80 @@ h2.show {
   }
   100% {
     bottom: 0;
+  }
+}
+
+@keyframes burgerBtn_1 {
+  0% {
+    margin-bottom: 4px;
+    rotate: 0deg;
+  }
+  15% {
+    margin-bottom: 0;
+    rotate: 0deg;
+  }
+  60% {
+    margin-bottom: 0;
+    rotate: 0deg;
+  }
+  100% {
+    margin-bottom: 0;
+    rotate: 45deg;
+  }
+}
+@keyframes burgerBtnRe_1 {
+  0% {
+    margin-bottom: 0;
+    rotate: 45deg;
+  }
+  15% {
+    margin-bottom: 0;
+    rotate: 0deg;
+  }
+  60% {
+    margin-bottom: 0;
+    rotate: 0deg;
+  }
+  100% {
+    margin-bottom: 4px;
+    rotate: 0deg;
+  }
+}
+
+@keyframes burgerBtn_2 {
+  0% {
+    margin-top: 4px;
+    rotate: 0deg;
+  }
+  15% {
+    margin-top: -1px;
+    rotate: 0deg;
+  }
+  60% {
+    margin-top: -1px;
+    rotate: 0deg;
+  }
+  100% {
+    margin-top: -1px;
+    rotate: -45deg;
+  }
+}
+
+@keyframes burgerBtnRe_2 {
+  0% {
+    margin-top: -1px;
+    rotate: -45deg;
+  }
+  15% {
+    margin-top: -1px;
+    rotate: 0deg;
+  }
+  60% {
+    margin-top: -1px;
+    rotate: 0deg;
+  }
+  100% {
+    margin-top: 4px;
+    rotate: 0deg;
   }
 }

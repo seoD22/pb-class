@@ -13,6 +13,7 @@ const $portfolioList = document.querySelectorAll('.portfolio li');
 const $header = document.querySelector('header');
 const $navi = document.querySelectorAll('.navi li');
 const $contact = document.querySelector('.contact');
+const $burgerBtn = document.querySelector('header button')
 
 $html.style.overflow = 'hidden'; //로딩 중 스크롤 방지
 
@@ -74,6 +75,11 @@ for(let i = 0; i<$navi.length; i++){
     }
   })
 }
+
+// 햄버거 버튼
+$burgerBtn.addEventListener('click', ()=>{
+  $burgerBtn.classList.toggle('close')
+})
 
 
 // scroll event
