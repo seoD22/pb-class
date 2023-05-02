@@ -31,6 +31,7 @@ window.addEventListener('load', ()=>{
 
 // 마우스커서
 window.addEventListener('mousemove', cursor);
+window.addEventListener('click', clickEvent)
 
 let mouseX;
 let mouseY;
@@ -39,7 +40,6 @@ function cursor(e){
   mouseY = e.clientY;
   $cursor.style.left = mouseX + 'px';
   $cursor.style.top = mouseY + 'px';
-  console.log(e)
 }
 
 function cursorEvent_remove(){
@@ -48,6 +48,13 @@ function cursorEvent_remove(){
 
 function cursorEvent_add(){
   $cursor.classList.add('link-grow');
+}
+
+function clickEvent(){
+  $cursor.classList.add('clickE');
+  setTimeout(()=>{
+    $cursor.classList.remove('clickE');
+  }, 300)
 }
 
 $cursorLink.forEach((link)=>{

@@ -34,10 +34,13 @@ video::-webkit-media-controls-fullscreen-button {
   
 }
 .link-grow{
-  transform: scale(1.5);
+  transform: translate(-50%, -50%) scale(1.5);
   background-color: #191919;
   filter: invert(1);
   mix-blend-mode: difference;
+}
+.clickE{
+  animation: cursorAnime .3s forwards;
 }
 
 /* Loading */
@@ -818,46 +821,49 @@ h2.show {
   }
   .hamburger{
     position: absolute;
-    padding: 40px 30px;
+    padding: 40px;
     top: 0;
   }
-  .hamburger a{
+  .hamburger.show{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+  .hamburger a,
+  .hamburger p{
     text-transform: uppercase;
     color: #f7f6f1;
-    font-weight: 200;
+    font-weight: 500;
+    font-size: 23px;
     letter-spacing: .5px;
     display: block;
     transition: .7s;
+    transition-delay: .8s;
     transform: translateY(100%);
   }
-  .hamburger.show a{
-    transform: translateY(0);
+  .hamburger.show a,
+  .hamburger.show p{
+    transform: translateY(-1px);
   }
   .hamburger li{
     position: relative;
-    margin-bottom: 30px;
+    margin-top: 20px;
     overflow: hidden;
+    text-align: right;
   }
-  .hamburger li:nth-child(1){
-    line-height: 1;
+  .hamburger li:nth-child(1),
+  .hamburger li:nth-child(2){
+    line-height: .9;
+    margin-top: 0;
+    text-align: left;
   }
-  .hamburger li:nth-child(1) a{
-    font-size: 55px;
+  .hamburger li p{
+    font-family: 'Bebas Neue';
+    font-size: 35vw;
     font-weight: 500;
     letter-spacing: -0.5px;
-  }
-  .hamburger li:nth-child(2) a{
-    transition-delay: .7s;
-  }
-  .hamburger li:nth-child(1) a::before{
-    content: "";
-    height: 1px;
-    width: 100%;
-    background-color: #f7f6f1;
-    display: block;
-    position: absolute;
-    bottom: -7px;
-    transition: .2s;
+    transition-delay: 0s;
   }
   .burgerMenu.show .menuLine .line{
     opacity: 1;
@@ -1207,23 +1213,14 @@ h2.show {
     rotate: 0deg;
   }
 }
-/* @keyframes burgerBg {
-  from {
-    transform: rotateX(90);
-    opacity: 0;
+@keyframes cursorAnime{
+  0%{
+    transform: translate(-50%, -50%) scale(1);
   }
-  to{
-    transform: rotateX(0);
-    opacity: 1;
+  50%{
+    transform: translate(-50%, -50%) scale(2);
+  }
+  100%{
+    transform: translate(-50%, -50%) scale(1);
   }
 }
-@keyframes burgerBgRe {
-  from {
-    transform: rotateX(0);
-    opacity: 1;
-  }
-  to{
-    transform: rotateX(90deg);
-    opacity: 0;
-  }
-} */
