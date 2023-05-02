@@ -1,6 +1,6 @@
 const $loader = document.querySelector('.loader');
+const $content = document.querySelector('.content')
 const $cursorLink = document.querySelectorAll('.cursorFilter');
-let $cursor = document.querySelector('.cursor');
 const $main = document.querySelector('.main_banner');
 const $html = document.querySelector('html');
 const $body = document.querySelector('body');
@@ -25,11 +25,13 @@ window.addEventListener('load', ()=>{
     $loader.classList.remove('loader');
     $html.style.overflow = 'auto'; //스크롤 방지 해제
     $main.classList.remove('none');
-    $burgerBtn.classList.remove('none')
+    $burgerBtn.classList.remove('none');
+    $content.classList.remove('none')
   }, 1000);
 })
 
 // 마우스커서
+let $cursor = document.querySelector('.cursor');
 window.addEventListener('mousemove', cursor);
 window.addEventListener('click', clickEvent)
 

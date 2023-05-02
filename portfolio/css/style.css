@@ -88,6 +88,16 @@ video::-webkit-media-controls-fullscreen-button {
   }
 }
 
+/* contents */
+.content{
+  opacity: 1;
+  transition: 1s;
+  transition-delay: 2s;
+}
+.content.none{
+  opacity: 0;
+}
+
 /* fixed */
 .fixed{  
   opacity: 1;
