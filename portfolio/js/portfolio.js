@@ -77,9 +77,8 @@ for(let i = 0; i<$navi.length; i++){
   })
 
   // 스크롤 위치에 따라 클래스 적용
-  let windowscrollY;
   window.addEventListener('scroll', ()=>{
-    windowscrollY = window.pageYOffset;
+    let windowscrollY = window.pageYOffset;
     if(windowscrollY > sectionTop - navbarHeight - 200 && windowscrollY <= sectionTop + elementVisible - navbarHeight - 200){
       $section[i].classList.add('scene');
       $navi[i].classList.add('scene');
