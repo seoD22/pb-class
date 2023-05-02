@@ -1,6 +1,6 @@
 const $loader = document.querySelector('.loader');
 const $cursorLink = document.querySelectorAll('.cursorFilter');
-const $cursor = document.querySelector('.cursor');
+let $cursor = document.querySelector('.cursor');
 const $main = document.querySelector('.main_banner');
 const $html = document.querySelector('html');
 const $body = document.querySelector('body');
@@ -35,10 +35,11 @@ window.addEventListener('mousemove', cursor);
 let mouseX;
 let mouseY;
 function cursor(e){
-  mouseX = e.pageX;
-  mouseY = e.pageY;
-  $cursor.style.top = e.pageY + 'px';
-  $cursor.style.left = e.pageX + 'px';
+  mouseX = e.clientX;
+  mouseY = e.clientY;
+  $cursor.style.left = mouseX + 'px';
+  $cursor.style.top = mouseY + 'px';
+  console.log(e)
 }
 
 function cursorEvent_remove(){

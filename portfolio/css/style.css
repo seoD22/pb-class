@@ -20,7 +20,9 @@ video::-webkit-media-controls-fullscreen-button {
   width: 1.5rem;
   height: 1.5rem;
   border-radius: 50%;
-  position: absolute;
+  position: fixed;
+  top: 0;
+  left: 0;
   z-index: 1000;
   transform: translate(-50%, -50%);
   pointer-events: none;
@@ -825,7 +827,7 @@ h2.show {
     font-weight: 200;
     letter-spacing: .5px;
     display: block;
-    transition: .5s;
+    transition: .7s;
     transform: translateY(100%);
   }
   .hamburger.show a{
@@ -845,7 +847,7 @@ h2.show {
     letter-spacing: -0.5px;
   }
   .hamburger li:nth-child(2) a{
-    transition-delay: .5s;
+    transition-delay: .7s;
   }
   .hamburger li:nth-child(1) a::before{
     content: "";
