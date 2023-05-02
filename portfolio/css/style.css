@@ -852,6 +852,9 @@ h2.show {
     overflow: hidden;
     text-align: right;
   }
+  .hamburger li:nth-child(2){
+    margin-bottom: 55px;
+  }
   .hamburger li:nth-child(1),
   .hamburger li:nth-child(2){
     line-height: .9;

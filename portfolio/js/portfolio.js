@@ -63,9 +63,11 @@ $cursorLink.forEach((link)=>{
 })
 
 // 네비게이션
+let sectionTop;
+let elementVisible;
 for(let i = 0; i<$navi.length; i++){
-  let sectionTop = $section[i].getBoundingClientRect().top;
-  let elementVisible = $section[i].getBoundingClientRect().height;
+  sectionTop = $section[i].getBoundingClientRect().top;
+  elementVisible = $section[i].getBoundingClientRect().height;
   const navbarHeight = $header.getBoundingClientRect().height;
   const windowHeight = window.innerHeight;
 
@@ -75,6 +77,7 @@ for(let i = 0; i<$navi.length; i++){
   })
 
   // 스크롤 위치에 따라 클래스 적용
+  let windowscrollY;
   window.addEventListener('scroll', ()=>{
     windowscrollY = window.pageYOffset;
     if(windowscrollY > sectionTop - navbarHeight - 200 && windowscrollY <= sectionTop + elementVisible - navbarHeight - 200){
