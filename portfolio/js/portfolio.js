@@ -63,11 +63,9 @@ $cursorLink.forEach((link)=>{
 })
 
 // 네비게이션
-let sectionTop;
-let elementVisible;
 for(let i = 0; i<$navi.length; i++){
-  sectionTop = $section[i].getBoundingClientRect().top;
-  elementVisible = $section[i].getBoundingClientRect().height;
+  let sectionTop = $section[i].getBoundingClientRect().top;
+  let elementVisible = $section[i].getBoundingClientRect().height;
   const navbarHeight = $header.getBoundingClientRect().height;
   const windowHeight = window.innerHeight;
 
@@ -78,7 +76,7 @@ for(let i = 0; i<$navi.length; i++){
 
   // 스크롤 위치에 따라 클래스 적용
   window.addEventListener('scroll', ()=>{
-    let windowscrollY = window.pageYOffset;
+    windowscrollY = window.pageYOffset;
     if(windowscrollY > sectionTop - navbarHeight - 200 && windowscrollY <= sectionTop + elementVisible - navbarHeight - 200){
       $section[i].classList.add('scene');
       $navi[i].classList.add('scene');
