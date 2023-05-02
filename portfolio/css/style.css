@@ -742,6 +742,79 @@ h2.show {
     animation-timing-function: ease-out;
     animation-fill-mode: forwards;
   }
+
+  .main_banner{
+    height: 86vh;
+    padding-top: 55px;
+    overflow: unset;
+  }
+  .video_wrapper p{
+    font-size: 750px;
+  }
+  .main_banner.none .video_wrapper{
+    height: 200px;
+  }
+
+
+  .introduce .pic p{
+    font-size: 80px;
+  }
+  .introduce .text p:nth-child(1){
+    font-size: 45px;
+  }
+  
+  .study .swiper-slide-active{
+    transform: translateY(-5px);
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.2);
+  }
+  .study .swiper-slide:hover{
+    transform: translateY(0);
+    box-shadow: 0px 7px 15px 0 rgba(0,0,0,0.15);
+  }
+
+  .contact a:hover h3{
+    transform: translateX(0);
+  }
+  .contact .arrow{
+    display: none;
+  }
+
+  footer{
+    margin-top: 150px;
+  }
+}
+
+/* mobile */
+@media(max-width: 1023px){
+  body{ cursor: unset }
+  a{cursor: pointer;}
+  section{ padding: 0 30px; }
+  h2{font-size: 50px; margin-top: 100px; opacity: 1; text-align: center;}
+  .container{ padding: 0 30px; }
+  .cursor{display: none;}
+
+  .kakao{
+    display: none;
+  }
+  .fixed .text p{
+    font-size: 15px;
+    font-weight: 500;
+  }
+
+  header{
+    padding: 0 30px;
+  }
+  header h1{
+    font-size: 20px;
+    height: 28px;
+  }
+  header .navi{
+    display: none;
+  }
+  header h1 .logo2{
+    bottom: -20px;
+  }
+
   .burgerline{
     height: .1rem;
     width: 100%;
@@ -813,6 +886,7 @@ h2.show {
     transition-delay: .4s;
   }
   .burgerMenu.show .hamburger{
+    width: 100%;
     opacity: 1;
   }
   .burgerMenu .hamburger{
@@ -862,8 +936,8 @@ h2.show {
   }
   .hamburger li p{
     font-family: 'Bebas Neue';
-    font-size: 35vw;
     font-weight: 500;
+    font-size: 150px;
     letter-spacing: -0.5px;
     transition-delay: 0s;
   }
@@ -914,78 +988,6 @@ h2.show {
   .burgerMenu.show .line:nth-child(3),
   .burgerMenu.show .line:nth-child(4){
     height: 100%;
-  }
-
-
-  .main_banner{
-    height: 86vh;
-    padding-top: 55px;
-    overflow: unset;
-  }
-  .video_wrapper p{
-    font-size: 750px;
-  }
-  .main_banner .video_wrapper{
-    transition-delay: 2s;
-  }
-
-  .introduce .pic p{
-    font-size: 80px;
-  }
-  .introduce .text p:nth-child(1){
-    font-size: 45px;
-  }
-  
-  .study .swiper-slide-active{
-    transform: translateY(-5px);
-    box-shadow: 5px 5px 20px rgba(0,0,0,0.2);
-  }
-  .study .swiper-slide:hover{
-    transform: translateY(0);
-    box-shadow: 0px 7px 15px 0 rgba(0,0,0,0.15);
-  }
-
-  .contact a:hover h3{
-    transform: translateX(0);
-  }
-  .contact .arrow{
-    display: none;
-  }
-
-  footer{
-    margin-top: 150px;
-  }
-}
-
-/* mobile */
-@media(max-width: 1023px){
-  body{ cursor: unset }
-  a{cursor: pointer;}
-  section{ padding: 0 30px; }
-  h2{font-size: 50px; margin-top: 100px; opacity: 1; text-align: center;}
-  .container{ padding: 0 30px; }
-  .cursor{display: none;}
-
-  .kakao{
-    display: none;
-  }
-  .fixed .text p{
-    font-size: 15px;
-    font-weight: 500;
-  }
-
-  header{
-    padding: 0 30px;
-  }
-  header h1{
-    font-size: 20px;
-    height: 28px;
-  }
-  header .navi{
-    display: none;
-  }
-  header h1 .logo2{
-    bottom: -20px;
   }
 
   .main_banner{
