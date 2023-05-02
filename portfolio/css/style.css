@@ -358,7 +358,6 @@ header::after{
 .introduce .pic p:nth-child(3){
   right: -230px;
 }
-.introduce .text.show,
 .introduce h2.show + div .text{
   opacity: 1;
 } 
@@ -369,7 +368,7 @@ header::after{
   flex-direction: column;
   justify-content: space-between;
   transition: 1s;
-  transition-delay: .3s;
+  transition-delay: .8s;
 }
 .introduce .text p:nth-child(1){
   font-size: 50px;

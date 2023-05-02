@@ -146,7 +146,7 @@ window.addEventListener('scroll', ()=>{
   // intersection Observer 
   for(let i = 0; i<$h2.length; i++){
     io.observe($h2[i]); // 모든 h2 등록
-    io.observe(document.querySelector('.introduce .text'))
+    // io.observe(document.querySelector('.introduce .text'))
   }
   for(let i = 0; i<$portfolioList.length; i++){
     io_por.observe($portfolioList[i]); // 포폴 li 등록
