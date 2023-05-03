@@ -5,7 +5,20 @@
 }
 
 /* header */
+header{
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  right: 0;
+}
+header .container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
 header .logo{
+  position: relative;
   background-image: url(../img/logo_2rism.png);
   height: 24px;
   width: 72px;
@@ -26,29 +39,37 @@ header .logo::before{
   transform: translateX(10px);
 }
 header .navi{
+  display: flex;
+  justify-content: space-between;
   color: white;
   font-weight: 200;
   cursor: pointer;
 }
 header .navi li{
   text-align: center;
+  font-size: 13px;
 }
 header .navi li.on,
 header .navi li.active{
   color: red;
 }
 header .user{
+  display: flex;
   text-align: right;
 }
 header .user p{
   color: #FFFFFF;
   opacity: .5;
+  font-size: 13px;
 }
 header .user strong{
   color: #FFFFFF;
   font-weight: 500;
+  font-size: 13px;
 }
 header .user .user_img{
+  position: relative;
+  border-radius: 50px;
   background-image: url(../img/user.png);
   background-repeat: no-repeat;
   background-size: contain;
@@ -83,6 +104,10 @@ header.on .user strong{
 
 /* main */
 #main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-image: url(../img/bg-image.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -91,8 +116,14 @@ header.on .user strong{
   border-bottom-left-radius: 3rem;
   border-bottom-right-radius: 3rem;
 }
+#main .title{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 #main .text p{
-  font-size: 48px;
+  font-size: 40px;
   font-weight: 600;
   color: #FFFFFF;
 }
@@ -113,6 +144,17 @@ header.on .user strong{
   border-radius: 10px;
   width: 80%;
   margin-top: 8rem;
+}
+#main .search ul{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+}
+#main .search ul li{
+  display: flex;
+  align-items: center;
+  padding-right: 0;
 }
 #main .search i{
   background-repeat: no-repeat;
@@ -142,11 +184,16 @@ header.on .user strong{
   font-size: 15px;
   white-space: nowrap;
 }
+#main .search li:last-child{
+  margin-left: auto;
+  padding-left: 0;
+}
 #main .search li:last-child button{
   background-color: #7B61FF;
   background-size: contain;
   height: 50px;
   width: 50px;
+  border: 0;
   border-radius: 10px;
   padding: 1rem;
 }
@@ -157,6 +204,7 @@ header.on .user strong{
   background-size: contain;
   width: 18px;
   height: 18px;
+  margin: 0;
 }
 
 /* popular */
@@ -166,20 +214,33 @@ header.on .user strong{
   margin-top: 9rem; margin-bottom: 5rem;
 }
 #popular img{
+  display: inline-block;
   min-width: 50px;
   max-width: 100%;
 }
 #popular p{
-  font-size: 15px;
+  font-size: 13px;
   color: #979797;
 }
 #popular strong{
-  font-size: 18px;
+  font-size: 13px;
   font-weight: 500;
+}
+#popular ul{
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+}
+#popular ul a{
+  display: flex;
+  flex-direction: column;
 }
 
 /* hotels */
 #hotels .title{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-top: 9rem;
   margin-bottom: 5rem;
 }
@@ -188,6 +249,9 @@ header.on .user strong{
   font-weight: 600;
 }
 #hotels .title button{
+  display: flex;
+  align-items: center;
+  border: 0;
   background-color: #F6F4FF;
   border-radius: 10px;
 }
@@ -202,18 +266,32 @@ header.on .user strong{
   width: 15px;
   height: 15px;
 }
+#hotels ul{
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+}
 #hotels .content{
   width: 25%;
 }
 #hotels .content img{
+  display: inline-block;
   width: 100%;
 }
+#hotels .content img + div{
+  display: flex;
+  justify-content: space-between;
+}
+#hotels .content .location{
+  display: flex;
+  align-items: center;
+}
 #hotels .content p{
-  font-size: 18px;
+  font-size: 13px;
   font-weight: 500;
 }
 #hotels .content span{
-  font-size: 15px;
+  font-size: 13px;
   color: #979797;
   font-weight: 400;
 }
@@ -238,7 +316,7 @@ header.on .user strong{
   position: absolute;
   z-index: 1;
   display: flex;
-  top: 1px;
+  top: 0;
   left: 0;
   overflow: hidden;
   display: inline-block;
@@ -263,6 +341,9 @@ header.on .user strong{
 
 /* tip */
 #tip .title{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-top: 9rem;
   margin-bottom: 5rem;
 }
@@ -271,6 +352,9 @@ header.on .user strong{
   font-weight: 600;
 }
 #tip .title button{
+  display: flex;
+  align-items: center;
+  border: 0;
   background-color: #F6F4FF;
   border-radius: 10px;
 }
@@ -285,17 +369,45 @@ header.on .user strong{
   width: 15px;
   height: 15px;
 }
+#tip .content{
+  display: flex;
+  justify-content: space-between;
+}
+#tip .content > div{
+  padding-left: 0;
+}
+#tip .content a{
+  display: flex;
+  justify-content: space-between;
+}
 #tip a h4{
   font-weight: 600;
-  font-size: 1.5rem;
+  font-size: 20px;
 }
 #tip a p{
   color: #979797;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 12px;
 }
 #tip a img{
   width: 100%;
+  padding-left: 0;
+}
+#tip .desc{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#tip ul{
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+}
+#tip ul li{
+  display: flex;
+  align-items: center;
+  padding-left: 0;
 }
 #tip ul p{
   font-size: 12px;
@@ -319,6 +431,9 @@ header.on .user strong{
 
 /* activities */
 #activities .title{
+  display: flex;
+  align-items: center;
+  border: 0;
   margin-top: 9rem;
   margin-bottom: 5rem;
 }
@@ -327,6 +442,7 @@ header.on .user strong{
   font-weight: 600;
 }
 #activities .title button{
+  border: 0;
   background-color: #F6F4FF;
   border-radius: 10px;
 }
@@ -341,10 +457,16 @@ header.on .user strong{
   width: 15px;
   height: 15px;
 }
+#activities ul{
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+}
 #activities .content{
   width: 25%;
 }
 #activities .content img{
+  display: inline-block;
   width: 100%;
 }
 #activities .content p{
@@ -354,19 +476,33 @@ header.on .user strong{
 
 /* about */
 #about{
-  margin-top: 9rem; margin-bottom: 5rem;
+  display: flex;
+  justify-content: center;
+  margin-top: 9rem; 
+  margin-bottom: 5rem;
+}
+#about .desc{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 0;
 }
 #about h2{
   font-size: 3rem;
   font-weight: 600;
 }
 #about button{
+  display: flex;
+  align-items: center;
+  border: 0;
   background-color: #F6F4FF;
   border-radius: 10px;
-  width: 21%;
+  width: 160px;
+  padding: 10px 20px;
 }
 #about button span{
   color: #7B61FF;
+  margin-right: 10px;
 }
 #about button i{
   background-image: url(../img/icon/arrow.png);
@@ -375,6 +511,9 @@ header.on .user strong{
   display: inline-block;
   width: 15px;
   height: 15px;
+}
+#about .img_section{
+  padding-right: 0;
 }
 #about .img_section img{
   width: 100%;
@@ -385,14 +524,27 @@ header.on .user strong{
 footer{
   background-color: #F9F9F9;
 }
+footer .container{
+  display: flex;
+  justify-content: space-between;
+}
 footer > div{
   padding-top: 3rem;
   padding-bottom: 3rem;
 }
+footer > div:not(:last-child){
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 footer .ft_1{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 23%;
 }
 footer .ft_1 .logo{
+  position: relative;
   background-image: url(../img/logo_2rism_black.png);
   height: 24px;
   width: 72px;
@@ -400,7 +552,7 @@ footer .ft_1 .logo{
   background-repeat: no-repeat;
   background-size: contain;
 }
-footer .ft_1 .logo.logo::before{
+footer .ft_1 .logo::before{
   position: absolute;
   content: "";
   display: block;
@@ -441,7 +593,13 @@ footer .ft_1 button i{
   height: 15px;
   width: 15px;
 }
+footer .ft_5 .mail{
+  display: flex;
+  align-items: center;
+}
 footer .mail_text{
+  display: flex;
+  align-items: center;
   background-color: #FFFFFF;
   padding: 1rem;
   border-radius: 10px;
@@ -457,4 +615,8 @@ footer a{
 footer ul{
   margin: 0;
   padding: 0;
+}
+footer button{
+  border: 0;
+  margin-left: auto;
 }
