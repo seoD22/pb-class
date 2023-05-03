@@ -696,8 +696,6 @@ h2.show {
   opacity: 1;
 }
 
-
-
 @media(min-width:1700px){
   .contact .arrow{
     right: 510px;
@@ -931,7 +929,7 @@ h2.show {
   }
   .hamburger li{
     position: relative;
-    margin-top: 20px;
+    margin-top: 0;
     overflow: hidden;
     text-align: right;
   }
@@ -947,7 +945,7 @@ h2.show {
   .hamburger li p{
     font-family: 'Bebas Neue';
     font-weight: 500;
-    font-size: 150px;
+    font-size: 31vw;
     letter-spacing: -0.5px;
     transition-delay: 0s;
   }
@@ -1084,6 +1082,11 @@ h2.show {
   }
 } 
 
+@media(min-width:670px){
+  .hamburger li p{
+    font-size: 24vw;
+  }
+}
 
 /* keyframe */
 @keyframes navi_width{
