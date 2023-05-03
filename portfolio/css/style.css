@@ -875,7 +875,7 @@ h2.show {
   .menuBg .bar{
     display: block;
     background-color: #191919;
-    height: calc(92vh / 5);
+    height: calc(93vh / 5);
     width: 100%;
     opacity: 0;
     transform: rotateX(-90deg);
@@ -978,7 +978,7 @@ h2.show {
     transition-delay: .6s;
   }
   .menuLine .line:nth-child(2){
-    bottom: 15px;
+    bottom: 22px;
     transition-delay: .8s;
   }
   .menuLine .line:nth-child(3){
