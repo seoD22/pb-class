@@ -1,0 +1,7 @@
+html{scroll-behavior: smooth;}
+body {font-family: 'Poppins', sans-serif;}
+body::-webkit-scrollbar{display: none;}
+li{list-style: none;}
+a{text-decoration: none; color: black;}
+a:hover{text-decoration: none; color: black;}
+p{margin: 0;}

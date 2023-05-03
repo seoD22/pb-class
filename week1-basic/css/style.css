@@ -1,40 +1,11 @@
-html {
-  scroll-behavior: smooth;
+.container{
+  /* min-width: 1920px; */
+  margin-left: auto;
+  margin-right: auto;
 }
 
-body {
-  font-family: "Poppins", sans-serif;
-}
-
-li {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-  color: black;
-}
-
-a:hover {
-  text-decoration: none;
-  color: black;
-}
-
-p {
-  margin: 0;
-}
-
-.container {
-  min-width: 1920px;
-  padding-left: 279px;
-  padding-right: 279px;
-}
-
-body::-webkit-scrollbar {
-  display: none;
-}
-
-header .logo {
+/* header */
+header .logo{
   background-image: url(../img/logo_2rism.png);
   height: 24px;
   width: 72px;
@@ -42,7 +13,7 @@ header .logo {
   background-repeat: no-repeat;
   background-size: contain;
 }
-header .logo::before {
+header .logo::before{
   position: absolute;
   content: "";
   display: block;
@@ -54,68 +25,64 @@ header .logo::before {
   right: 0;
   transform: translateX(10px);
 }
-header.on {
-  background-color: rgba(255, 255, 255, 0.814);
-  padding-bottom: 2rem;
-}
-header.on .logo {
-  background-image: url(../img/logo_2rism_black.png);
-}
-header.on .navi {
-  color: black;
-  font-weight: 400;
-}
-header.on .user p {
-  color: black;
-}
-header.on .user strong {
-  color: black;
-}
-header .navi {
+header .navi{
   color: white;
   font-weight: 200;
   cursor: pointer;
 }
-header .navi li {
+header .navi li{
   text-align: center;
 }
-header .navi li.on {
+header .navi li.on,
+header .navi li.active{
   color: red;
 }
-header .navi li.active {
-  color: red;
-}
-header .user {
+header .user{
   text-align: right;
 }
-header .user p {
+header .user p{
   color: #FFFFFF;
-  opacity: 0.5;
+  opacity: .5;
 }
-header .user strong {
+header .user strong{
   color: #FFFFFF;
   font-weight: 500;
 }
-header .user .user_img {
+header .user .user_img{
   background-image: url(../img/user.png);
   background-repeat: no-repeat;
   background-size: contain;
   width: 50px;
   height: 50px;
 }
-header .user .user_img::before {
+header .user .user_img::before{
   content: "";
   display: block;
   border-radius: 10px;
   background-color: #FF0000;
   border: #161414 solid 1px;
-  width: 13px;
-  height: 13px;
+  width: 13px; height: 13px;
   right: 0;
   position: absolute;
 }
+header.on{
+  background-color: rgba(255, 255, 255, 0.814);
+  padding-bottom: 2rem;
+}
+header.on .logo{
+  background-image: url(../img/logo_2rism_black.png);
+}
+header.on .navi{
+  color: black;
+  font-weight: 400;
+}
+header.on .user p,
+header.on .user strong{
+  color: black;
+}
 
-#main {
+/* main */
+#main{
   background-image: url(../img/bg-image.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -124,58 +91,58 @@ header .user .user_img::before {
   border-bottom-left-radius: 3rem;
   border-bottom-right-radius: 3rem;
 }
-#main .text + div {
+#main .text p{
+  font-size: 48px;
+  font-weight: 600;
+  color: #FFFFFF;
+}
+#main .text + div{
   background-color: #7B61FF;
   width: 30%;
   text-align: center;
   border-radius: 10px;
 }
-#main .text + div p {
+#main .text + div p{
   font-size: 18px;
   font-weight: 400;
   color: #FFFFFF;
   line-height: 3;
 }
-#main .text p {
-  font-size: 48px;
-  font-weight: 600;
-  color: #FFFFFF;
-}
-#main .search {
+#main .search{
   background-color: #FFFFFF;
   border-radius: 10px;
   width: 80%;
   margin-top: 8rem;
 }
-#main .search i {
+#main .search i{
   background-repeat: no-repeat;
   background-size: contain;
   display: block;
   width: 23px;
   height: 23px;
 }
-#main .search .i_1 {
+#main .search .i_1{
   background-image: url(../img/icon/location.png);
 }
-#main .search .i_2 {
+#main .search .i_2{
   background-image: url(../img/icon/activity.png);
 }
-#main .search .i_3 {
+#main .search .i_3{
   background-image: url(../img/icon/when.png);
 }
-#main .search .i_4 {
+#main .search .i_4{
   background-image: url(../img/icon/guest.png);
 }
-#main .search p {
+#main .search p{
   font-size: 14px;
   font-weight: 300;
   color: #979797;
 }
-#main .search strong {
+#main .search strong{
   font-size: 15px;
   white-space: nowrap;
 }
-#main .search li:last-child button {
+#main .search li:last-child button{
   background-color: #7B61FF;
   background-size: contain;
   height: 50px;
@@ -183,7 +150,7 @@ header .user .user_img::before {
   border-radius: 10px;
   padding: 1rem;
 }
-#main .search li:last-child button i {
+#main .search li:last-child button i{
   background-image: url(../img/icon/search.png);
   background-color: #7B61FF;
   background-repeat: no-repeat;
@@ -192,41 +159,42 @@ header .user .user_img::before {
   height: 18px;
 }
 
-#popular h2 {
+/* popular */
+#popular h2{
   font-size: 3rem;
   font-weight: 600;
-  margin-top: 9rem;
-  margin-bottom: 5rem;
+  margin-top: 9rem; margin-bottom: 5rem;
 }
-#popular img {
+#popular img{
   min-width: 50px;
   max-width: 100%;
 }
-#popular p {
+#popular p{
   font-size: 15px;
   color: #979797;
 }
-#popular strong {
+#popular strong{
   font-size: 18px;
   font-weight: 500;
 }
 
-#hotels .title {
+/* hotels */
+#hotels .title{
   margin-top: 9rem;
   margin-bottom: 5rem;
 }
-#hotels .title h2 {
+#hotels .title h2{
   font-size: 3rem;
   font-weight: 600;
 }
-#hotels .title button {
+#hotels .title button{
   background-color: #F6F4FF;
   border-radius: 10px;
 }
-#hotels .title button span {
+#hotels .title button span{
   color: #7B61FF;
 }
-#hotels .title button i {
+#hotels .title button i{
   background-image: url(../img/icon/arrow.png);
   background-repeat: no-repeat;
   background-size: contain;
@@ -234,22 +202,22 @@ header .user .user_img::before {
   width: 15px;
   height: 15px;
 }
-#hotels .content {
+#hotels .content{
   width: 25%;
 }
-#hotels .content img {
+#hotels .content img{
   width: 100%;
 }
-#hotels .content p {
+#hotels .content p{
   font-size: 18px;
   font-weight: 500;
 }
-#hotels .content span {
+#hotels .content span{
   font-size: 15px;
   color: #979797;
   font-weight: 400;
 }
-#hotels .content i {
+#hotels .content i{
   background-image: url(../img/icon/location_blue.png);
   background-repeat: no-repeat;
   background-size: contain;
@@ -257,15 +225,15 @@ header .user .user_img::before {
   width: 14px;
   height: 14px;
 }
-#hotels .content .stars {
-  color: #aaa9a9;
+#hotels .content .stars{
+  color: #aaa9a9; 
   position: relative;
   width: max-content;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 1.3px;
   -webkit-text-stroke-color: #FFA800;
 }
-#hotels .content .star-ratings-fill {
+#hotels .content .star-ratings-fill{
   padding: 0;
   position: absolute;
   z-index: 1;
@@ -280,35 +248,36 @@ header .user .user_img::before {
   z-index: 0;
   padding: 0;
 }
-#hotels .content:nth-child(1) .star-ratings-fill {
+#hotels .content:nth-child(1) .star-ratings-fill{
   width: 100%;
 }
-#hotels .content:nth-child(2) .star-ratings-fill {
+#hotels .content:nth-child(2) .star-ratings-fill{
   width: 60%;
 }
-#hotels .content:nth-child(3) .star-ratings-fill {
+#hotels .content:nth-child(3) .star-ratings-fill{
   width: 80%;
 }
-#hotels .content:nth-child(4) .star-ratings-fill {
+#hotels .content:nth-child(4) .star-ratings-fill{
   width: 60%;
 }
 
-#tip .title {
+/* tip */
+#tip .title{
   margin-top: 9rem;
   margin-bottom: 5rem;
 }
-#tip .title h2 {
+#tip .title h2{
   font-size: 3rem;
   font-weight: 600;
 }
-#tip .title button {
+#tip .title button{
   background-color: #F6F4FF;
   border-radius: 10px;
 }
-#tip .title button span {
+#tip .title button span{
   color: #7B61FF;
 }
-#tip .title button i {
+#tip .title button i{
   background-image: url(../img/icon/arrow.png);
   background-repeat: no-repeat;
   background-size: contain;
@@ -316,54 +285,55 @@ header .user .user_img::before {
   width: 15px;
   height: 15px;
 }
-#tip a h4 {
+#tip a h4{
   font-weight: 600;
   font-size: 1.5rem;
 }
-#tip a p {
+#tip a p{
   color: #979797;
   font-weight: 400;
   font-size: 16px;
 }
-#tip a img {
+#tip a img{
   width: 100%;
 }
-#tip ul p {
+#tip ul p{
   font-size: 12px;
 }
-#tip ul i {
+#tip ul i{
   background-repeat: no-repeat;
   background-size: contain;
   display: inline-block;
   width: 15px;
   height: 15px;
 }
-#tip ul li:nth-child(1) i {
+#tip ul li:nth-child(1) i{
   background-image: url(../img/icon/calender.png);
 }
-#tip ul li:nth-child(2) i {
+#tip ul li:nth-child(2) i{
   background-image: url(../img/icon/user.png);
 }
-#tip ul li:nth-child(3) i {
+#tip ul li:nth-child(3) i{
   background-image: url(../img/icon/message.png);
 }
 
-#activities .title {
+/* activities */
+#activities .title{
   margin-top: 9rem;
   margin-bottom: 5rem;
 }
-#activities .title h2 {
+#activities .title h2{
   font-size: 3rem;
   font-weight: 600;
 }
-#activities .title button {
+#activities .title button{
   background-color: #F6F4FF;
   border-radius: 10px;
 }
-#activities .title button span {
+#activities .title button span{
   color: #7B61FF;
 }
-#activities .title button i {
+#activities .title button i{
   background-image: url(../img/icon/arrow.png);
   background-repeat: no-repeat;
   background-size: contain;
@@ -371,34 +341,34 @@ header .user .user_img::before {
   width: 15px;
   height: 15px;
 }
-#activities .content {
+#activities .content{
   width: 25%;
 }
-#activities .content img {
+#activities .content img{
   width: 100%;
 }
-#activities .content p {
+#activities .content p{
   font-size: 18px;
   font-weight: 500;
 }
 
-#about {
-  margin-top: 9rem;
-  margin-bottom: 5rem;
+/* about */
+#about{
+  margin-top: 9rem; margin-bottom: 5rem;
 }
-#about h2 {
+#about h2{
   font-size: 3rem;
   font-weight: 600;
 }
-#about button {
+#about button{
   background-color: #F6F4FF;
   border-radius: 10px;
   width: 21%;
 }
-#about button span {
+#about button span{
   color: #7B61FF;
 }
-#about button i {
+#about button i{
   background-image: url(../img/icon/arrow.png);
   background-repeat: no-repeat;
   background-size: contain;
@@ -406,22 +376,23 @@ header .user .user_img::before {
   width: 15px;
   height: 15px;
 }
-#about .img_section img {
+#about .img_section img{
   width: 100%;
   border-radius: 20px;
 }
 
-footer {
+/* footer */
+footer{
   background-color: #F9F9F9;
 }
-footer > div {
+footer > div{
   padding-top: 3rem;
   padding-bottom: 3rem;
 }
-footer .ft_1 {
+footer .ft_1{
   width: 23%;
 }
-footer .ft_1 .logo {
+footer .ft_1 .logo{
   background-image: url(../img/logo_2rism_black.png);
   height: 24px;
   width: 72px;
@@ -429,7 +400,7 @@ footer .ft_1 .logo {
   background-repeat: no-repeat;
   background-size: contain;
 }
-footer .ft_1 .logo::before {
+footer .ft_1 .logo.logo::before{
   position: absolute;
   content: "";
   display: block;
@@ -441,13 +412,13 @@ footer .ft_1 .logo::before {
   right: 0;
   transform: translateX(10px);
 }
-footer .ft_1 .sns img {
+footer .ft_1 .sns img{
   width: 35px;
 }
-footer .ft_5 {
+footer .ft_5{
   width: 25%;
 }
-footer .ft_5 i {
+footer .ft_1 i{
   background-image: url(../img/icon/letter.png);
   background-repeat: no-repeat;
   background-size: contain;
@@ -455,13 +426,13 @@ footer .ft_5 i {
   width: 27px;
   height: 27px;
 }
-footer .ft_5 button {
+footer .ft_1 button{
   background-color: #7B61FF;
   border-radius: 10px;
   width: 50px;
   height: 50px;
 }
-footer .ft_5 button i {
+footer .ft_1 button i{
   background-image: url(../img/icon/arrow_white.png);
   background-repeat: no-repeat;
   background-size: contain;
@@ -470,21 +441,20 @@ footer .ft_5 button i {
   height: 15px;
   width: 15px;
 }
-footer .mail_text {
+footer .mail_text{
   background-color: #FFFFFF;
   padding: 1rem;
   border-radius: 10px;
 }
-footer h5 {
+footer h5{
   font-size: 18px;
 }
-footer p, footer a {
+footer p,
+footer a{
   color: #979797;
   font-size: 14px;
 }
-footer ul {
+footer ul{
   margin: 0;
   padding: 0;
 }
-
-/* animation */
