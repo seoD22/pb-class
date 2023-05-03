@@ -1,5 +1,5 @@
 window.onload = ()=>{
-  const $header = document.querySelector('.header');
+  const $header = document.querySelector('header');
   const $navBtn = document.querySelectorAll('.navi li');
   const $section = document.querySelectorAll('section');
   let windowHeight = window.innerHeight;
