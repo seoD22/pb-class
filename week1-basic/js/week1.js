@@ -5,40 +5,37 @@ window.onload = ()=>{
   let windowHeight = window.innerHeight;
 
   window.addEventListener('scroll', ()=>{
+    let windowScrollY = window.pageYOffset;
     for (let i = 0; i < $section.length; i++) {
       let elementTop = $section[i].getBoundingClientRect().top;
-      let elementVisible = 150;
+      let elementVisible = $section[i].getBoundingClientRect().height;
+      let elementHeight = $section[i].scrollHeight
       if (elementTop < windowHeight - elementVisible) {
         $section[i].classList.add("active");
       } else {
         $section[i].classList.remove("active");
       }
+
+      
+    // 네비 클래스
+    if(windowScrollY >= elementHeight){
+      $navBtn[i].classList.add('scene');
+    }else{
+      $navBtn[i].classList.remove('scene');
+    }
     }
 
-    // 네비 스타일
     // 헤더 클래스
-    if(document.body.scrollTop > 700 || document.documentElement.scrollTop > 700){
+    if(windowScrollY > $header.getBoundingClientRect().top){
       $header.classList.add('on');
     }else{ 
       $header.classList.remove('on');
-    }
-
-    // 네비 클래스
-    for (let i = 0; i < $section.length; i++) {
-      let elementTop = $section[i].getBoundingClientRect().top + 700;
-
-      if (elementTop < windowHeight ) {
-        $navBtn.forEach((ele, index)=>{
-          ele.classList.remove('on');
-        })
-        $navBtn[i].classList.add('on');
-      }
     }
   });
 
   // 네비 스크롤 이벤트
   $navBtn.forEach((el, idx)=>{
-    el.addEventListener('click', (e)=>{
+    el.addEventListener('click', ()=>{
       window.scrollTo(0, $section[idx].offsetTop - $header.offsetHeight);
     });
   });

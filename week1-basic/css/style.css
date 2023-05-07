@@ -71,7 +71,7 @@ header .navi li{
   font-size: 13px;
   margin: 0 35px;
 }
-header .navi li.on,
+header .navi li.scene,
 header .navi li.active{
   color: red;
 }
