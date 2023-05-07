@@ -69,7 +69,6 @@ for(let i = 0; i<$navi.length; i++){
   let sectionTop = $section[i].getBoundingClientRect().top;
   let elementVisible = $section[i].getBoundingClientRect().height;
   const navbarHeight = $header.getBoundingClientRect().height;
-  const windowHeight = window.innerHeight;
 
   // 네비 버튼 클릭 시 이동
   $navi[i].addEventListener('click', ()=>{
