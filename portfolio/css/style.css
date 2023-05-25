@@ -513,6 +513,24 @@ header::after{
 .study h2{
   padding: 0 200px;
 }
+.study .show + .mySwiper .swiper-slide{
+  animation: showAnime 1s forwards .3s;
+}
+.study .show + .mySwiper .swiper-slide:nth-child(2){
+  animation-delay: .5s;
+}
+.study .show + .mySwiper .swiper-slide:nth-child(3){
+  animation-delay: .7s;
+}
+.study .show + .mySwiper .swiper-slide:nth-child(4){
+  animation-delay: .9s;
+}
+.study .show + .mySwiper .swiper-slide:nth-child(5){
+  animation-delay: 1.1s;
+}
+.study .show + .mySwiper .swiper-slide:nth-child(6){
+  animation-delay: 1.3s;
+}
 .study .mySwiper{
   padding: 20px;
 }
@@ -523,6 +541,8 @@ header::after{
   border-radius: 20px;
   box-shadow: 0px 7px 15px 0 rgba(0,0,0,0.15);
   transition: all 0.3s;
+  transform: translateY(100%);
+  opacity: 0;
 }
 .study .swiper-slide:hover{
   transform: translateY(-5px);
@@ -1239,5 +1259,15 @@ h2.show {
   }
   100%{
     transform: translate(-50%, -50%) scale(1);
+  }
+}
+@keyframes showAnime{
+  0%{
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100%{
+    transform: translateY(0);
+    opacity: 1;
   }
 }

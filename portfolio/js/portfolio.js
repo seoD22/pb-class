@@ -92,7 +92,7 @@ for(let i = 0; i<$navi.length; i++){
 $burgerBtn.addEventListener('click', ()=>{
   $burgerBtn.classList.toggle('close');
   $burgerMenu.classList.toggle('show');
-  $body.classList.toggle('noScroll')
+  $body.classList.toggle('noScroll');
   setTimeout(() => {
     $burgerList.classList.toggle('show');
   }, 800);
@@ -124,8 +124,6 @@ window.addEventListener('scroll', ()=>{
     entries.forEach((entry, idx)=>{
       if(entry.isIntersecting){
         entry.target.classList.add('show');
-      }else{
-        entry.target.classList.remove('show');
       }
     })
   }, option_por);
