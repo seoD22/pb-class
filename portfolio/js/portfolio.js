@@ -92,6 +92,7 @@ for(let i = 0; i<$navi.length; i++){
 $burgerBtn.addEventListener('click', ()=>{
   $burgerBtn.classList.toggle('close');
   $burgerMenu.classList.toggle('show');
+  $header.classList.toggle('show');
   $body.classList.toggle('noScroll');
   setTimeout(() => {
     $burgerList.classList.toggle('show');

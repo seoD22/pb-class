@@ -959,6 +959,15 @@ h2.show {
   header h1 .logo2{
     bottom: -20px;
   }
+  header.show{
+    background-color: #f7f6f1;
+  }
+  header.show .logo1{
+    background-image: url(../img/logo_1.svg);
+  }
+  header.show .logo2{
+    background-image: url(../img/logo_2.svg);
+  }
 
   header.fix .burgerline{
     background-color: #191919;
