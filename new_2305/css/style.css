@@ -1,0 +1,100 @@
+.dimmed::after{
+  content: "";
+  position: absolute;
+  top: 0; bottom: 0; left: 0; right: 0;
+  background-color: rgba(0,0,0,0.45);
+}
+
+.container{
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+/* header */
+header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.hamburger{
+  position: relative;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-content: space-between;
+  flex-wrap: wrap;
+  z-index: 99;
+  transition: .5s;
+}
+.hamburger .buttonCircle{
+  height: 11px;
+  width: 11px;
+  background-color: #ffffff;
+  border: 2px solid;
+  border-radius: 10px;
+  border-color: #000000;
+}
+.hamburgerMenu{
+  position: absolute;
+  z-index: 98;
+  left: -100%;
+  top: 0;
+  bottom: 0;
+  width: 80%;
+  background-color: var(--color-yellow);
+  transition: .5s;
+}
+.hamburgerMenu ul{
+  padding-top: 80px;
+  padding-left: 80px;
+}
+.hamburgerMenu li{
+  margin-bottom: 25px;
+}
+.hamburgerMenu a{
+  font-size: 50px;
+  font-weight: 500;
+}
+.hamburger.show{
+  align-content: space-around;
+}
+.show + .hamburgerMenu{
+  left: 0;
+}
+.show .buttonCircle{
+  height: 5px;
+  width: 12px;
+  rotate: 45deg;
+}
+.show .buttonCircle:nth-child(2),
+.show .buttonCircle:nth-child(3){
+  rotate: -45deg;
+}
+.hamburger:hover{
+  transform: rotate(270deg);
+}
+.logo{
+  flex:1;
+  background-image: url(../img/weeat_logo_pc.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 179px;
+  height: 50px;
+  margin: 0;
+}
+.navi{
+  display: none;
+}
+
+@media(min-width: 1025px){
+  .container{
+    padding: 0 100px;
+  }
+
+  /* header */
+  .logo{
+    height: 50px;
+  }
+}

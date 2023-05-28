@@ -1,8 +1,16 @@
 @font-face {
   font-family: 'Pretendard';
-  src: url(../font/Pretendard-Regular.ttf);
+  src: url(../font/PretendardVariable.woff2);
+}
+
+:root{
+  --color-yellow: #e3f43b;
+  --color-green: #00c728;
 }
 
 *{
   font-family: 'Pretendard', Dotum, Helvetica, "Apple SD Gothic Neo", sans-serif;
 }
+li{list-style: none;}
+a{text-decoration: none; color: black;}
+ul{padding: 0; margin: 0;}
