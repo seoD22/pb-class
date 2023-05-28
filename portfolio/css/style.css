@@ -250,7 +250,7 @@ header .navi li{
   position: relative;
 }
 header .navi li a{
-  font-weight: 500;
+  font-weight: 300;
   text-transform: uppercase;
   color: #f7f6f1;
 }
@@ -339,7 +339,7 @@ header.fix::after{
   display: flex;
   flex-direction: column;
   justify-content: left;
-  align-items: flex-start;
+  align-items: center;
   left: 0;
   right: 0;
   top: 0;
@@ -373,7 +373,10 @@ header.fix::after{
   transition: .5s;
   transition-delay: 3s;
 }
-.mainBack svg{
+.mainBack #layer_2{
+  display: none;
+}
+.mainBack #layer_1{
   position: absolute;
   top: 50px;
 }
@@ -840,7 +843,6 @@ h2.show {
     width: 100%;
     padding: 0 100px;
     z-index: 999;
-    background-color: #f7f6f1;
   }
   header button{
     background-color: transparent;
@@ -872,17 +874,32 @@ h2.show {
   }
 
   .main_banner{
-    height: 86vh;
-    padding-top: 55px;
-    overflow: unset;
+    height: 100vh;
+    overflow: hidden;
+    padding: 0 100;
   }
-  .video_wrapper p{
-    font-size: 750px;
+  .mainBack #layer_1{
+    display: none;
   }
-  .main_banner.none .video_wrapper{
-    height: 200px;
+  .main_banner.none #layer_2{
+    opacity: 0;
   }
-
+  .mainBack #layer_2{
+    display: block;
+    top: 110px;
+    position: absolute;
+    opacity: 1;
+    transition: .7s;
+    transition-delay: 2.5s;
+  }
+  .mainBack .mainText{
+    padding: 0 30px;
+    font-size: 50px;
+    transform: translateY(0);
+  }
+  .mainBack .mainText h3{
+    font-size: 100px;
+  }
 
   .introduce .pic p{
     font-size: 80px;
@@ -943,10 +960,13 @@ h2.show {
     bottom: -20px;
   }
 
+  header.fix .burgerline{
+    background-color: #191919;
+  }
   .burgerline{
     height: .1rem;
     width: 100%;
-    background-color: #191919;
+    background-color: #f7f6f1;
     transition: .3s ease-out;
     transition-delay: 1.5s;
   }
@@ -1119,10 +1139,27 @@ h2.show {
   }
 
   .main_banner{
-    height: 200px;
+    height: 100vh;
   }
-  .video_wrapper p{
-    font-size: 257px;
+  .mainBack .mainText{
+    padding: 0 30px; 
+  }
+  .mainBack .mainText h3{
+    font-size: 130px;
+  }
+  .mainBack #layer_1{
+    display: none;
+  }
+  .main_banner.none #layer_2{
+    opacity: 0;
+  }
+  .mainBack #layer_2{
+    display: block;
+    top: 110px;
+    position: absolute;
+    opacity: 1;
+    transition: .7s;
+    transition-delay: 2.5s;
   }
 
   .introduce > div{
