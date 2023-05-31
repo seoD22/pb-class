@@ -972,11 +972,14 @@ h2.show {
   header.fix .burgerline{
     background-color: #191919;
   }
+  .show .burgerline{
+    background-color: #191919;
+  }
   .burgerline{
     height: .1rem;
     width: 100%;
     background-color: #f7f6f1;
-    transition: .3s ease-out;
+    transition: .3s ease-out width;
     transition-delay: 1.5s;
   }
   .burgerline:nth-child(1){
@@ -1154,7 +1157,7 @@ h2.show {
     padding: 0 30px; 
   }
   .mainBack .mainText h3{
-    font-size: 130px;
+    font-size: 110px;
   }
   .mainBack #layer_1{
     display: none;
