@@ -1,6 +1,12 @@
 body{
   background-color: var(--color-primary);
 }
+h3{
+  font-size: 40px;
+  color: #ffffff;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
 .container{
   padding: 0 250px;
 }
@@ -162,10 +168,10 @@ header{
 
 /* banner */
 .banner{
-  margin: 150px 0;
+  margin: 110px 0;
 }
 .banner .bannerImg{
-  height: 230px;
+  height: 248px;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -185,10 +191,10 @@ header{
   height: 40px;
 }
 .banner .swiper-button-prev{
-  left: 100px;
+  left: 60px;
 }
 .banner .swiper-button-next{
-  right: 100px;
+  right: 60px;
 }
 .banner .swiper-button-next::after,
 .banner .swiper-button-prev::after{
@@ -196,6 +202,33 @@ header{
 }
 .banner .swiper-button-next::after{
   rotate: 180deg;
+}
+
+/* product */
+.product .gnb{
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.product .gnb li{
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 30px;
+  padding: 10px 30px;
+  margin-right: 20px;
+}
+.product .gnb li:hover{
+  color: var(--color-primary);
+  background-color: #ffffff;
+  cursor: pointer;
+  font-weight: 700;
+}
+.product .gnb li::after{
+  content: attr(title);
+  display: block;
+  font-weight: 700;
+  height: 0px;
+  visibility: hidden;
 }
 
 /* animation */
