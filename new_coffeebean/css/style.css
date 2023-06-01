@@ -4,7 +4,9 @@
 
 /* eventTab */
 .eventTab{
+  position: relative;
   display: flex;
+  z-index: 9999;
   background-color: #110916;
   height: 42px;
   align-items: center;
@@ -45,6 +47,7 @@ header{
   background-color: transparent;
   height: 80px;
   left: 0; right: 0;
+  z-index: 10;
   border-bottom: 1px solid #ffffff;
 }
 .logo{
@@ -63,7 +66,7 @@ header{
 }
 .navi a{
   color: #ffffff;
-  font: 400;
+  font-weight: 400;
 }
 .navi li:hover a,
 .user p:hover a{
@@ -87,7 +90,49 @@ header{
 }
 
 /* main */
-.main{
+.main{  
   height: 100vh;
   background-color: var(--color-primary);
+}
+.main .coffee{
+  background-image: url(../img/main_coffee.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  width: 250px;
+  height: 100%;
+  margin: auto;
+}
+.main .text{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  left: 0; right: 0; top: 0; bottom: 0;
+  color: #ffffff;
+}
+.main h3{
+  font-size: 9rem;
+  line-height: 1;
+  margin: 0;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.main p{
+  font-size: 25px;
+  font-weight: 700;
+  margin: .2rem 0;
+}
+.main .text .mainBtn{
+  margin-top: 1rem;
+  width: 115px;
+  height: 40px;
+  border: 1px solid #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main .text .mainBtn a{
+  color: #ffffff;
 }
