@@ -35,3 +35,52 @@
 .eventTab .close::after{
   rotate: -45deg;
 }
+
+/* header */
+header{
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  height: 80px;
+  left: 0; right: 0;
+  border-bottom: 1px solid #ffffff;
+}
+.logo{
+  background-image: url(../img/w_logo\ 1.svg);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: contain;
+  width: 65px;
+  height: 100%;
+}
+.navi{
+  display: flex;
+}
+.navi li{
+  margin: 0 20px;
+}
+.navi a{
+  color: #ffffff;
+  font: 400;
+}
+.navi li:hover a,
+.user p:hover a{
+  font-weight: 800;
+}
+.user{
+  display: flex;
+}
+.user p{
+  margin: 0 20px;
+}
+.user a{
+  color: #ffffff;
+}
+
+/* main */
+.main{
+  height: 100vh;
+  background-color: var(--color-primary);
+}
