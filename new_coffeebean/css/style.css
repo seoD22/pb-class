@@ -1,3 +1,6 @@
+body{
+  background-color: var(--color-primary);
+}
 .container{
   padding: 0 250px;
 }
@@ -155,6 +158,44 @@ header{
 }
 .main .text .mainBtn a{
   color: #ffffff;
+}
+
+/* banner */
+.banner{
+  margin: 150px 0;
+}
+.banner .bannerImg{
+  height: 230px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.banner .swiper-slide:nth-child(1) .bannerImg{
+  background-image: url(../img/banner/banner1.png);
+}
+.banner .swiper-slide:nth-child(2) .bannerImg{
+  background-image: url(../img/banner/banner2.png);
+}
+.banner .swiper-slide:nth-child(3) .bannerImg{
+  background-image: url(../img/banner/banner3.png);
+}
+.banner .swiper-button-prev,
+.banner .swiper-button-next{
+  width: 40px;
+  height: 40px;
+}
+.banner .swiper-button-prev{
+  left: 100px;
+}
+.banner .swiper-button-next{
+  right: 100px;
+}
+.banner .swiper-button-next::after,
+.banner .swiper-button-prev::after{
+  content: url(../img/icon/swiper_arrow.png);
+}
+.banner .swiper-button-next::after{
+  rotate: 180deg;
 }
 
 /* animation */

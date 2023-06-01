@@ -8,6 +8,7 @@
   <!-- favicon -->
   <link rel="shortcut icon" href="./img/favicon-16x16.png" type="image/x-icon">
   <!-- custom -->
+  <link rel="stylesheet" href="./css/swiper.css">
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -48,8 +49,22 @@
         </div>
       </div>
     </div>
-    <div class="banner">
-
+    <div class="banner container">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="bannerImg"></div>
+          </div>
+          <div class="swiper-slide">
+            <div class="bannerImg"></div>
+          </div>
+          <div class="swiper-slide">
+            <div class="bannerImg"></div>
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
     </div>
     <div class="product">
 
@@ -64,6 +79,8 @@
 
     </footer>
   </div>
-<script src="./js/new.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="./js/swiper.js"></script>
+  <script src="./js/new.js"></script>
 </body>
 </html>
