@@ -10,9 +10,10 @@
 
 *{
   font-family: 'Pretendard', Dotum, Helvetica, "Apple SD Gothic Neo", sans-serif;
+  cursor: default;
 }
 body{margin: 0;}
 li{list-style: none;}
-a{text-decoration: none; color: black;}
+a{text-decoration: none; color: black; cursor: pointer;}
 ul{padding: 0; margin: 0;}
 p{margin: 0; font-size: 16px; font-weight: 400;}

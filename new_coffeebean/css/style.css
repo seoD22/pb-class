@@ -187,8 +187,8 @@ header{
 }
 .banner .swiper-button-prev,
 .banner .swiper-button-next{
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
 }
 .banner .swiper-button-prev{
   left: 60px;
@@ -198,9 +198,13 @@ header{
 }
 .banner .swiper-button-next::after,
 .banner .swiper-button-prev::after{
+  display: none;
+}
+.banner .swiper-button-next::before,
+.banner .swiper-button-prev::before{
   content: url(../img/icon/swiper_arrow.png);
 }
-.banner .swiper-button-next::after{
+.banner .swiper-button-next::before{
   rotate: 180deg;
 }
 
