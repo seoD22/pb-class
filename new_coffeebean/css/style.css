@@ -94,6 +94,24 @@ header{
   height: 100vh;
   background-color: var(--color-primary);
 }
+.blur{
+  position: absolute;
+}
+.blur:nth-child(1){
+  left: 720px;
+  top: 360px;
+  animation: bluranime1 1.5s linear infinite alternate-reverse;
+}
+.blur:nth-child(2){
+  right: 620px;
+  top: 500px;
+  animation: bluranime2 1.7s linear .3s infinite alternate-reverse;
+}
+.blur:nth-child(3){
+  left: 860px;
+  top: 790px;
+  animation: bluranime3 1.9s linear .5s infinite alternate-reverse;
+}
 .main .coffee{
   background-image: url(../img/main_coffee.png);
   background-repeat: no-repeat;
@@ -135,4 +153,30 @@ header{
 }
 .main .text .mainBtn a{
   color: #ffffff;
+}
+
+/* animation */
+@keyframes bluranime1 {
+  from {
+    box-shadow: 0px 0px 115px 127px #7bff8954;
+  }
+  to {
+    box-shadow: 0px 0px 115px 0px #7bff8954;
+  }
+}
+@keyframes bluranime2 {
+  from {
+    box-shadow: 0px 0px 115px 127px #FFFFFF26;
+  }
+  to {
+    box-shadow: 0px 0px 115px 0px #FFFFFF26;
+  }
+}
+@keyframes bluranime3 {
+  from {
+    box-shadow: 0px 0px 115px 127px #fb32ff59;
+  }
+  to {
+    box-shadow: 0px 0px 115px 0px #fb32ff59;
+  }
 }
