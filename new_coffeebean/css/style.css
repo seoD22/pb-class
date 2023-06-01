@@ -105,12 +105,14 @@ header{
 .blur:nth-child(2){
   right: 620px;
   top: 500px;
-  animation: bluranime2 1.7s linear .3s infinite alternate-reverse;
+  animation: bluranime2 1.5s linear infinite alternate-reverse;
+  /* animation: bluranime2 1.7s linear .3s infinite alternate-reverse; */
 }
 .blur:nth-child(3){
   left: 860px;
   top: 790px;
-  animation: bluranime3 1.9s linear .5s infinite alternate-reverse;
+  animation: bluranime3 1.5s linear infinite alternate-reverse;
+  /* animation: bluranime3 1.9s linear .5s infinite alternate-reverse; */
 }
 .main .coffee{
   background-image: url(../img/main_coffee.png);
