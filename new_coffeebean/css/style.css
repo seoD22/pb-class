@@ -131,7 +131,7 @@ header{
   background-position: center center;
   background-size: contain;
   width: 250px;
-  height: 100%;
+  height: 110%;
   margin: auto;
 }
 .main .text{
@@ -214,7 +214,7 @@ header{
 .product .gnb{
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 .product .gnb li{
   color: #ffffff;
@@ -222,6 +222,11 @@ header{
   border-radius: 30px;
   padding: 10px 30px;
   margin-right: 20px;
+}
+.product .gnb li.show{
+  color: var(--color-primary);
+  background-color: #ffffff;
+  font-weight: 700;
 }
 .product .gnb li:hover{
   color: var(--color-primary);
@@ -235,6 +240,75 @@ header{
   font-weight: 700;
   height: 0px;
   visibility: hidden;
+}
+.menu{
+  position: relative;
+  display: flex;
+  height: 500px;
+}
+.menu li{
+  display: none;
+}
+.menu li.show{
+  position: absolute;
+  display: flex;
+}
+.menu li > div{
+  margin-right: 30px;
+}
+.menu .smallPic{
+  display: flex;
+  flex-direction: column;
+}
+.menu .smallPic img{
+  width: 70px;
+  margin-bottom: 30px;
+}
+.menu .pic{
+  width: 450px;
+}
+.menu .pic img{
+  width: 100%;
+}
+.menu .des{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.menu .proNm p,
+.menu .proNm h4{
+  color: #ffffff;
+}
+.menu .proNm p:nth-child(1){
+  font-weight: 700;
+  font-size: 28px;
+}
+.menu .proNm h4{
+  font-weight: 700;
+  font-size: 40px;
+  margin: 20px 0;
+}
+.menu .detail{
+  display: flex;
+}
+.menu .detail .box{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  padding: 10px;
+  border: 1px solid #ffffff;
+  border-radius: 15px;
+  margin-right: 10px;
+}
+.menu .detail p{
+  color: #ffffff;
+  font: 14px;
+}
+.menu .detail .num{
+  font-weight: 700;
+  font-size: 21px;
 }
 
 /* animation */
