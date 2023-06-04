@@ -1,5 +1,6 @@
 body{
   background-color: var(--color-primary);
+  transition: .3s;
 }
 h3{
   font-size: 40px;
@@ -99,7 +100,8 @@ header{
 }
 
 /* main */
-.main{  
+.main{
+  position: relative;
   height: 100vh;
   background-color: var(--color-primary);
 }
