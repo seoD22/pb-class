@@ -1,0 +1,177 @@
+{
+  "menu":
+  [
+    {
+      "espresso":
+      [
+        {
+          "img": "./img/product/americano.png",
+          "Nm": "아메리카노",
+          "engNm": "Americano",
+          "description":"따뜻한 물에 부드러워진 에스프레소의 컴비네이션",
+          "kcal":"0",
+          "g":"0",
+          "mg": "20",
+          "gCar": "0",
+          "caffeine": "198"
+        },
+        {
+          "img": "./img/product/cafelatte.png",
+          "Nm": "카페 라떼",
+          "engNm": "Cafe Latte",
+          "description":"에스프레소와 스팀밀크 그리고 거품",
+          "kcal":"210",
+          "g":"7",
+          "mg": "180",
+          "gCar": "18",
+          "caffeine": "99"
+        },
+        {
+          "img": "./img/product/latte.png",
+          "Nm": "아이스 헤이즐넛 라떼",
+          "engNm": "Iced Hazelnut Latte",
+          "description":"에스프레소와 헤이즐넛 파우더, 스팀밀크와 거품",
+          "kcal":"320",
+          "g":"9",
+          "mg": "260",
+          "gCar": "47",
+          "caffeine": "99"
+        },
+        {
+          "img": "./img/product/mochaLatte.jpg",
+          "Nm": "모카 라떼",
+          "engNm": "Mocha latte",
+          "description":"에스프레소와 초콜릿 파우더, 스팀밀크와 거품",
+          "kcal":"270",
+          "g":"3",
+          "mg": "350",
+          "gCar": "46",
+          "caffeine": "104"
+        }
+      ]
+    },
+    {
+      "tea":
+      [
+        {
+          "img": "./img/product/greenTea.jpg",
+          "Nm": "제주 유기농 작설",
+          "engNm": "Jeju Organic Green",
+          "description":"유기농으로 재배된 제주 녹차의 어린 찻잎만을 채취하여 싱그럽고 은은한 향을 내는 최고급 티",
+          "kcal":"5",
+          "g":"0",
+          "mg": "15",
+          "gCar": "1",
+          "caffeine": "8"
+        },
+        {
+          "img": "./img/product/jasmineTea.jpg",
+          "Nm": "매화 자스민",
+          "engNm": "Plum Blossom Jasmine",
+          "description":"전남에서 자란 달콤한 향의 매화꽃과 향기로운 자스민이 만나 부드러우면서 깊은 향이 나는 티",
+          "kcal":"5",
+          "g":"0",
+          "mg": "15",
+          "gCar": "1",
+          "caffeine": "36"
+        },
+        {
+          "img": "./img/product/mintTea.jpg",
+          "Nm": "하동 녹차 민트",
+          "engNm": "Hadong Green Tea Mint",
+          "description":"하동 녹차와 대만산 우롱, 향긋한 민트 잎과 혼합되어 상쾌하면서도 깊은 맛을 내는 티",
+          "kcal":"5",
+          "g":"0",
+          "mg": "15",
+          "gCar": "1",
+          "caffeine": "109"
+        },
+        {
+          "img": "./img/product/englishBreakfast.jpg",
+          "Nm": "잉글리쉬 브렉퍼스트",
+          "engNm": "English Breakfast",
+          "description":"다질링과 실론 차의 완벽한 블렌드. 커피빈만의 특별한 제조법은 중간  정도의 무게감과 상쾌한 맛이 잘 조화된 차 한잔을 만들어 냅니다. 우유와 잘 어울립니다.",
+          "kcal":"5",
+          "g":"0",
+          "mg": "15",
+          "gCar": "1",
+          "caffeine": "122"
+        }
+      ]
+    },
+    {
+      "food":
+      [
+        {
+          "img": "./img/product/oliveBagel.jpg",
+          "Nm": "올리브 바질 베이글",
+          "engNm": "Olive Basil Bagel",
+          "description":"은은한 바질향이 산뜻하게 풍기는 베이글",
+          "kcal":"316",
+          "g":"0.5",
+          "mg": "542",
+          "sugar": "9",
+          "protein": "10"
+        },
+        {
+          "img": "./img/product/scone.jpg",
+          "Nm": "크랜베리 크림치즈 스콘",
+          "engNm": "Cranberry Cream Cheese Scone",
+          "description":"진한 크림치즈와 크랜베리의 새콤달콤 풍미가 조화롭게 어울리는 스콘",
+          "kcal":"449",
+          "g":"17",
+          "mg": "502",
+          "sugar": "14",
+          "protein": "7"
+        },
+        {
+          "img": "./img/product/chocoCake.jpg",
+          "Nm": "벨지안 초콜릿 미니케익",
+          "engNm": "Belgian Chocolate Cake",
+          "description":"벨기에산 진한 초콜릿 시트에 부드러운 우유생크림과 초콜릿 가나슈, 크런치 초코볼을 레이어하여 꾸덕한 식감을 구현한 미니사이즈 초콜릿 케익",
+          "kcal":"1505",
+          "g":"73",
+          "mg": "603",
+          "sugar": "41",
+          "protein": "17"
+        },
+        {
+          "img": "./img/product/tiramisu.jpg",
+          "Nm": "뉴 티라미수 케익",
+          "engNm": "New Tiramisu Cake",
+          "description":"부드러운 마스카포네 치즈크림, 쌉싸름한 에스프레소를 촉촉하게 머금은 시트, 달콤한 코코아파우더까지 한 입에 느껴지는 풍미 가득한 케익",
+          "kcal":"355",
+          "g":"24",
+          "mg": "138",
+          "sugar": "15",
+          "protein": "5"
+        }
+      ]
+    },
+    {
+      "card":
+      [
+        {
+          "img": "./img/product/thankyouCard.png",
+          "Nm": "땡큐카드",
+          "description":"2023년 5월 출시"
+        },
+        {
+          "img": "./img/product/busanCard.jpg",
+          "Nm": "부산지역카드_송도해상케이블카",
+          "description":"2023년 3월 출시"
+        },
+        {
+          "img": "./img/product/loveCard.png",
+          "Nm": "러브카드",
+          "description":"2023년 2월 출시"
+        },
+        {
+          "img": "./img/product/newyearCard.png",
+          "Nm": "신년카드",
+          "description":"2023년 1월 출시"
+        }
+      ]
+    }
+  ]
+}
