@@ -391,8 +391,73 @@ header{
   cursor: pointer;
 }
 
-
-
+/* relations */
+.relations button{
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  color: #ffffff;
+  border: 0;
+  padding: 0 0 25px 0;
+  border-bottom: 1px solid #ffffff;
+  width: 100%;
+}
+.relations li{
+  overflow: hidden;
+  max-height: 47px;
+  height: fit-content;
+  transition: .4s;
+  margin-bottom: 25px;
+}
+.relations .title{
+  font-size: 21px;
+  font-weight: 200;
+  line-height: 1;
+}
+.relations .title:hover,
+.relations .plus:hover{
+  cursor: pointer;
+}
+.content p{
+  color: #ffffff;
+  font-size: 21px;
+  font-weight: 200;
+}
+.relations .plus{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+.relations .plus::before,
+.relations .plus::after{
+  content: "";
+  position: absolute;
+  background-color: var(--color-primary);
+  height: 2px;
+  width: 15px;
+  border-radius: 10px;
+}
+.relations .plus::after{
+  rotate: 90deg;
+}
+.relations .content{
+  padding: 25px 32px;
+}
+.relations li.show{
+  max-height: 200px;
+}
+.relations li.show .title{
+  font-weight: 500;
+}
+.relations li.show .plus::after{
+  display: none;
+}
 
 /* animation */
 @keyframes bluranime1 {
