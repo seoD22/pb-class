@@ -1,6 +1,10 @@
 body{
   background-color: var(--color-primary);
   transition: .3s;
+  min-width: 1680px;
+}
+section{
+  margin: 150px 0;
 }
 h3{
   font-size: 40px;
@@ -50,7 +54,6 @@ h3{
 
 /* header */
 header{
-  position: absolute;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -67,6 +70,9 @@ header{
   background-size: contain;
   width: 65px;
   height: 100%;
+}
+.logo:hover{
+  cursor: pointer;
 }
 .navi{
   display: flex;
@@ -104,6 +110,7 @@ header{
   position: relative;
   height: 100vh;
   background-color: var(--color-primary);
+  margin: 0;
 }
 .blur{
   position: absolute;
@@ -448,6 +455,7 @@ header{
 }
 .relations .content{
   padding: 25px 32px;
+  border-bottom: 1px solid #ffffff;
 }
 .relations li.show{
   max-height: 200px;
@@ -458,6 +466,88 @@ header{
 .relations li.show .plus::after{
   display: none;
 }
+
+/* footer */
+footer{
+  background-color: #303030;
+}
+footer a{
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 200;
+}
+footer .top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  padding: 0 80px;
+  padding-top: 120px;
+  padding-bottom: 50px;
+}
+footer .sns{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+footer .sns li{
+  margin: 0 10px;
+}
+footer .sns li a div{
+  width: 35px;
+  height: 35px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+}
+.insta{
+  background-image: url(../img/Icon/insta.png);
+}
+.facebook{
+  background-image: url(../img/Icon/facebook.png);
+}
+.tweeter{
+  background-image: url(../img/Icon/tweet.png);
+}
+.in{
+  background-image: url(../img/Icon/in.png);
+}
+.youtube{
+  background-image: url(../img/Icon/youtube.png);
+}
+footer .bottom{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-weight: 300;
+  padding: 30px 0;
+}
+footer .middle{
+  border-top: 1px solid #4A4A4A;
+  border-bottom: 1px solid #4A4A4A;
+}
+.menuTitle{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 80px;
+  border-bottom: 1px solid #4A4A4A;
+}
+.menuTitle a{
+  line-height: 3.5;
+}
+.footMenu{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 80px;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+.footMenu li{
+  margin-bottom: 15px;
+}
+
 
 /* animation */
 @keyframes bluranime1 {
