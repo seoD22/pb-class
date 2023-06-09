@@ -63,12 +63,16 @@ header{
   z-index: 10;
   border-bottom: 1px solid #ffffff;
 }
+header > a{
+  width: 65px;
+  height: 100%;
+}
 .logo{
   background-image: url(../img/w_logo\ 1.svg);
   background-repeat: no-repeat;
   background-position: left;
   background-size: contain;
-  width: 65px;
+  margin: 0;
   height: 100%;
 }
 .logo:hover{
@@ -475,6 +479,10 @@ footer a{
   color: #ffffff;
   font-size: 18px;
   font-weight: 200;
+}
+footer .top > a{
+  width: 65px;
+  height: 100%;
 }
 footer .top{
   display: flex;
