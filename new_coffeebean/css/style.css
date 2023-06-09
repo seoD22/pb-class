@@ -387,6 +387,9 @@ header{
 .newsContents li:hover .newsPic{
   background-size: 110%;
 }
+.newsContents li:hover .gradient{
+  cursor: pointer;
+}
 
 
 
