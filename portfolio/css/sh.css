@@ -19,6 +19,15 @@
   color: var(--color-Main);
   text-transform: uppercase;
 }
+._m section._01 .dg_01 .dt_01{
+  color: var(--color-LightGrey);
+}
+._m section._01 .dg_01 .dt_02{
+  color: var(--color-Grey);
+}
+._m section._01 .dg_01 .dt_03{
+  color: var(--color-Black);
+}
 
 ._m section._01 .dg_02{
   position: absolute;

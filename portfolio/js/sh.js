@@ -37,7 +37,7 @@ $(document).ready(function(){
         scrollTrigger: {
           trigger: s01,
           start: 'center center',
-          end: '300%',
+          end: '500%',
           pin: true,
           scrub: 1,
           // markers: true
