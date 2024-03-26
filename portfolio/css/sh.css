@@ -21,7 +21,10 @@
 }
 
 ._m section._02{
+  position: relative;
+  z-index: 1;
   height: 100vh;
+  background-color: var(--color-Black);
 }
 
 
