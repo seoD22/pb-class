@@ -31,6 +31,7 @@ header nav li{
 /* 좌측 네비 */
 .l_f{
   position: fixed;
+  z-index: 99;
   top: 50%;
   transform: translateY(-50%);
   left: 10vh;

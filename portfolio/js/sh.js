@@ -29,14 +29,15 @@ $(document).ready(function(){
 
 
       // sec_01 스크롤 모션
-      const s01_dt01 = document.querySelector('section._01 .dt_01');
-      const s01_dt02 = document.querySelector('section._01 .dt_02');
-      const s01_dt03 = document.querySelector('section._01 .dt_03');
+      const s01_dt01 = document.querySelector('section._01 .dg_01 .dt_01');
+      const s01_dt02 = document.querySelector('section._01 .dg_01 .dt_02');
+      const s01_dt03 = document.querySelector('section._01 .dg_01 .dt_03');
+      const s01_dg01 = document.querySelector('section._01 .dg_02');
       let s01_timeline = gsap.timeline({
         scrollTrigger: {
           trigger: s01,
           start: 'center center',
-          end: '200%',
+          end: '300%',
           pin: true,
           scrub: 1,
           // markers: true
@@ -48,14 +49,19 @@ $(document).ready(function(){
       .set(s01_dt01, {xPercent: 200, opacity: 0})
       .set(s01_dt02, {xPercent: 200, opacity: 0})
       .set(s01_dt03, {xPercent: 200, opacity: 0})
+      .set(s01_dg01, {opacity: 0, scale: 2})
 
-      .to(s01_dt01, {xPercent: 0, opacity: 1, duration: 1})
-      .to(s01_dt02, {xPercent: 0, opacity: 1, duration: 1})
-      .to(s01_dt03, {xPercent: 0, opacity: 1, duration: 1})
+      .to(s01_dt01, {xPercent: 0, opacity: 1, duration: 3})
+      .to(s01_dt02, {xPercent: 0, opacity: 1, duration: 3})
+      .to(s01_dt03, {xPercent: 0, opacity: 1, duration: 3})
       .addLabel("label_01")
-      .to(s01_dt01, {opacity: 0, duration: 2}, 'label_01')
-      .to(s01_dt02, {opacity: 0, duration: 2}, 'label_01')
-      .to(s01_dt03, {opacity: 0, duration: 2}, 'label_01')
+      .to(s01_dt01, {opacity: 0, duration: 2, delay: 3}, 'label_01')
+      .to(s01_dt02, {opacity: 0, duration: 2, delay: 3}, 'label_01')
+      .to(s01_dt03, {opacity: 0, duration: 2, delay: 3}, 'label_01')
+
+      .to(s01_dg01, {scale: 1, opacity: 1, duration: 3, delay: 3},)
+      .to(s01_dg01, {color: 'transparent', duration: 3, delay: 3},)
+
     }
   })
 

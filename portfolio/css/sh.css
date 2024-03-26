@@ -20,6 +20,18 @@
   text-transform: uppercase;
 }
 
+._m section._01 .dg_02{
+  position: absolute;
+  width: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  align-items: center;
+  line-height: 1;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: var(--color-Main);
+}
+
 ._m section._02{
   position: relative;
   z-index: 1;
