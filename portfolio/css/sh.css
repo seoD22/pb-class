@@ -20,13 +20,13 @@
   text-transform: uppercase;
 }
 ._m section._01 .dg_01 .dt_01{
-  color: var(--color-LightGrey);
+  color: #0066ffaf;
 }
 ._m section._01 .dg_01 .dt_02{
-  color: var(--color-Grey);
+  color: #0066ff5e;
 }
 ._m section._01 .dg_01 .dt_03{
-  color: var(--color-Black);
+  color: #0066ff27;
 }
 
 ._m section._01 .dg_02{
