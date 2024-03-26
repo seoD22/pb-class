@@ -1,0 +1,73 @@
+header{
+  position: fixed;
+  top: 0;left: 0;right: 0;
+  padding: 20px 0;
+  transform: translateY(-100%);
+}
+header .wrap{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header .logo{
+  font-family: var(--font-suit);
+  font-size: 35px;
+  font-weight: 700;
+  color: var(--color-Main);
+}
+header nav ul{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+header nav li{
+  font-family: var(--font-pre);
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+
+/* 좌측 네비 */
+.l_f{
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 10vh;
+}
+.l_f ul{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.l_f li{
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-family: var(--font-pre);
+  font-size: 16px;
+  line-height: 1.5;
+}
+.l_f li span{
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2px;
+  height: 1px;
+  background-color: var(--color-Black);
+  transition: .2s width;
+}
+.l_f li em{
+  cursor: pointer;
+  margin-left: 30px;
+}
+.l_f li.on{
+  color: var(--color-Main);
+}
+.l_f li.on span{
+  width: 20px;
+  background-color: var(--color-Main);
+}
+

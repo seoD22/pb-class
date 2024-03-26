@@ -1,16 +1,37 @@
 @charset "UTF-8";
+._m section._01{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+._m section._01 dl{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  text-align: center;
+  font-family: var(--font-pre);
+  font-size: 150px;
+  font-weight: 900;
+  line-height: 1.2;
+  letter-spacing: -1px;
+  color: var(--color-Main);
+  text-transform: uppercase;
+}
 
-
-
+._m section._02{
+  height: 100vh;
+}
 
 
 
 
 
 @media screen and (max-width: 1250px) {
-    
+  
 }
 
 @media screen and (max-width: 769px) {
-    
+  
 }
