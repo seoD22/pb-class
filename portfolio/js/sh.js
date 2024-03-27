@@ -1,11 +1,11 @@
 $(document).ready(function(){
 
   ScrollTrigger.matchMedia({
-    '(min-width: 800px)': function(){
+    '(min-width: 801px)': function(){
 
       // sec_01
       const s01 = document.querySelector('section._01');
-      let s01_dl = gsap.utils.toArray('section._01 dl');
+      // let s01_dl = gsap.utils.toArray('section._01 dl');
       // let s01Tween = gsap.to(s01_dl, {
       //   xPercent: -100 * (s01_dl.length -1),
       //   ease: 'none',
@@ -40,6 +40,7 @@ $(document).ready(function(){
           end: '500%',
           pin: true,
           scrub: 1,
+          ease: 'none',
           // markers: true
           invalidateOnRefresh: true,
         },
@@ -55,16 +56,36 @@ $(document).ready(function(){
       .to(s01_dt02, {xPercent: 0, opacity: 1, duration: 3})
       .to(s01_dt03, {xPercent: 0, opacity: 1, duration: 3})
       .addLabel("label_01")
-      .to(s01_dt01, {opacity: 0, duration: 2, delay: 3}, 'label_01')
-      .to(s01_dt02, {opacity: 0, duration: 2, delay: 3}, 'label_01')
-      .to(s01_dt03, {opacity: 0, duration: 2, delay: 3}, 'label_01')
+      .to(s01_dt01, {opacity: 0, duration: 2, delay: 2}, 'label_01')
+      .to(s01_dt02, {opacity: 0, duration: 2, delay: 2}, 'label_01')
+      .to(s01_dt03, {opacity: 0, duration: 2, delay: 2}, 'label_01')
 
       .to(s01_dg01, {scale: 1, opacity: 1, duration: 3, delay: 3},)
-      .to(s01_dg01, {color: 'transparent', duration: 3, delay: 3},)
-
+      .to(s01_dg01, {color: 'transparent', duration: 5, delay: 3},)
     }
-  })
+  });
 
+  // 퀵, 헤더 show
+  const s02 = document.querySelector('section._02');
+  ScrollTrigger.create({
+    trigger: s02,
+    start: 'top, center',
+    end: 'bottom center',
+    scrub: true,
+    // markers: true,
+    toggleClass: { targets: $('.header, .l_f'), className: "show" },
+  });
+
+  // 퀵, 헤더 색상 변경
+  $('.inv_').each(function (idx, item) {
+    ScrollTrigger.create({
+      trigger: item,
+      start: 'top center',
+      end: 'bottom center',
+      // markers: true,
+      toggleClass: { targets: $('.l_f'), className: "invert" },
+    });
+  });
 
 
 

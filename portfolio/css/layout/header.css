@@ -3,6 +3,8 @@ header{
   top: 0;left: 0;right: 0;
   padding: 20px 0;
   transform: translateY(-100%);
+  z-index: 99;
+  transition: .5s;
 }
 header .wrap{
   display: flex;
@@ -27,6 +29,9 @@ header nav li{
   text-transform: uppercase;
 }
 
+header.show{
+  transform: translateY(0);
+}
 
 /* 좌측 네비 */
 .l_f{
@@ -34,7 +39,8 @@ header nav li{
   z-index: 99;
   top: 50%;
   transform: translateY(-50%);
-  left: 10vh;
+  left: -10vh;
+  transition: .5s;
 }
 .l_f ul{
   display: flex;
@@ -64,11 +70,22 @@ header nav li{
   cursor: pointer;
   margin-left: 30px;
 }
+.l_f li:hover span{
+  width: 20px;
+}
 .l_f li.on{
-  color: var(--color-Main);
+  color: var(--color-Main) !important;
 }
 .l_f li.on span{
   width: 20px;
-  background-color: var(--color-Main);
+  background-color: var(--color-Main) !important;
 }
-
+.l_f.show{
+  left: 10vh;
+}
+.l_f.invert li{
+  color: var(--color-LightGrey);
+}
+.l_f.invert li span{
+  background-color: var(--color-LightGrey);
+}
