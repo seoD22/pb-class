@@ -83,7 +83,7 @@ $(document).ready(function(){
       start: 'top center',
       end: 'bottom center',
       // markers: true,
-      toggleClass: { targets: $('.l_f'), className: "invert" },
+      toggleClass: { targets: $('.header, .l_f'), className: "invert" },
     });
   });
 
