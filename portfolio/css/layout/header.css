@@ -15,7 +15,7 @@ header .logo{
   font-family: var(--font-suit);
   font-size: 35px;
   font-weight: 700;
-  color: var(--color-Main);
+  color: #fff;
 }
 header nav ul{
   display: flex;
@@ -33,7 +33,7 @@ header.show{
   transform: translateY(0);
 }
 header.invert .logo{
-  color: #fff;
+  color: var(--color-Main);
 }
 
 /* 좌측 네비 */
@@ -59,6 +59,7 @@ header.invert .logo{
   font-size: 16px;
   line-height: 1.5;
   opacity: .7;
+  color: var(--color-LightGrey);
 }
 .l_f li span{
   position: absolute;
@@ -67,7 +68,8 @@ header.invert .logo{
   transform: translateY(-50%);
   width: 2px;
   height: 1px;
-  background-color: var(--color-Black);
+  background-color: var(--color-LightGrey);
+  
   transition: .2s width;
 }
 .l_f li em{
@@ -78,25 +80,25 @@ header.invert .logo{
   width: 20px;
 }
 .l_f li.on{
-  color: var(--color-Main);
+  color: #fff;
   opacity: 1;
 }
 .l_f li.on span{
   width: 20px;
-  background-color: var(--color-Main);
+  background-color: #fff;
 }
 .l_f.show{
   left: 10vh;
 }
 .l_f.invert li{
-  color: var(--color-LightGrey);
+  color: var(--color-Black);
 }
 .l_f.invert li span{
-  background-color: var(--color-LightGrey);
+  background-color: var(--color-Black);
 }
 .l_f.invert li.on{
-  color: #fff;
+  color: var(--color-Main);
 }
 .l_f.invert li.on span{
-  background-color: #fff;
+  background-color: var(--color-Main);
 }

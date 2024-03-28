@@ -2,7 +2,6 @@ $(document).ready(function(){
 
   ScrollTrigger.matchMedia({
     '(min-width: 801px)': function(){
-
       // sec_01
       const s01 = document.querySelector('section._01');
       // let s01_dl = gsap.utils.toArray('section._01 dl');
@@ -62,19 +61,75 @@ $(document).ready(function(){
 
       .to(s01_dg01, {scale: 1, opacity: 1, duration: 3, delay: 3},)
       .to(s01_dg01, {color: 'transparent', duration: 5, delay: 3},)
-    }
-  });
+
+      const s02 = document.querySelector('section._02');
+      let s02_timeline = gsap.timeline({
+        scrollTrigger: {
+          trigger: s02,
+          start: 'center center',
+          end: '100%',
+          pin: true,
+          scrub: 1,
+          ease: 'none',
+          // markers: true,
+          invalidateOnRefresh: true,
+        },
+      });
+
+      // sec_03
+      ScrollTrigger.create({ // sticky
+        trigger: "section._03 h3",
+        start: "top top",
+        endTrigger: 'section._03',
+        end: 'bottom top',
+        pin: true,
+        pinSpacing : false,
+        // markers: true,
+        invalidateOnRefresh: true,
+        toggleClass: { targets: $('section._03 h3'), className: "view" }
+      });
+      
+
+      gsap.utils.toArray('section._03 .port_box').forEach(function(imgBox){
+        gsap.timeline({
+          scrollTrigger: {
+            trigger: imgBox,
+            start: 'center bottom',
+            end: 'center center',
+            scrub: true,
+            // markers: true,
+          }
+        })
+        .to(imgBox, {'clip-path': 'inset(0%)', ease: 'none', duration: .3}, 0)
+      })
+
+    } /// min-width: 801px
+  }); 
+
+
+
 
   // 퀵, 헤더 show
-  const s02 = document.querySelector('section._02');
-  ScrollTrigger.create({
-    trigger: s02,
-    start: 'top, center',
-    end: 'bottom center',
-    scrub: true,
-    // markers: true,
-    toggleClass: { targets: $('.header, .l_f'), className: "show" },
-  });
+  window.addEventListener('scroll', () => {
+    const header = document.querySelector('header');
+    const quick = document.querySelector('.l_f');
+
+    const options = {
+      threshold: [1]
+    };
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach((entry, idx)=>{
+        if(entry.isIntersecting){
+          header.classList.add('show');
+          quick.classList.add('show');
+          entry.target.classList.add('anime');
+        }
+      })
+    }, options);
+
+    // intersection Observer 
+    io.observe(document.querySelector('section._02'))
+  })
 
   // 퀵, 헤더 색상 변경
   $('.inv_').each(function (idx, item) {
@@ -89,4 +144,13 @@ $(document).ready(function(){
 
 
 
-});
+
+
+
+
+
+
+
+
+
+});///////////////
