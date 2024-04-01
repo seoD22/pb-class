@@ -173,7 +173,7 @@
 
 ._m section._03{
   position: relative;
-  padding: 200px 0;
+  padding-bottom: 200px;
   background-color: #fff;
 }
 ._m section._03 h3{
@@ -246,6 +246,30 @@
   font-weight: 800;
 }
 
+.marquee{
+  display: inline-flex;
+  align-items: center;
+  background-color: #fff;
+  animation: marquee forwards infinite linear 120s;
+}
+.marquee.tr_{
+  animation: marquee02 forwards infinite linear 120s;
+}
+.marquee p{
+  display: inline-block;
+  font-family: var(--font-suit);
+  font-weight: 700;
+  font-size: 160px;
+  white-space: nowrap;
+  color: var(--color-Main);
+  text-transform: uppercase;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: var(--color-Main);
+}
+.marquee p span{
+  color: transparent;
+}
+
 @keyframes downAnime {
   to{
     opacity: .2;
@@ -267,6 +291,23 @@
   }
 }
 
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee02 {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 
 @media screen and (max-width: 1250px) {
   
