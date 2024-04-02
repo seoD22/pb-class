@@ -1,0 +1,44 @@
+@charset "UTF-8";
+/* 기본 설정들 */
+html {overflow-x: hidden;}
+body{position: relative;overflow: hidden;}
+html *{ word-break: keep-all;}
+html, body {font-family: "Noto Sans KR", sans-serif;}
+img, p, span, h1, h2, h3, h4, h5, h6 {-webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -o-user-select: none; user-select: none; -webkit-user-drag: none; }
+.p{display: block ;}
+.t{display: none;}
+.m{display: none ;}
+.fb{font-family: "Noto Sans KR"; font-weight: 600; font-style: bold;}
+html::-webkit-scrollbar {width: 8px;}
+html::-webkit-scrollbar-thumb {background-color: #2f3542; border-radius: 10px;}
+
+@media screen and (max-width: 1250px) {
+  .p{display: none;}
+  .t{display: block;}
+  .cont{width: 90%;margin: 0 auto;max-width:1250px}
+}
+
+
+@media screen and (max-width:767px) {
+  .m{display: block;}
+  .cont{max-width:767px}
+}
+
+/* 기본 세팅 */
+.wrap{ width: 100%; margin: 0 auto; }
+.wrap[max="1750"]{ max-width: 1750px; }
+.wrap[max="1510"]{ max-width: 1510px; }
+.wrap[max="1280"]{ max-width: 1280px; }
+
+:root{
+  /* font */
+  --font-pre: 'Pretendard';
+  --font-suit: 'SUIT';
+  
+  /* color */
+  --color-Main: #0066ff;
+  --color-Black: #25282F;
+  --color-Grey: #9BA3AB;
+  --color-DeepGrey: #2E3238;
+  --color-LightGrey: #EAF0F5;
+}
