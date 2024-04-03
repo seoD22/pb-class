@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /* 기본 설정들 */
 html {overflow-x: hidden;}
-body{position: relative;overflow: hidden;}
+body{position: relative;overflow: hidden !important;}
 html *{ word-break: keep-all;}
 html, body {font-family: "Noto Sans KR", sans-serif;}
 img, p, span, h1, h2, h3, h4, h5, h6 {-webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -o-user-select: none; user-select: none; -webkit-user-drag: none; }
@@ -25,7 +25,7 @@ html::-webkit-scrollbar-thumb {background-color: #2f3542; border-radius: 10px;}
 }
 
 /* 기본 세팅 */
-.wrap{ width: 100%; margin: 0 auto; }
+.wrap{ width: 95%; margin: 0 auto; }
 .wrap[max="1750"]{ max-width: 1750px; }
 .wrap[max="1510"]{ max-width: 1510px; }
 .wrap[max="1280"]{ max-width: 1280px; }
@@ -34,11 +34,16 @@ html::-webkit-scrollbar-thumb {background-color: #2f3542; border-radius: 10px;}
   /* font */
   --font-pre: 'Pretendard';
   --font-suit: 'SUIT';
+  --font-raleway: "Raleway", sans-serif;
+  --font-Score:'S-CoreDream', sans-serif;
   
   /* color */
-  --color-Main: #0066ff;
-  --color-Black: #25282F;
+  --color-Main: #B5CFF8;
+  --color-Black: #161616;
   --color-Grey: #9BA3AB;
-  --color-DeepGrey: #2E3238;
+  --color-DeepGrey: #404040;
   --color-LightGrey: #EAF0F5;
+  --color-Yellow: #E7FF57;
+  --color-Skyblue: #8DBBFF;
+  --color-Pink: #FF85D2;
 }

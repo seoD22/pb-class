@@ -2,7 +2,7 @@ header{
   position: fixed;
   top: 0;left: 0;right: 0;
   padding: 20px 0;
-  transform: translateY(-100%);
+  /* transform: translateY(-100%); */
   z-index: 99;
   transition: .5s;
 }
@@ -12,93 +12,49 @@ header .wrap{
   justify-content: space-between;
 }
 header .logo{
-  font-family: var(--font-suit);
-  font-size: 35px;
-  font-weight: 700;
-  color: #fff;
+  font-family: var(--font-raleway);
+  font-size: 30px;
+  font-weight: 400;
 }
 header nav ul{
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 40px;
 }
 header nav li{
-  font-family: var(--font-pre);
+  position: relative;
+  font-family: var(--font-raleway);
   font-size: 16px;
   font-weight: 400;
   text-transform: uppercase;
+  color: var(--color-Black);
 }
 
 header.show{
   transform: translateY(0);
 }
 header.invert .logo{
-  color: var(--color-Main);
+  color: #fff;
+}
+header.invert li{
+  color: #fff;
 }
 
-/* 좌측 네비 */
-.l_f{
-  position: fixed;
-  z-index: 99;
-  top: 50%;
-  transform: translateY(-50%);
-  left: -10vh;
-  transition: .5s;
-}
-.l_f ul{
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-.l_f li{
-  position: relative;
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  font-family: var(--font-pre);
-  font-size: 16px;
-  line-height: 1.5;
-  opacity: .7;
-  color: var(--color-LightGrey);
-}
-.l_f li span{
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 2px;
-  height: 1px;
-  background-color: var(--color-LightGrey);
-  
-  transition: .2s width;
-}
-.l_f li em{
-  cursor: pointer;
-  margin-left: 30px;
-}
-.l_f li:hover span{
-  width: 20px;
-}
-.l_f li.on{
-  color: #fff;
-  opacity: 1;
-}
-.l_f li.on span{
-  width: 20px;
-  background-color: #fff;
-}
-.l_f.show{
-  left: 10vh;
-}
-.l_f.invert li{
-  color: var(--color-Black);
-}
-.l_f.invert li span{
-  background-color: var(--color-Black);
-}
-.l_f.invert li.on{
-  color: var(--color-Main);
-}
-.l_f.invert li.on span{
-  background-color: var(--color-Main);
+@media screen and (min-width: 768px) {
+  header nav li::after{
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;right: 0;
+    height: 1px;
+    width: 100%;
+    background-color: var(--color-Black);
+    transform: scale(0, 1);
+    transform-origin: bottom right;
+    transition: transform .3s;
+  }
+  header nav li:hover::after{
+    transform: scale(1, 1);
+    transform-origin: bottom left;
+  }
 }
