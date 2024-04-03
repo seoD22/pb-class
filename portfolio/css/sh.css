@@ -32,6 +32,7 @@ section._01 dt span{
   top: 0;bottom: 0;
   background-color: var(--color-Main);
   z-index: -1;
+  transform: translateX(-105%);
 }
 section._01 .scroll{
   position: absolute;
@@ -113,8 +114,7 @@ section._02 .img-wrap .img-box img{
 } */
 
 section._03{
-  min-height: calc(100vh - 400px);
-  padding: 200px 0;
+  height: 100vh;
   background-color: var(--color-Black);
   display: flex;
   align-items: center;
@@ -148,6 +148,9 @@ section._03 .cont._r{
   flex-direction: column;
   gap: 40px;
 }
+section._03 .cont .img-group{
+  position: relative;
+}
 section._03 .cont .img-box{
   position: relative;
   border-radius: 50px;
@@ -156,6 +159,7 @@ section._03 .cont .img-box{
   max-width: 600px;
   aspect-ratio: 1 / 1;
   background-color: var(--color-Grey);
+  z-index: 2;
 }
 section._03 .cont .img-border{
   position: absolute;
@@ -164,6 +168,7 @@ section._03 .cont .img-border{
   border-radius: 50px;
   border: 1px solid var(--color-Main);
   opacity: 0;
+  z-index: 1;
 }
 section._03 .cont .tit{
   padding-left: 5px;
@@ -203,6 +208,71 @@ section._03 .cont p{
   font-size: 18px;
   color: #fff;
   line-height: 1.5;
+}
+
+.marquee_group{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  z-index: 3;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+  /* opacity: 0; */
+}
+.marquee{
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  width: max-content;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+}
+.marquee._01{
+  left: calc(50% - 2%);
+}
+.marquee._02{
+  left: calc(50% + 5%);
+}
+.marquee._03{
+  left: calc(50% - 2%);
+}
+.marquee_box{
+  background-color: var(--color-Grey);
+  border-radius: 30px;
+  height: 155px;
+  width: 30%;
+  min-width: 935px;
+
+}
+.marquee_box.word{
+  display: flex;
+  align-items: center;justify-content: center;
+  font-family: var(--font-raleway);
+  font-weight: 400;
+  font-size: 100px;
+  color: var(--color-Black);
+  letter-spacing: 25px;
+  padding: 0 30px;
+  width: unset;
+  min-width: unset;
+}
+
+.marquee._01 .word{
+  background-color: var(--color-Yellow);
+}
+.marquee._02 .word{
+  background-color: var(--color-Main);
+}
+.marquee._03 .word{
+  background-color: var(--color-Pink);
+}
+
+section._04{
+  height: 100vh;
 }
 
 @keyframes scrollAnime {
