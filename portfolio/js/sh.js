@@ -140,7 +140,7 @@ $(document).ready(function(){
         trigger: "section._04 .pin_txt",
         start: "center center",
         endTrigger: 'section._04',
-        end: 'bottom top',
+        end: 'bottom-=10% top+=30%',
         pin: true,
         pinSpacing : false,
         scrub: 1,

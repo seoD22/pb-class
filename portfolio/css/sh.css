@@ -187,6 +187,7 @@ section._03 .cont h3{
   color: #fff;
   line-height: 1.5;
   z-index: 2;
+  letter-spacing: -0.04rem;
 }
 section._03 .cont h3 .bold{
   font-weight: 700;
@@ -208,6 +209,7 @@ section._03 .cont p{
   font-size: 18px;
   color: #fff;
   line-height: 1.5;
+  letter-spacing: -0.04rem;
 }
 
 .marquee_group{
@@ -278,6 +280,7 @@ section._03 .cont p{
 section._04{
   min-height: 100vh;
   background-color: var(--color-Black);
+  overflow: hidden;
 }
 section._04 .pin_txt{
   font-family: var(--font-raleway);
@@ -375,6 +378,9 @@ section._04 .port_group .port_num p{
 section._04 .port_group .port_num span{
   font-weight: 700;
   color: #fff;
+}
+section._05{
+  height: 100vh;
 }
 
 @keyframes scrollAnime {
