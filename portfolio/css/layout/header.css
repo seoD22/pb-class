@@ -15,6 +15,7 @@ header .logo{
   font-family: var(--font-raleway);
   font-size: 30px;
   font-weight: 400;
+  color: #fff;
 }
 header nav ul{
   display: flex;
@@ -27,17 +28,17 @@ header nav li{
   font-size: 16px;
   font-weight: 400;
   text-transform: uppercase;
-  color: var(--color-Black);
+  color: #fff;
 }
 
 header.show{
   transform: translateY(0);
 }
 header.invert .logo{
-  color: #fff;
+  color: var(--color-Black);
 }
 header.invert li{
-  color: #fff;
+  color: var(--color-Black);
 }
 
 @media screen and (min-width: 768px) {

@@ -276,7 +276,105 @@ section._03 .cont p{
 }
 
 section._04{
-  height: 100vh;
+  min-height: 100vh;
+  background-color: var(--color-Black);
+}
+section._04 .pin_txt{
+  font-family: var(--font-raleway);
+  font-weight: 700;
+  font-size: 100px;
+  color: #ffffff36;
+  text-align: center;
+  opacity: 0;
+}
+section._04 .pin_txt span{
+  font-weight: 300;
+}
+section._04 .cont-group{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 200vh;
+}
+section._04 .cont{
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 340px;
+}
+section._04 .cont._r{
+  margin-top: 410px;
+}
+section._04 .port_group{
+  display: flex;
+  align-items: start;
+  gap: 10px;
+}
+section._04 .port_group .img-wrap{
+  position: relative; 
+  width: 100%;
+}
+section._04 .port_group .img-wrap::after{
+  content: "";
+  position: absolute;
+  left: 0;right: 0;
+  top: 0;bottom: 0;
+  background: linear-gradient(to top, #3F3F3F, #D9D9D9);
+  border-radius: 30px;
+  z-index: 1;
+  pointer-events: none;
+  transition: .4s;
+}
+section._04 .port_group .img-wrap:hover::after{
+  opacity: 0;
+}
+section._04 .port_group .img-box{
+  border-radius: 30px;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  min-width: 280px;
+  aspect-ratio: 693 / 805;
+  background-color: var(--color-Grey);
+}
+section._04 .port_group .tit_group{
+  position: absolute;
+  left: 45px;bottom: 45px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  font-family: var(--font-Score);
+  color: #fff;
+  z-index: 2;
+  overflow: hidden;
+  height: 100%;
+  max-height: 52px;
+  transition: .4s;
+}
+section._04 .port_group .img-wrap:hover .tit_group{
+  max-height: 100px;
+}
+section._04 .port_group .tit_group h4{
+  font-weight: 700;
+  font-size: 50px;
+}
+section._04 .port_group .tit_group p{
+  font-weight: 300;
+  font-size: 20px;
+}
+section._04 .port_group .port_num{
+  font-family: var(--font-Score);
+  font-weight: 300;
+  font-size: 20px;
+  color: var(--color-LightGrey);
+  writing-mode: vertical-lr;
+}
+section._04 .port_group .port_num p{
+  transform: rotate(180deg);
+}
+section._04 .port_group .port_num span{
+  font-weight: 700;
+  color: #fff;
 }
 
 @keyframes scrollAnime {

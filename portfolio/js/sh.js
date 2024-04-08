@@ -1,46 +1,23 @@
 $(document).ready(function(){
-    // 퀵, 헤더 show
-    // window.addEventListener('scroll', () => {
-    //   const header = document.querySelector('header');
-    //   const quick = document.querySelector('.l_f');
+  // 퀵, 헤더 색상 변경
+  ScrollTrigger.matchMedia({
+    '(min-width: 801px)': function(){
+      $(window).scroll(function() {
+        $('.inv_').each(function() {
+          var sectionTop = $(this).offset().top - 300;
+          var sectionBottom = sectionTop + $(this).outerHeight();
+          var windowTop = $(window).scrollTop();
+          var windowBottom = windowTop + $(window).height();
   
-    //   const options = {
-    //     threshold: [1]
-    //   };
-    //   const io = new IntersectionObserver((entries)=>{
-    //     entries.forEach((entry, idx)=>{
-    //       if(entry.isIntersecting){
-    //         header.classList.add('show');
-    //         quick.classList.add('show');
-    //         entry.target.classList.add('anime');
-    //       }
-    //     })
-    //   }, options);
-  
-    //   // intersection Observer 
-    //   io.observe(document.querySelector('section._02'))
-    // })
-  
-    // 퀵, 헤더 색상 변경
-    ScrollTrigger.matchMedia({
-      '(min-width: 801px)': function(){
-        
-        $(window).scroll(function() {
-          $('.inv_').each(function() {
-            var sectionTop = $(this).offset().top - 300;
-            var sectionBottom = sectionTop + $(this).outerHeight();
-            var windowTop = $(window).scrollTop();
-            var windowBottom = windowTop + $(window).height();
-    
-            if (windowBottom > sectionTop && windowTop < sectionBottom) {
-              $('header').addClass('invert');
-            } else {
-              $('header').removeClass('invert');
-            }
-          });
+          if (windowBottom > sectionTop && windowTop < sectionBottom) {
+            $('header').addClass('invert');
+          } else {
+            $('header').removeClass('invert');
+          }
         });
-      }
-    })
+      });
+    }
+  })
   ScrollTrigger.matchMedia({
     '(min-width: 801px)': function(){
       // sec_01
@@ -118,6 +95,7 @@ $(document).ready(function(){
       //   opacity: 1,
       // });
 
+      const body = document.querySelector('body');
       const s03_conBox = document.querySelector('section._03 .cont-group');
       const s03_spBg = document.querySelector('section._03 .sp_bg');
       const s03_border = document.querySelector('section._03 .img-border');
@@ -144,7 +122,9 @@ $(document).ready(function(){
       .set(s03_mq02, {xPercent: -200})
       .set(s03_mq03, {xPercent: 100})
 
+
       .addLabel("label_01")
+      .to(body, {backgroundColor: '#161616'}, 'label_01')
       .to(s03_spBg, {x: 0, duration: 1}, 'label_01')
       .to(s03_border, {x: -40, y: 40, opacity: 1, duration: 1}, 'label_01')
       .to(s03_h3, {color: '#161616'}, 'label_01')
@@ -154,6 +134,30 @@ $(document).ready(function(){
       .to(s03_mq03, {opacity: 1, xPercent: -50, duration: 2,}, 'label_02')
       .to(s03_conBox, {opacity: 0, duration: 1, delay: 1}, 'label_02')
 
+
+      // sec04
+      ScrollTrigger.create({ // sticky
+        trigger: "section._04 .pin_txt",
+        start: "center center",
+        endTrigger: 'section._04',
+        end: 'bottom top',
+        pin: true,
+        pinSpacing : false,
+        scrub: 1,
+        // markers: true,
+        invalidateOnRefresh: true,
+      });
+
+      gsap.to("section._04 .pin_txt", {
+        scrollTrigger: {
+          trigger: "section._04",
+          start: "center-=40% bottom",
+          end: "center top",
+          scrub: 1,
+          // markers:true,
+        },
+        opacity: 1,
+      });
 
     } /// min-width: 801px
   }); 
