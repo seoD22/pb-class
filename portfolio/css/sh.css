@@ -252,13 +252,17 @@ section._03 .cont p{
   display: flex;
   align-items: center;justify-content: center;
   font-family: var(--font-raleway);
-  font-weight: 400;
+  font-weight: 600;
   font-size: 100px;
   color: var(--color-Black);
   letter-spacing: 25px;
   padding: 0 30px;
   width: unset;
   min-width: unset;
+}
+.marquee_box.word p{
+  position: relative;
+  right: -12px;
 }
 
 .marquee._01 .word{
