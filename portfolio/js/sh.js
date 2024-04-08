@@ -118,6 +118,7 @@ $(document).ready(function(){
       //   opacity: 1,
       // });
 
+      const s03_conBox = document.querySelector('section._03 .cont-group');
       const s03_spBg = document.querySelector('section._03 .sp_bg');
       const s03_border = document.querySelector('section._03 .img-border');
       const s03_h3 = document.querySelector('section._03 .h3_box h3');
@@ -151,6 +152,7 @@ $(document).ready(function(){
       .to(s03_mq01, {opacity: 1, xPercent: -50, duration: 2,}, 'label_02')
       .to(s03_mq02, {opacity: 1, xPercent: -50, duration: 2,}, 'label_02')
       .to(s03_mq03, {opacity: 1, xPercent: -50, duration: 2,}, 'label_02')
+      .to(s03_conBox, {opacity: 0, duration: 1, delay: 1}, 'label_02')
 
 
     } /// min-width: 801px
