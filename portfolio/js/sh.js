@@ -1,5 +1,20 @@
 $(document).ready(function(){
-  // 퀵, 헤더 색상 변경
+  // 헤더 섹션 이동
+  $('header .menu li').click(function () {
+    let idx = $(this).index();
+    console.log(idx);
+    gsap.to(window,{
+        scrollTo: {
+            y: $('section.move_sec').eq(idx),
+            offsetY: 0
+        },
+        duration: 1,
+        ease: 'power2.inOut'
+    })
+    
+  });
+
+  // 헤더 색상 변경
   ScrollTrigger.matchMedia({
     '(min-width: 801px)': function(){
       $(window).scroll(function() {
@@ -18,6 +33,7 @@ $(document).ready(function(){
       });
     }
   })
+
   ScrollTrigger.matchMedia({
     '(min-width: 801px)': function(){
       // sec_01
@@ -43,57 +59,29 @@ $(document).ready(function(){
       });
 
       // sec_03
-      ScrollTrigger.create({
-        trigger: "section._03",
+      ScrollTrigger.create({ // sticky
+        trigger: "section._03 .cont-group",
+        start: "center center",
+        endTrigger: 'section._03',
+        end: '600%',
         pin: true,
-        // markers:true,
-        start: "top top",
-        end: "+=500%",
+        pinSpacing : false,
+        scrub: 1,
+        // markers: true,
+        invalidateOnRefresh: true,
       });
-      // gsap.to("section._03 .sp_bg", {
-      //   scrollTrigger: {
-      //     trigger: "section._03",
-      //     start: "top center",
-      //     end: "bottom-=20% bottom+=50%",
-      //     scrub: 1,
-      //     // markers:true,
-      //   },
-      //   x: 0,
-      // });
-      // gsap.to("section._03 .img-border", {
-      //   scrollTrigger: {
-      //     trigger: "section._03",
-      //     start: "top center",
-      //     end: "bottom-=20% bottom",
-      //     scrub: 1,
-      //     // markers:true,
-      //   },
-      //   opacity: 1,
-      //   x: -40,
-      //   y: 40,
-      // });
-      
-      // gsap.to("section._03 .h3_box h3", {
-      //   scrollTrigger: {
-      //     trigger: "section._03",
-      //     start: "top center",
-      //     end: "bottom-=20% bottom",
-      //     scrub: 1,
-      //     // markers:true,
-      //   },
-      //   color: "#161616",
-      // });
 
-      // gsap.to("section._03 .marquee_group", {
-      //   scrollTrigger: {
-      //     trigger: "section._03",
-      //     start: "bottom-=70% center",
-      //     end: "bottom-=20% bottom",
-      //     scrub: 1,
-      //     markers:true,
-      //   },
-      //   opacity: 1,
-      // });
+      ScrollTrigger.create({ // sticky
+        trigger: "section._03 .marquee_group",
+        start: "center center",
+        endTrigger: 'section._03',
+        end: 'bottom top',
+        pin: true,
+        pinSpacing : false,
+        scrub: 1,
+        // markers: true,
+        invalidateOnRefresh: true,
+      });
 
       const body = document.querySelector('body');
       const s03_conBox = document.querySelector('section._03 .cont-group');
@@ -104,15 +92,27 @@ $(document).ready(function(){
       const s03_mq02 = document.querySelector('section._03 .marquee._02');
       const s03_mq03 = document.querySelector('section._03 .marquee._03');
 
+      // ScrollTrigger.create({ // sticky
+      //   trigger: "section._03 .cont-group",
+      //   start: "center center",
+      //   endTrigger: 'section._03',
+      //   end: '500%',
+      //   pin: true,
+      //   pinSpacing : false,
+      //   scrub: 1,
+      //   // markers: true,
+      //   invalidateOnRefresh: true,
+      // });
+
       let s03_timeline = gsap.timeline({
         scrollTrigger: {
           trigger: 'section._03',
-          start: 'center center',
-          end: '500%',
+          start: 'top top',
+          end: '100%',
           // pin: true,
           scrub: 1,
           ease: 'none',
-          // markers: true
+          // markers: true,
           invalidateOnRefresh: true,
         },
       });
@@ -122,17 +122,16 @@ $(document).ready(function(){
       .set(s03_mq02, {xPercent: -200})
       .set(s03_mq03, {xPercent: 100})
 
-
       .addLabel("label_01")
       .to(body, {backgroundColor: '#161616'}, 'label_01')
-      .to(s03_spBg, {x: 0, duration: 1}, 'label_01')
-      .to(s03_border, {x: -40, y: 40, opacity: 1, duration: 1}, 'label_01')
+      .to(s03_spBg, {x: 0, duration: .5}, 'label_01')
+      .to(s03_border, {x: -40, y: 40, opacity: 1, duration: .5}, 'label_01')
       .to(s03_h3, {color: '#161616'}, 'label_01')
       .addLabel("label_02")
-      .to(s03_mq01, {opacity: 1, xPercent: -50, duration: 2,}, 'label_02')
-      .to(s03_mq02, {opacity: 1, xPercent: -50, duration: 2,}, 'label_02')
-      .to(s03_mq03, {opacity: 1, xPercent: -50, duration: 2,}, 'label_02')
-      .to(s03_conBox, {opacity: 0, duration: 1, delay: 1}, 'label_02')
+      .to(s03_mq01, {opacity: 1, xPercent: -50, duration: 1,}, 'label_02')
+      .to(s03_mq02, {opacity: 1, xPercent: -50, duration: 1,}, 'label_02')
+      .to(s03_mq03, {opacity: 1, xPercent: -50, duration: 1,}, 'label_02')
+      .to(s03_conBox, {opacity: 0, duration: .5, delay: .5}, 'label_02')
 
 
       // sec04

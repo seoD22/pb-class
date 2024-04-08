@@ -97,27 +97,12 @@ section._01 .img-wrap .img-box img{
 section._02{
   min-height: 100vh;
 }
-/* section._02 .img-wrap{
-  position: absolute;
-  width: 100%;
-  top: -50vh;
-}
-section._02 .img-wrap .img-box{
-  border-radius: 50px 50px 0 0;
-  overflow: hidden;
-  background-color: var(--color-Grey);
-  width: 100%;
-}
-section._02 .img-wrap .img-box img{
-  object-fit: cover;
-  width: 100%;
-} */
 
 section._03{
-  height: 100vh;
+  min-height: 700vh;
   background-color: var(--color-Black);
-  display: flex;
-  align-items: center;
+  /* display: flex;
+  align-items: center; */
 }
 section._03 .bg_gr{
   position: absolute;
@@ -327,9 +312,7 @@ section._04 .port_group .img-wrap::after{
   pointer-events: none;
   transition: .4s;
 }
-section._04 .port_group .img-wrap:hover::after{
-  opacity: 0;
-}
+
 section._04 .port_group .img-box{
   border-radius: 30px;
   overflow: hidden;
@@ -349,14 +332,9 @@ section._04 .port_group .tit_group{
   font-family: var(--font-Score);
   color: #fff;
   z-index: 2;
-  overflow: hidden;
-  height: 100%;
-  max-height: 52px;
   transition: .4s;
 }
-section._04 .port_group .img-wrap:hover .tit_group{
-  max-height: 100px;
-}
+
 section._04 .port_group .tit_group h4{
   font-weight: 700;
   font-size: 50px;
@@ -408,6 +386,25 @@ section._05 .title{
     opacity: 0.1;
   }
 }
+
+@media screen and (min-width: 768px) {
+  section._04 .port_group .img-wrap::after{
+    opacity: 1;
+  }
+  section._04 .port_group .img-wrap:hover::after{
+    opacity: 0;
+  }
+  section._04 .port_group .tit_group{
+    overflow: hidden;
+    height: 100%;
+    max-height: 52px;
+  }
+  section._04 .port_group .img-wrap:hover .tit_group{
+    max-height: 100px;
+  }
+}
+
+
 @media screen and (max-width: 1250px) {
   
 }

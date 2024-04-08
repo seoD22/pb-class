@@ -40,6 +40,9 @@ header.invert .logo{
 header.invert li{
   color: var(--color-Black);
 }
+/* header.invert li a{
+  pointer-events: none;
+} */
 
 @media screen and (min-width: 768px) {
   header nav li::after{
@@ -49,10 +52,13 @@ header.invert li{
     left: 0;right: 0;
     height: 1px;
     width: 100%;
-    background-color: var(--color-Black);
+    background-color: #fff;
     transform: scale(0, 1);
     transform-origin: bottom right;
     transition: transform .3s;
+  }
+  header.invert nav li::after{
+    background-color: var(--color-Black);
   }
   header nav li:hover::after{
     transform: scale(1, 1);
