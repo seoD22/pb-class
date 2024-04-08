@@ -42,7 +42,7 @@ section._01 .scroll{
   font-family: var(--font-raleway);
   font-weight: 700;
   font-size: 20px;
-  color: var(--color-Black);
+  color: #fff;
   z-index: 2;
 }
 section._01 .scroll span{
@@ -380,7 +380,21 @@ section._04 .port_group .port_num span{
   color: #fff;
 }
 section._05{
-  height: 100vh;
+  height: calc(100vh - 100px);
+  padding-top: 100px;
+  margin-top: 100px;
+}
+section._05 .title{
+  font-family: var(--font-raleway);
+  font-weight: 300;
+  font-size: 80px;
+  color: var(--color-Black);
+  background-color: var(--color-Main);
+  padding: 20px 0;
+  padding-left: 205px;
+  padding-right: 20px;
+  width: 100%;
+  max-width: 550px;
 }
 
 @keyframes scrollAnime {
