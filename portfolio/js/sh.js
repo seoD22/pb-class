@@ -1,27 +1,27 @@
 $(document).ready(function(){
 
   // 햄버거 버튼
-  const html = document.querySelector('html');
-  const hamBtn = document.querySelector('header .ham');
+  // const html = document.querySelector('html');
+  // const hamBtn = document.querySelector('header .ham');
 
-  hamBtn.addEventListener('click', () => {
-    html.classList.toggle('menuOpen');
-  })
+  // hamBtn.addEventListener('click', () => {
+  //   html.classList.toggle('menuOpen');
+  // })
 
-  // 헤더 섹션 이동
-  $('header .menu li').click(function () {
-    let idx = $(this).index();
-    // console.log(idx);
-    gsap.to(window,{
-        scrollTo: {
-            y: $('section.move_sec').eq(idx),
-            offsetY: 0
-        },
-        duration: 1,
-        ease: 'power2.inOut'
-    })
+  // // 헤더 섹션 이동
+  // $('header .menu li').click(function () {
+  //   let idx = $(this).index();
+  //   // console.log(idx);
+  //   gsap.to(window,{
+  //       scrollTo: {
+  //           y: $('section.move_sec').eq(idx),
+  //           offsetY: 0
+  //       },
+  //       duration: 1,
+  //       ease: 'power2.inOut'
+  //   })
     
-  });
+  // });
 
   // 헤더 색상 변경
   ScrollTrigger.matchMedia({
