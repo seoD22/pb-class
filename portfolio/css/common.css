@@ -15,13 +15,13 @@ html::-webkit-scrollbar-thumb {background-color: #2f3542; border-radius: 10px;}
 @media screen and (max-width: 1250px) {
   .p{display: none;}
   .t{display: block;}
-  .cont{width: 90%;margin: 0 auto;max-width:1250px}
+  /* .cont{width: 90%;margin: 0 auto;max-width:1250px} */
 }
 
 
 @media screen and (max-width:767px) {
   .m{display: block;}
-  .cont{max-width:767px}
+  /* .cont{max-width:767px} */
 }
 
 /* 기본 세팅 */
@@ -29,6 +29,22 @@ html::-webkit-scrollbar-thumb {background-color: #2f3542; border-radius: 10px;}
 .wrap[max="1750"]{ max-width: 1750px; }
 .wrap[max="1510"]{ max-width: 1510px; }
 .wrap[max="1280"]{ max-width: 1280px; }
+
+.block_1250{display: none;}
+.none_1250{display: block;}
+
+.block_767{display: none;}
+.none_767{display: block;}
+
+@media screen and (max-width: 1250px) {
+  .block_1250{display: block;}
+  .none_1250{display: none;}
+}
+
+@media screen and (max-width: 767px) {
+  .block_767{display: block;}
+  .none_767{display: none;}
+}
 
 :root{
   /* font */
