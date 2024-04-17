@@ -117,6 +117,18 @@ $(document).ready(function(){
         opacity: 1,
       });
 
+      
+  // 퀵, 헤더 색상 변경
+  $('section._05').each(function (idx, item) {
+    ScrollTrigger.create({
+      trigger: item,
+      start: 'top center',
+      end: 'bottom center',
+      // markers: true,
+      toggleClass: { targets: $('section._05'), className: "on" },
+    });
+  });
+
   ScrollTrigger.matchMedia({
     '(min-width: 430px)': function(){
       // sec_03

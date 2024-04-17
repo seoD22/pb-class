@@ -91,29 +91,12 @@ header .ham{
     width: 20px;
     height: 20px;
     transition: .3s transform;
+    filter: brightness(10);
   }
-  header .ham .hamLine{
-    position: absolute;
-    background-color: #fff;
-  }
-  header .ham .hamLine:nth-child(1){
-    width: 100%;
-    height: 1px;
-    left: 0;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  header .ham .hamLine:nth-child(2){
-    width: 1px;
-    height: 100%;
-    top: 0;
-    bottom: 0;
-  }
-  header.invert .ham .hamLine{
-    background-color: var(--color-Black);
+  header.invert .ham{
+    filter: brightness(0);
   }
   .menuOpen header .ham{
-    transform: rotate(90deg);
+    transform: rotate(135deg);
   }
 }
