@@ -48,11 +48,13 @@ html::-webkit-scrollbar-thumb {background-color: #2f3542; border-radius: 10px;}
   /* font */
   --font-popp: "Poppins", sans-serif;
   --font-lato: "Lato", sans-serif;
+  --font-caveat: "Caveat", sans-serif;
   
   /* color */
   --color-Dark: #394034;
   --color-Brown: #935831;
   --color-Beige: #E5DCD3;
+  --color-Orange: #D78325;
   --color-Black: #2E2C2A;
   --color-White: #f5f5f5;
 

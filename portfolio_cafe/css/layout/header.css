@@ -2,6 +2,7 @@ header{
   position: fixed;
   left: 0;right: 0;
   top: 0;
+  z-index: 99;
   padding: 26px 0;
 }
 header .wrap{
@@ -64,8 +65,8 @@ header nav li.mem span{
 header nav li.mem::before{
   content: "";
   position: absolute;
-  left: -10px;
-  right: -10px;
+  left: -15px;
+  right: -15px;
   top: -5px;
   bottom: -6px;
   background-color: #D78325;
