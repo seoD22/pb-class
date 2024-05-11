@@ -1,4 +1,19 @@
 $(document).ready(function(){
+    // sec_01 Mo스와이퍼
+    var swiper = new Swiper(".s01_swiper_m", {
+      speed: 400,
+      loop: true,
+      effect: "fade",
+      fadeEffect: { 
+        crossFade: true 
+      },
+      autoplay: {
+        delay: 3500,
+        disableOnInteraction: false,
+      },
+    });
+
+  // sec_01 PC스와이퍼
   var swiper = new Swiper(".s01_swiper", {
     speed: 400,
     loop: true,
@@ -55,7 +70,6 @@ $(document).ready(function(){
       },
     },
   });
-
 
   // visual1
   let v1img1 = 'section._01 .swiper-slide._01 .group_01';
@@ -114,6 +128,5 @@ $(document).ready(function(){
     .to(v4img2, { opacity: 1, xPercent: 0, duration: .8}, "-=50%" )
 
   v4motion.pause();
-
 
 })////////////

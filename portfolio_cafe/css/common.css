@@ -28,15 +28,15 @@ html::-webkit-scrollbar-thumb {background-color: #2f3542; border-radius: 10px;}
 .wrap{ width: 90%; margin: 0 auto; }
 .wrap[max="1320"]{ max-width: 1320px; }
 
-.block_1250{display: none;}
-.none_1250{display: block;}
+.block_1024{display: none;}
+.none_1024{display: block;}
 
 .block_767{display: none;}
 .none_767{display: block;}
 
-@media screen and (max-width: 1250px) {
-  .block_1250{display: block;}
-  .none_1250{display: none;}
+@media screen and (max-width: 1024px) {
+  .block_1024{display: block;}
+  .none_1024{display: none;}
 }
 
 @media screen and (max-width: 767px) {
