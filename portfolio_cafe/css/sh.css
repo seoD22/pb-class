@@ -95,11 +95,11 @@ section._01 .group_02{
 section._01 .swiper{
   overflow: visible;
 }
-section._01 .swiper .swiper-slide{
+/* section._01 .swiper .swiper-slide{
   opacity: 0;
   transition: .3s;
 }
 section._01 .swiper .swiper-slide.swiper-slide-active{
   opacity: 1;
-}
+} */
 

@@ -1,10 +1,13 @@
 $(document).ready(function(){
   var swiper = new Swiper(".s01_swiper", {
-    speed: 600,
+    speed: 400,
     loop: true,
-    // effect: "fade",
+    effect: "fade",
+    fadeEffect: { 
+      crossFade: true 
+    },
     autoplay: {
-      delay: 3000,
+      delay: 3500,
       disableOnInteraction: false,
     },
     on: {
