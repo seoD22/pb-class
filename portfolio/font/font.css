@@ -10,12 +10,6 @@
 /* font-family: 'Nanum Myeongjo', serif; */
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700&display=swap');
 
-/* SUIT */
-/* font-family: 'SUIT', sans-serif; */
-
-/* Raleway */
-/* font-family: "Raleway", sans-serif; */
-
 /* S-coredream */
 @font-face {
 	font-family: 'S-CoreDream';
@@ -62,8 +56,6 @@
 	font-weight: 900;
 	src: url('./S-Core_Dream/SCDream_Black.otf') format('opentype');
 }
-
-
 
 /* Pretendard */
 @font-face {
