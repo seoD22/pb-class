@@ -95,11 +95,27 @@ section._01 .group_02{
 section._01 .swiper{
   overflow: visible;
 }
-/* section._01 .swiper .swiper-slide{
-  opacity: 0;
-  transition: .3s;
-}
-section._01 .swiper .swiper-slide.swiper-slide-active{
-  opacity: 1;
-} */
 
+
+@media screen and (min-width: 768px) {
+  section._01 .txt_group .mov_btn:hover{
+    filter: brightness(1.2);
+    cursor: pointer;
+  }
+  section._01 .txt_group .icon_box .img-box{
+    cursor: pointer;
+  }
+  section._01 .group_01 .img_group .arr-box{
+    cursor: pointer;
+  }
+  section._01 .group_01 .img_group .arr-box img{
+    transition: .3s;
+  }
+  section._01 .group_01 .img_group .arr-box:hover{
+    background: #00000073;
+    transition: .3s;
+  }
+  section._01 .group_01 .img_group .arr-box:hover img{
+    transform: scale(1.2);
+  }
+}
