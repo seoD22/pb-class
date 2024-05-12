@@ -244,22 +244,16 @@ section._02 .cont._r .tag{
   section._02 .cont._r .tag_group{
     display: none;
   }
-  section._02 .cont._l .txt-box{
-    display: none;
-  }
   section._02 .cont._l{
+    width: 100%;
     justify-content: center;
+    min-height: unset;
   }
   section._02 .cont._l .l_group{
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 2;
-  }
-  section._02 .cont._l .l_group > .img-box{
-    top: 0;
+    display: none;
   }
   section._02 .cont._l > .img-box{
-    margin-top: 190px;
+    width: 100%;
   }
 }
 
@@ -272,6 +266,11 @@ section._02 .cont._r .tag{
   }
   section._01 .txt_group h2{
     font-size: 90px;
+  }
+
+  section._02 .cont._r h3{
+    font-size: 45px;
+    line-height: 1.2;
   }
 }
 
