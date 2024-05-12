@@ -45,6 +45,7 @@ section._01 .txt_group > p{
 }
 section._01 .txt_group .mov_btn{
   font-family: var(--font-lato);
+  font-weight: 500;
   font-size: 16px;
   line-height: 24px;
   color: #fff;
@@ -180,6 +181,70 @@ section._02 .cont._r .tag{
   justify-content: center;
 }
 
+/* sec03 */
+section._03{
+  padding: 96px 0;
+  text-align: center;
+  background-color: var(--color-Beige);
+}
+section._03 h3{
+  margin-bottom: 56px;
+  font-family: var(--font-popp);
+  font-weight: 600;
+  font-size: 64px;
+  line-height: 72px;
+  color: var(--color-Black);
+  text-transform: uppercase;
+}
+section._03 h4{
+  margin-bottom: 60px;
+  font-family: var(--font-popps);
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.2;
+  color: var(--color-Black);
+  text-transform: uppercase;
+}
+section._03 .p_arrow{
+  position: relative;
+  background-color: var(--color-Black);
+  border-radius: 30px;
+  padding: 0px 30px;
+  margin: 0 10px;
+  cursor: pointer;
+  font-size: 28px;
+}
+section._03 .p_arrow img{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+section._03 .wrap > p{
+  width: 85%;
+  margin: 0 auto;
+  margin-bottom: 35px;
+  font-family: var(--font-lato);
+  font-weight: 500;
+  font-size: 19px;
+  line-height: 26px;
+  color: var(--color-Black);
+}
+section._03 .mov_btn{
+  margin: 0 auto;
+  font-family: var(--font-lato);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-Orange);
+  border-radius: 5px;
+  max-width: 146px;
+  height: 58px;
+  color: var(--color-Beige);
+}
 
 @media screen and (min-width: 768px) {
   section._01 .txt_group .mov_btn:hover{
