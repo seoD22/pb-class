@@ -337,6 +337,29 @@ section._03 .mov_btn{
     font-size: 45px;
     line-height: 1.2;
   }
+  section._01 .s01_swiper_m{
+    font-size: 24px;
+  }
+
+  section._03 h3{
+    margin-bottom: 40px;
+  }
+  section._03 h4{
+    margin-bottom: 40px;
+    font-size: 24px;
+    line-height: 1.5;
+  }
+  section._03 .p_arrow{
+    padding: 0 22px;
+    font-size: 25px;
+  }
+  section._03 .p_arrow img{
+    width: 11px;
+  }
+  section._03 .wrap > p{
+    margin-bottom: 27px;
+    line-height: 2;
+  }
 }
 
 @media screen and (max-width: 500px){
