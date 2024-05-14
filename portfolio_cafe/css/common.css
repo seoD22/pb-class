@@ -27,6 +27,7 @@ html::-webkit-scrollbar-thumb {background-color: #2f3542; border-radius: 10px;}
 /* 기본 세팅 */
 .wrap{ width: 90%; margin: 0 auto; }
 .wrap[max="1320"]{ max-width: 1320px; }
+.wrap[max="1500"]{ max-width: 1500px; }
 
 .block_1024{display: none;}
 .none_1024{display: block;}

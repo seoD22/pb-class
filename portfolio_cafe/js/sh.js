@@ -129,4 +129,18 @@ $(document).ready(function(){
 
   v4motion.pause();
 
+
+
+  // section04 버튼
+  const infoBtn = document.querySelectorAll('section._04 .img_group .des_btn');
+  const menu = document.querySelectorAll('section._04 .menu');
+
+  infoBtn.forEach((el, idx) => {
+    el.addEventListener('click', () => {
+      menu[idx].classList.toggle('show');
+    })
+  })
+
+
+
 })////////////
