@@ -134,13 +134,37 @@ $(document).ready(function(){
   // section04 버튼
   const infoBtn = document.querySelectorAll('section._04 .img_group .des_btn');
   const menu = document.querySelectorAll('section._04 .menu');
+  const imgBox = document.querySelectorAll('section._04 .img_group');
+
+  // 토글 기능
+  function toggleMenu(idx) {
+    menu[idx].classList.toggle('show');
+  }
+  
 
   infoBtn.forEach((el, idx) => {
     el.addEventListener('click', () => {
-      menu[idx].classList.toggle('show');
+      toggleMenu(idx)
     })
   })
 
+  // 1024px 이하
+  if (window.innerWidth <= 1024) {
+    imgBox.forEach((el, idx) => {
+      el.addEventListener('click', () => {
+        toggleMenu(idx)
+      });
+    });
+  };
 
+  // sec04 스와이퍼
+  var swiper = new Swiper(".s04_swiper", {
+    spaceBetween: 30,
+    speed: 600,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+  });
 
 })////////////
