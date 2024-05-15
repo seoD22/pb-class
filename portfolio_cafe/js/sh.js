@@ -157,6 +157,18 @@ $(document).ready(function(){
     });
   };
 
+  // sec04 페이지 버튼
+  const pageBtn = document.querySelectorAll('section._04 .bottom .page');
+
+  pageBtn.forEach((el, idx) => {
+    el.addEventListener('click', () => {
+      pageBtn.forEach((ele, index) => {
+        ele.classList.remove('on');
+      })
+      el.classList.add('on');
+    })
+  })
+
   // sec04 스와이퍼
   var swiper = new Swiper(".s04_swiper", {
     spaceBetween: 30,
@@ -166,5 +178,56 @@ $(document).ready(function(){
       disableOnInteraction: false,
     },
   });
+
+
+    // section04 버튼
+    const infoBtn_06 = document.querySelectorAll('section._06 .img_group .des_btn');
+    const menu_06 = document.querySelectorAll('section._06 .menu');
+    const imgBox_06 = document.querySelectorAll('section._06 .img_group');
+  
+    // 토글 기능
+    function toggleMenu(idx) {
+      menu_06[idx].classList.toggle('show');
+    }
+    
+  
+    infoBtn_06.forEach((el, idx) => {
+      el.addEventListener('click', () => {
+        toggleMenu(idx)
+      })
+    })
+  
+    // 1024px 이하
+    if (window.innerWidth <= 1024) {
+      imgBox_06.forEach((el, idx) => {
+        el.addEventListener('click', () => {
+          toggleMenu(idx)
+        });
+      });
+    };
+  
+    // sec04 페이지 버튼
+    const pageBtn_06 = document.querySelectorAll('section._06 .bottom .page');
+  
+    pageBtn_06.forEach((el, idx) => {
+      el.addEventListener('click', () => {
+        pageBtn_06.forEach((ele, index) => {
+          ele.classList.remove('on');
+        })
+        el.classList.add('on');
+      })
+    })
+  
+    // sec04 스와이퍼
+    var swiper = new Swiper(".s06_swiper", {
+      spaceBetween: 30,
+      speed: 600,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+    });
+
+
 
 })////////////
