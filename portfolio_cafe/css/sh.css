@@ -332,6 +332,7 @@ section._04 .menu_group{
   opacity: 0;
   transition: .8s;
   transform: translateY(20px);
+  z-index: 1;
 }
 section._04 .menu_group.rel{
   position: relative;
@@ -339,6 +340,7 @@ section._04 .menu_group.rel{
 section._04 .menu_group.on{
   opacity: 1;
   transform: translateY(0);
+  z-index: 2;
 }
 
 section._04 .menu{
@@ -694,6 +696,7 @@ section._06 .menu_group{
   opacity: 0;
   transition: .8s;
   transform: translateY(20px);
+  z-index: 1;
 }
 section._06 .menu_group.rel{
   position: relative;
@@ -701,6 +704,7 @@ section._06 .menu_group.rel{
 section._06 .menu_group.on{
   opacity: 1;
   transform: translateY(0);
+  z-index: 2;
 }
 section._06 .menu{
   display: flex;

@@ -225,20 +225,20 @@ $(document).ready(function(){
   });
 
 
-    // section04 버튼
+    // section06 버튼
     const infoBtn_06 = document.querySelectorAll('section._06 .img_group .des_btn');
     const menu_06 = document.querySelectorAll('section._06 .menu');
     const imgBox_06 = document.querySelectorAll('section._06 .img_group');
   
     // 토글 기능
-    function toggleMenu(idx) {
+    function toggleMenu_06(idx) {
       menu_06[idx].classList.toggle('show');
     }
     
   
     infoBtn_06.forEach((el, idx) => {
       el.addEventListener('click', () => {
-        toggleMenu(idx)
+        toggleMenu_06(idx)
       })
     })
   
@@ -246,7 +246,7 @@ $(document).ready(function(){
     if (window.innerWidth <= 1024) {
       imgBox_06.forEach((el, idx) => {
         el.addEventListener('click', () => {
-          toggleMenu(idx)
+          toggleMenu_06(idx)
         });
       });
     };
