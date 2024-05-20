@@ -63,6 +63,10 @@ footer .bottom{
   margin-bottom: 65px;
   display: flex;
   justify-content: space-between;
+  gap: 10PX;
+}
+footer .bottom li:nth-child(2){
+  width: 40%;
 }
 footer .bottom li h5{
   font-family: var(--font-popp);
@@ -115,4 +119,28 @@ footer .sns{
 }
 footer .sns .img-box{
   cursor: pointer;
+}
+
+@media screen and (max-width: 1020px) {
+  footer .bottom{
+    flex-direction: column;
+    gap: 62px;
+  }
+  footer .bottom li:nth-child(2){
+    width: 100%;
+  }
+  footer .link ul{
+    gap: 30px;
+  }
+}
+
+@media screen and (max-width: 1020px){
+  footer .logo{
+    font-family: var(--font-popp);
+    font-size: 24px;
+    line-height: 32px;
+    color: var(--color-Beige);
+    text-transform: uppercase;
+    cursor: pointer;
+  }
 }
