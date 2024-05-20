@@ -23,6 +23,21 @@ $(document).ready(function(){
     html.classList.toggle('ham_on');
   })
 
+  // 페이지 걸림 효과
+  ScrollTrigger.matchMedia({
+    '(min-width: 1024px)': function(){
+      gsap.utils.toArray(".page_rock").forEach((panel, i) => {
+        ScrollTrigger.create({
+          trigger: panel,
+          start: "top top",
+          pin: true,
+          // pinSpacing: false,
+          end: "+=120%",
+        });
+      });
+    },
+  })
+
     // sec_01 Mo스와이퍼
     var swiper = new Swiper(".s01_swiper_m", {
       speed: 400,
