@@ -4,6 +4,8 @@ header{
   top: 0;
   z-index: 99;
   padding: 26px 0;
+  background-color: var(--color-Dark);
+  transition: .3s;
 }
 header .wrap{
   display: flex;
@@ -72,6 +74,10 @@ header nav li.mem::before{
   background-color: #D78325;
   border-radius: 30px;
   padding: 8px 12px;
+}
+
+header.invert{
+  background-color: transparent;
 }
 
 @media screen and (max-width: 1024px) {

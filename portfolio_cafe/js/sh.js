@@ -1,4 +1,20 @@
 $(document).ready(function(){
+  // header 배경
+  $(window).scroll(function() {
+    $('.inv_').each(function() {
+      var sectionTop = $(this).offset().top;
+      var sectionBottom = sectionTop + $(this).outerHeight();
+      var windowTop = $(window).scrollTop();
+      var windowBottom = windowTop + $(window).height();
+
+      if (windowBottom > sectionTop && windowTop < sectionBottom) {
+        $('header').addClass('invert');
+      } else {
+        $('header').removeClass('invert');
+      }
+    });
+  });
+
     // sec_01 Mo스와이퍼
     var swiper = new Swiper(".s01_swiper_m", {
       speed: 400,
