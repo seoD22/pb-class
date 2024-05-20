@@ -318,13 +318,29 @@ section._04 .tag{
   align-items: center;
   justify-content: center;
 }
+section._04 .menu_group_wrap{
+  position: relative;
+}
 section._04 .menu_group{
+  position: absolute;
+  top: 0;
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 23px;
   row-gap: 38px;
+  opacity: 0;
+  transition: .8s;
+  transform: translateY(20px);
 }
+section._04 .menu_group.rel{
+  position: relative;
+}
+section._04 .menu_group.on{
+  opacity: 1;
+  transform: translateY(0);
+}
+
 section._04 .menu{
   display: flex;
   flex-direction: column;
@@ -376,6 +392,7 @@ section._04 .img_group .des_btn{
   cursor: pointer;
   transition: .4s;
 }
+
 section._04 .menu .des_group{
   display: flex;
   justify-content: space-between;
@@ -414,6 +431,8 @@ section._04 .menu.show .img_group .des_btn{
   right: 100%;
 }
 section._04 .bottom {
+  position: relative;
+  z-index: 2;
   margin-top: 46px;
   margin-left: auto;
   display: flex;
@@ -661,12 +680,27 @@ section._06 .tag{
   align-items: center;
   justify-content: center;
 }
+section._06 .menu_group_wrap{
+  position: relative;
+}
 section._06 .menu_group{
+  position: absolute;
+  top: 0;
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 23px;
   row-gap: 38px;
+  opacity: 0;
+  transition: .8s;
+  transform: translateY(20px);
+}
+section._06 .menu_group.rel{
+  position: relative;
+}
+section._06 .menu_group.on{
+  opacity: 1;
+  transform: translateY(0);
 }
 section._06 .menu{
   display: flex;

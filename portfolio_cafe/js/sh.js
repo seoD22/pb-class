@@ -184,14 +184,18 @@ $(document).ready(function(){
 
   // sec04 페이지 버튼
   const pageBtn = document.querySelectorAll('section._04 .bottom .page');
+  const pages = document.querySelectorAll('section._04 .menu_group');
 
   pageBtn.forEach((el, idx) => {
     el.addEventListener('click', () => {
-      pageBtn.forEach((ele, index) => {
-        ele.classList.remove('on');
-      })
+      // on클래스 지우기
+      pageBtn.forEach(btn => btn.classList.remove('on'));
+      pages.forEach(page => page.classList.remove('on'));
+  
+      // on클래스 추가
       el.classList.add('on');
-    })
+      pages[idx].classList.add('on');
+    });
   })
 
   // sec04 스와이퍼
@@ -232,8 +236,9 @@ $(document).ready(function(){
       });
     };
   
-    // sec04 페이지 버튼
+    // sec06 페이지 버튼
     const pageBtn_06 = document.querySelectorAll('section._06 .bottom .page');
+    const pages_06 = document.querySelectorAll('section._06 .menu_group');
   
     pageBtn_06.forEach((el, idx) => {
       el.addEventListener('click', () => {
@@ -241,6 +246,12 @@ $(document).ready(function(){
           ele.classList.remove('on');
         })
         el.classList.add('on');
+
+        // 페이지 변환
+        pages_06.forEach((ele, index) => {
+          ele.classList.remove('on');
+        })
+        pages_06[idx].classList.add('on');
       })
     })
   
