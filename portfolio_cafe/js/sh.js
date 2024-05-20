@@ -15,6 +15,14 @@ $(document).ready(function(){
     });
   });
 
+  // 햄버거 버튼
+  const html = document.querySelector('html');
+  const hamBtn = document.querySelector('header .ham');
+
+  hamBtn.addEventListener('click', () => {
+    html.classList.toggle('ham_on');
+  })
+
     // sec_01 Mo스와이퍼
     var swiper = new Swiper(".s01_swiper_m", {
       speed: 400,

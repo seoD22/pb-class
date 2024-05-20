@@ -5,6 +5,8 @@ header{
   z-index: 99;
   padding: 26px 0;
   background-color: var(--color-Dark);
+  overflow: hidden;
+  max-height: 30px;
   transition: .3s;
 }
 header .wrap{
@@ -76,9 +78,51 @@ header nav li.mem::before{
   padding: 8px 12px;
 }
 
+header .ham{
+  display: none;
+}
+
 header.invert{
   background-color: transparent;
 }
+
+/* 햄버거 메뉴 */
+header .hamburger{
+  width: 100%;
+  margin-top: 22px;
+}
+header .hamburger li{
+  font-family: var(--font-popp);
+  font-size: 18px;
+  line-height: 3;
+  color: var(--color-Beige);
+  cursor: pointer;
+}
+header .hamburger li.mem{
+  position: relative;
+  line-height: 2;
+  max-width: 65px;
+  margin-left: auto;
+}
+header .hamburger li.mem span{
+  position: relative;
+  z-index: 2;
+}
+header .hamburger li.mem::before{
+  content: "";
+  position: absolute;
+  left: -15px;
+  right: -15px;
+  top: -5px;
+  bottom: -6px;
+  background-color: #D78325;
+  border-radius: 30px;
+  padding: 8px 12px;
+}
+.ham_on header{
+  max-height: 400px;
+}
+
 
 @media screen and (max-width: 1024px) {
   header nav{
@@ -92,7 +136,10 @@ header.invert{
 @media screen and (max-width: 768px) {
   header{
     padding: 22px 0;
-    background-color: var(--color-Dark);
+    background-color: var(--color-Dark) !important;
+  }
+  header .wrap{
+    flex-wrap: wrap;
   }
   header nav{
     display: none;
@@ -100,5 +147,8 @@ header.invert{
   header .group_01{
     width: 100%;
     justify-content: space-between;
+  }
+  header .ham{
+    display: flex;
   }
 }
