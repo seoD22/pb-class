@@ -42,6 +42,7 @@ $(document).ready(function(){
     speed: 400,
     loop: true,
     effect: "fade",
+    loop: true,
     fadeEffect: { 
       crossFade: true 
     },
@@ -197,6 +198,7 @@ $(document).ready(function(){
   var swiper = new Swiper(".s04_swiper", {
     spaceBetween: 30,
     speed: 600,
+    loop: true,
     autoplay: {
       delay: 2500,
       disableOnInteraction: false,
@@ -246,6 +248,7 @@ $(document).ready(function(){
     var swiper = new Swiper(".s06_swiper", {
       spaceBetween: 30,
       speed: 600,
+      loop: true,
       autoplay: {
         delay: 2500,
         disableOnInteraction: false,

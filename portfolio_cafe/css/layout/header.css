@@ -7,7 +7,7 @@ header{
   background-color: var(--color-Dark);
   overflow: hidden;
   max-height: 30px;
-  transition: .3s;
+  transition: .4s;
 }
 header .wrap{
   display: flex;
