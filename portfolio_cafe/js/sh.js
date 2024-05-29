@@ -1,29 +1,80 @@
 $(document).ready(function(){
-  // header 배경
+  // 최상단으로 이동
+  moveTop('header .logo');
+  moveTop('footer .logo');
+
+  // 헤더 색상 변경
+  headerColor('.inv_', 'header', 'invert');
+
+  // 햄버거 메뉴
+  hamEvent();
+
+  // 페이지 걸림 효과
+  // function sectionWait();
+
+  // 스와이퍼
+  s01Swiper();
+  s01SwiperPC();
+
+  s04Swiper();
+  s06Swiper();
+
+  infoEvent('section._04 .img_group', 'section._04 .menu');
+  infoEvent('section._06 .img_group', 'section._06 .menu');
+
+  // alert
+  showAlert();
+})////////////
+
+
+////함수 
+
+// 최상단으로 이동
+function moveTop(el){
+  $(el).click(function () {
+    let idx = $(this).index();
+    // console.log(idx);
+    gsap.to(window,{
+        scrollTo: {
+            y: $('body').eq(idx),
+            offsetY: 0
+        },
+        duration: 1,
+        ease: 'power2.inOut'
+    })
+  });
+};
+
+// header 배경
+function headerColor(section, ele, className){
   $(window).scroll(function() {
-    $('.inv_').each(function() {
+    $(section).each(function() {
       var sectionTop = $(this).offset().top;
       var sectionBottom = sectionTop + $(this).outerHeight();
       var windowTop = $(window).scrollTop();
       var windowBottom = windowTop + $(window).height();
-
+  
       if (windowBottom > sectionTop && windowTop < sectionBottom) {
-        $('header').addClass('invert');
+        $(ele).addClass(className);
       } else {
-        $('header').removeClass('invert');
+        $(ele).removeClass(className);
       }
     });
   });
+};
 
-  // 햄버거 버튼
+// 햄버거 버튼
+function hamEvent(){
   const html = document.querySelector('html');
   const hamBtn = document.querySelector('header .ham');
 
   hamBtn.addEventListener('click', () => {
     html.classList.toggle('ham_on');
   })
+};
 
-  // 페이지 걸림 효과
+// 페이지 걸림 효과
+function sectionWait(){
   ScrollTrigger.matchMedia({
     '(min-width: 1024px)': function(){
       gsap.utils.toArray(".page_rock").forEach((panel, i) => {
@@ -37,22 +88,27 @@ $(document).ready(function(){
       });
     },
   })
+};
 
-    // sec_01 Mo스와이퍼
-    var swiper = new Swiper(".s01_swiper_m", {
-      speed: 400,
-      loop: true,
-      effect: "fade",
-      fadeEffect: { 
-        crossFade: true 
-      },
-      autoplay: {
-        delay: 3500,
-        disableOnInteraction: false,
-      },
-    });
 
-  // sec_01 PC스와이퍼
+// sec_01 Mo스와이퍼
+function s01Swiper(){
+  var swiper = new Swiper(".s01_swiper_m", {
+    speed: 400,
+    loop: true,
+    effect: "fade",
+    fadeEffect: { 
+      crossFade: true 
+    },
+    autoplay: {
+      delay: 3500,
+      disableOnInteraction: false,
+    },
+  });
+};
+
+// sec_01 PC스와이퍼
+function s01SwiperPC(){
   var swiper = new Swiper(".s01_swiper", {
     speed: 400,
     loop: true,
@@ -168,38 +224,47 @@ $(document).ready(function(){
     .to(v4img2, { opacity: 1, xPercent: 0, duration: .8}, "-=50%" )
 
   v4motion.pause();
+};
 
 
+// 메뉴 섹션 이벤트
+// 토글 기능 PC
+// function infoEventPC(imgSelector, menuSelector){
+//   const infoBtn = document.querySelectorAll(imgSelector);
+//   const menu = document.querySelectorAll(menuSelector);
 
-  // section04 버튼
-  const infoBtn = document.querySelectorAll('section._04 .img_group .des_btn');
-  const menu = document.querySelectorAll('section._04 .menu');
-  const imgBox = document.querySelectorAll('section._04 .img_group');
+//   function toggleMenu(idx) {
+//     menu[idx].classList.toggle('show');
+//   };
 
-  // 토글 기능
+//   infoBtn.forEach((el, idx) => {
+//     el.addEventListener('click', () => {
+//       toggleMenu(idx)
+//     })
+//   })
+// };
+
+// 토글 기능 mobile
+function infoEvent(imgSelector, menuSelector){
+  const imgBox = document.querySelectorAll(imgSelector);
+  const menu = document.querySelectorAll(menuSelector);
+
   function toggleMenu(idx) {
     menu[idx].classList.toggle('show');
-  }
-  
-
-  infoBtn.forEach((el, idx) => {
-    el.addEventListener('click', () => {
-      toggleMenu(idx)
-    })
-  })
-
-  // 1024px 이하
-  if (window.innerWidth <= 1024) {
-    imgBox.forEach((el, idx) => {
-      el.addEventListener('click', () => {
-        toggleMenu(idx)
-      });
-    });
   };
 
-  // sec04 페이지 버튼
-  const pageBtn = document.querySelectorAll('section._04 .bottom .page');
-  const pages = document.querySelectorAll('section._04 .menu_group');
+  imgBox.forEach((el, idx) => {
+    el.addEventListener('click', () => {
+      toggleMenu(idx)
+    });
+  });
+};
+
+// sec04 페이지 버튼
+function menuPage(pageBtnSelector, pagesSelector){
+  
+  const pageBtn = document.querySelectorAll(pageBtnSelector);
+  const pages = document.querySelectorAll(pagesSelector);
 
   pageBtn.forEach((el, idx) => {
     el.addEventListener('click', () => {
@@ -212,8 +277,10 @@ $(document).ready(function(){
       pages[idx].classList.add('on');
     });
   })
+};
 
-  // sec04 스와이퍼
+// sec04 스와이퍼
+function s04Swiper(){
   var swiper = new Swiper(".s04_swiper", {
     spaceBetween: 30,
     speed: 600,
@@ -223,64 +290,29 @@ $(document).ready(function(){
       disableOnInteraction: false,
     },
   });
+};
 
 
-    // section06 버튼
-    const infoBtn_06 = document.querySelectorAll('section._06 .img_group .des_btn');
-    const menu_06 = document.querySelectorAll('section._06 .menu');
-    const imgBox_06 = document.querySelectorAll('section._06 .img_group');
-  
-    // 토글 기능
-    function toggleMenu_06(idx) {
-      menu_06[idx].classList.toggle('show');
-    }
-    
-  
-    infoBtn_06.forEach((el, idx) => {
-      el.addEventListener('click', () => {
-        toggleMenu_06(idx)
-      })
+// sec06 스와이퍼
+function s06Swiper(){
+  var swiper = new Swiper(".s06_swiper", {
+    spaceBetween: 30,
+    speed: 600,
+    loop: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+  });
+}
+
+// alert
+function showAlert(){
+  const alerts = document.querySelectorAll('.alert');
+
+  alerts.forEach((el) => {
+    el.addEventListener('click', (e) => {
+      window.alert('준비중입니다.');
     })
-  
-    // 1024px 이하
-    if (window.innerWidth <= 1024) {
-      imgBox_06.forEach((el, idx) => {
-        el.addEventListener('click', () => {
-          toggleMenu_06(idx)
-        });
-      });
-    };
-  
-    // sec06 페이지 버튼
-    const pageBtn_06 = document.querySelectorAll('section._06 .bottom .page');
-    const pages_06 = document.querySelectorAll('section._06 .menu_group');
-  
-    pageBtn_06.forEach((el, idx) => {
-      el.addEventListener('click', () => {
-        pageBtn_06.forEach((ele, index) => {
-          ele.classList.remove('on');
-        })
-        el.classList.add('on');
-
-        // 페이지 변환
-        pages_06.forEach((ele, index) => {
-          ele.classList.remove('on');
-        })
-        pages_06[idx].classList.add('on');
-      })
-    })
-  
-    // sec04 스와이퍼
-    var swiper = new Swiper(".s06_swiper", {
-      spaceBetween: 30,
-      speed: 600,
-      loop: true,
-      autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-      },
-    });
-
-
-
-})////////////
+  })
+};
