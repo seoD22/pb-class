@@ -19,8 +19,13 @@ $(document).ready(function(){
   s04Swiper();
   s06Swiper();
 
+  // 메뉴 정보
   infoEvent('section._04 .img_group', 'section._04 .menu');
   infoEvent('section._06 .img_group', 'section._06 .menu');
+
+  // 메뉴 페이지
+  menuPage('section._04 .bottom .page', 'section._04 .menu_group');
+  menuPage('section._06 .bottom .page', 'section._06 .menu_group');
 
   // alert
   showAlert();
