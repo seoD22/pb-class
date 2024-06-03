@@ -1,0 +1,50 @@
+@charset "UTF-8";
+/* 기본 설정들 */
+html {overflow-x: hidden;}
+body{position: relative;overflow: hidden !important;}
+html *{ word-break: keep-all;}
+html, body {font-family: "Noto Sans KR", sans-serif;}
+img, p, span, h1, h2, h3, h4, h5, h6 {-webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -o-user-select: none; user-select: none; -webkit-user-drag: none; }
+.p{display: block ;}
+.t{display: none;}
+.m{display: none ;}
+.fb{font-family: "Noto Sans KR"; font-weight: 600; font-style: bold;}
+html::-webkit-scrollbar {width: 8px;}
+html::-webkit-scrollbar-thumb {background-color: #2f3542; border-radius: 10px;}
+
+/* 기본 세팅 */
+.wrap{ width: 95%; margin: 0 auto; }
+.wrap[max="1750"]{ max-width: 1750px; }
+.wrap[max="1125"]{ max-width: 1125px; }
+
+.block_1250{display: none;}
+.none_1250{display: block;}
+
+.block_767{display: none;}
+.none_767{display: block;}
+
+@media screen and (max-width: 1250px) {
+  .block_1250{display: block;}
+  .none_1250{display: none;}
+}
+
+@media screen and (max-width: 767px) {
+  .block_767{display: block;}
+  .none_767{display: none;}
+}
+
+:root{
+  /* font */
+  --font-pre: 'Pretendard';
+  --font-suit: 'SUIT';
+  --font-gmarket: 'GmarketSans';
+  
+  /* color */
+  --color-Yellow: #FFCC13;
+  --color-Black: #050505;
+  --color-YellowDown: #CDA000;
+  --color-BlackDown: #977600;
+  --color-green: #3AF563;
+  --color-red: #EC5E44;
+  --color-blue: #6974EB;
+}
