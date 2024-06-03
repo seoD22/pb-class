@@ -27,6 +27,7 @@
 }
 #load .logo_box .img-box{
   width: 13vw;
+  max-width: 160px;
   aspect-ratio: 1 / 1;
 }
 #load .logo_box .img-box img{
@@ -45,7 +46,7 @@
   top: 15px;
   font-family: var(--font-gmarket);
   font-weight: 700;
-  font-size: 12vw;
+  font-size: 160px;
   color: var(--color-Black);
 }
 #load .logo_box._02{
@@ -55,6 +56,7 @@
 #load .logo_box._02 .line{
   height: 100%;
   width: 0;
+  max-width: 425px;
   transition: .65s;
 }
 #load .logo_box .line span{
@@ -73,7 +75,7 @@
 }
 
 #load.show .logo_box._01 em{
-  max-width: 1750px;
+  max-width: 800px;
   opacity: 1;
 }
 #load.show .logo_box._02 .line{
