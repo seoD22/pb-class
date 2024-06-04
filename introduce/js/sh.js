@@ -2,14 +2,14 @@ document.addEventListener('DOMContentLoaded', function() {
   window.addEventListener('load', function () {
       // 로딩 화면
       loading();
-
-      // gsap
-      visual();
   });
 
   // 사이드 버튼
   asideBtnEvent();
 
+  // gsap
+  visual();
+  sec01Fix()
 });
 
 
@@ -47,18 +47,25 @@ function asideBtnEvent() {
 };
 
 // gsap anime
+function sec01Fix() {
+  const section01 = document.querySelector('section._01');
+
+  ScrollTrigger.create({ // sticky
+    trigger: section01,
+    start: 'top top',
+    end: '+=200%',
+    pin: true,
+    pinSpacing : false,
+    scrub: 2,
+    // markers: true,
+    invalidateOnRefresh: true,
+  });
+}
+
 function visual() {
   const flowSection = document.querySelector('.flow_section');
   const flowBox01 = document.querySelector('.flow_wrap .flow_box._01');
   const flowBox02 = document.querySelector('.flow_wrap .flow_box._02');
-
-  // ScrollTrigger.create({
-  //   trigger: flowSection,
-  //   pin: true,
-  //   // markers:true,
-  //   start: "top top",
-  //   end: "+=500%",
-  // });
 
   let s03_timeline = gsap.timeline({
     scrollTrigger: {
@@ -79,44 +86,5 @@ function visual() {
   .to(flowBox02, {opacity: 1, duration: .5}, 'label_01')
   .to(flowBox02, {xPercent: -110, duration: 2}, 'label_01')
 
-  // gsap.to(flowBox01, {
-  //   scrollTrigger: {
-  //     trigger: flowBox01,
-  //     start: "top top",
-  //     end: "bottom+=300% center",
-  //     scrub: 2,
-  //     // markers:true,
-  //   },
-  //   opacity: 1,
-  // });
-  // gsap.to(flowBox01, {
-  //   scrollTrigger: {
-  //     trigger: flowBox01,
-  //     start: "top top",
-  //     end: "bottom+=500% top",
-  //     scrub: 2,
-  //     markers:true,
-  //   },
-  //   xPercent: 110, 
-  // });
-  // gsap.to(flowBox02, {
-  //   scrollTrigger: {
-  //     trigger: flowBox02,
-  //     start: "top top",
-  //     end: "bottom+=300% center",
-  //     scrub: 2,
-  //     // markers:true,
-  //   },
-  //   opacity: 1,
-  // });
-  // gsap.to(flowBox02, {
-  //   scrollTrigger: {
-  //     trigger: flowBox02,
-  //     start: "top top",
-  //     end: "bottom+=500% top",
-  //     scrub: 2,
-  //     markers:true,
-  //   },
-  //   xPercent: -110, 
-  // });
+  
 }

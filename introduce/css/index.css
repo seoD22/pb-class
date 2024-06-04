@@ -2,6 +2,16 @@ body{
   background-color: var(--color-Yellow);
 }
 
+/* cursor */
+#cursor{
+  width: 50px;
+  aspect-ratio: 1 / 1;
+  border: 1px solid #000;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 2;
+}
+
 /* visual */
 section._01{
   height: 100vh;
@@ -48,6 +58,7 @@ section._01 .logo_box._01 .img-box .white{
   display: flex;
   align-items: center;
   height: 100vh;
+  background-color: var(--color-Yellow);
 }
 .flow_wrap{
   position: relative;
