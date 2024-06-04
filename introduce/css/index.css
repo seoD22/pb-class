@@ -75,7 +75,7 @@ section._01 .logo_box._01 .img-box .white{
   width: max-content;
   margin-right: auto;
   top: 40%;
-  opacity: 0;
+  /* opacity: 0; */
   gap: 50px;
 }
 .flow_wrap .flow_box._01{
@@ -89,7 +89,7 @@ section._01 .logo_box._01 .img-box .white{
 .flow_wrap .flow_box .txt{
   font-family: var(--font-gmarket);
   font-weight: 700;
-  font-size: 200px;
+  font-size: 150px;
   color: var(--color-Black);
   text-transform: uppercase;
 }

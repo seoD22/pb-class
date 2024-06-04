@@ -93,10 +93,10 @@ function visual() {
 
   flowAnime
   .addLabel("label_01")
-  .to(flowBox01, {opacity: 1, duration: 1.5}, 'label_01')
-  .to(flowBox01, {xPercent: 100, duration: 2}, 'label_01')
-  .to(flowBox02, {opacity: 1, duration: 1.5}, 'label_01')
-  .to(flowBox02, {xPercent: -100, duration: 2}, 'label_01')
+  .to(flowBox01, {xPercent: 100, duration: 3}, 'label_01')
+  .to(flowBox02, {xPercent: -100, duration: 3}, 'label_01')
+  .addLabel("label_02")
+  .to(flowBox01, {opacity: 0, duration: .5}, 'label_02-=1')
+  .to(flowBox02, {opacity: 0, duration: .5}, 'label_02-=1')
 
-  
 }
