@@ -74,7 +74,7 @@ function visual() {
       end: "+=500%",
       pin: true,
       scrub: 2,
-      // markers: true,
+      markers: true,
       invalidateOnRefresh: true,
     },
   });
