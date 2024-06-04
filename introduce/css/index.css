@@ -59,6 +59,7 @@ section._01 .logo_box._01 .img-box .white{
   align-items: center;
   height: 100vh;
   background-color: var(--color-Yellow);
+  box-shadow: 30px 50px 70px #000;
 }
 .flow_wrap{
   position: relative;
