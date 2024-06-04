@@ -63,15 +63,27 @@ function sec01Fix() {
 }
 
 function visual() {
+  const section01 = document.querySelector('section._01');
   const flowSection = document.querySelector('.flow_section');
   const flowBox01 = document.querySelector('.flow_wrap .flow_box._01');
   const flowBox02 = document.querySelector('.flow_wrap .flow_box._02');
 
-  let s03_timeline = gsap.timeline({
+  ScrollTrigger.create({ // sticky
+    trigger: flowSection,
+    start: 'top top',
+    end: '+=100%',
+    pin: true,
+    pinSpacing : false,
+    scrub: 2,
+    // markers: true,
+    invalidateOnRefresh: true,
+  });
+
+  let flowAnime = gsap.timeline({
     scrollTrigger: {
-      trigger: flowSection,
+      trigger: section01,
       start: "top top",
-      end: "+=500%",
+      end: "+=250%",
       pin: true,
       scrub: 2,
       // markers: true,
@@ -79,12 +91,12 @@ function visual() {
     },
   });
 
-  s03_timeline
+  flowAnime
   .addLabel("label_01")
-  .to(flowBox01, {opacity: 1, duration: .5}, 'label_01')
-  .to(flowBox01, {xPercent: 110, duration: 2}, 'label_01')
-  .to(flowBox02, {opacity: 1, duration: .5}, 'label_01')
-  .to(flowBox02, {xPercent: -110, duration: 2}, 'label_01')
+  .to(flowBox01, {opacity: 1, duration: 1}, 'label_01')
+  .to(flowBox01, {xPercent: 100, duration: 2}, 'label_01')
+  .to(flowBox02, {opacity: 1, duration: 1}, 'label_01')
+  .to(flowBox02, {xPercent: -100, duration: 2}, 'label_01')
 
   
 }

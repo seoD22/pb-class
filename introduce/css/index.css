@@ -14,7 +14,7 @@ body{
 
 /* visual */
 section._01{
-  height: 100vh;
+  min-height: 100vh;
 }
 section._01 .wrap{
   height: 100%;
@@ -96,6 +96,14 @@ section._01 .logo_box._01 .img-box .white{
 .flow_wrap .flow_box .img_box{
   position: relative;
   top: -20px;
+}
+
+section._02{
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* hover event */
