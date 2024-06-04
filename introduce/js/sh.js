@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // gsap
   visual();
   sec01Fix()
+  sec02Fix();
 });
 
 
@@ -47,21 +48,6 @@ function asideBtnEvent() {
 };
 
 // gsap anime
-function sec01Fix() {
-  const section01 = document.querySelector('section._01');
-
-  ScrollTrigger.create({ // sticky
-    trigger: section01,
-    start: 'top top',
-    end: '+=200%',
-    pin: true,
-    pinSpacing : false,
-    scrub: 2,
-    // markers: true,
-    invalidateOnRefresh: true,
-  });
-}
-
 function visual() {
   const section01 = document.querySelector('section._01');
   const flowSection = document.querySelector('.flow_section');
@@ -71,7 +57,7 @@ function visual() {
   ScrollTrigger.create({ // sticky
     trigger: flowSection,
     start: 'top top',
-    end: '+=100%',
+    end: '+=200%',
     pin: true,
     pinSpacing : false,
     scrub: 2,
@@ -98,5 +84,42 @@ function visual() {
   .addLabel("label_02")
   .to(flowBox01, {opacity: 0, duration: .5}, 'label_02-=1')
   .to(flowBox02, {opacity: 0, duration: .5}, 'label_02-=1')
+
+}
+
+function sec01Fix() {
+  const section01 = document.querySelector('section._01');
+
+  ScrollTrigger.create({ // sticky
+    trigger: section01,
+    start: 'top top',
+    end: '+=200%',
+    pin: true,
+    pinSpacing : false,
+    scrub: 2,
+    // markers: true,
+    invalidateOnRefresh: true,
+  });
+}
+
+function sec02Fix() {
+  const section02 = document.querySelector('section._02');
+  const profileImg = document.querySelector('section._02 .img_part');
+
+  let section02Anime = gsap.timeline({
+    scrollTrigger: {
+      trigger: section02,
+      start: "top top",
+      end: "+=200%",
+      pin: true,
+      scrub: 1,
+      // markers: true,
+      invalidateOnRefresh: true,
+    },
+  });
+
+  section02Anime
+  .to(profileImg, {rotationY: "180deg", duration: .5});
+
 
 }

@@ -15,7 +15,7 @@ html::-webkit-scrollbar-thumb {background-color: #2f3542; border-radius: 10px;}
 /* 기본 세팅 */
 .wrap{ width: 95%; margin: 0 auto; }
 .wrap[max="1750"]{ max-width: 1750px; }
-.wrap[max="1125"]{ max-width: 1125px; }
+.wrap[max="1170"]{ max-width: 1170px; }
 
 .block_1250{display: none;}
 .none_1250{display: block;}
@@ -48,7 +48,7 @@ html::-webkit-scrollbar-thumb {background-color: #2f3542; border-radius: 10px;}
   --color-Black: #050505;
   --color-YellowDown: #CDA000;
   --color-BlackDown: #977600;
-  --color-green: #3AF563;
-  --color-red: #EC5E44;
-  --color-blue: #6974EB;
+  --color-Green: #3AF563;
+  --color-Red: #EC5E44;
+  --color-Blue: #6974EB;
 }
