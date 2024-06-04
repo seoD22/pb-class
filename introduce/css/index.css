@@ -44,6 +44,49 @@ section._01 .logo_box._01 .img-box .white{
   transition: opacity .5s;
 }
 
+.flow_section{
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}
+.flow_wrap{
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+.flow_wrap .flow_box{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: max-content;
+  margin-right: auto;
+  top: 40%;
+  opacity: 0;
+  gap: 50px;
+}
+.flow_wrap .flow_box._01{
+  transform: translate(-100%, -50%);
+  left: 50%;
+}
+.flow_wrap .flow_box._02{
+  transform: translate(100%, 50%);
+  right: 50%;
+}
+.flow_wrap .flow_box .txt{
+  font-family: var(--font-gmarket);
+  font-weight: 700;
+  font-size: 200px;
+  color: var(--color-Black);
+  text-transform: uppercase;
+}
+.flow_wrap .flow_box .img_box{
+  position: relative;
+  top: -20px;
+}
+
+/* hover event */
 @media screen and (min-width: 768px) {
   section._01 .logo_box._01 .img-box:nth-child(1):hover{
     opacity: 1;

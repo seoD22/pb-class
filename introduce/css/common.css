@@ -23,6 +23,10 @@ html::-webkit-scrollbar-thumb {background-color: #2f3542; border-radius: 10px;}
 .block_767{display: none;}
 .none_767{display: block;}
 
+.t_white{
+  color: #fff !important;
+}
+
 @media screen and (max-width: 1250px) {
   .block_1250{display: block;}
   .none_1250{display: none;}

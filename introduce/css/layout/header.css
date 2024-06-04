@@ -37,6 +37,7 @@ aside{
   left: 2.5%;
   top: 50%;
   transform: translateY(-50%);
+  z-index: 1;
 }
 aside > div{
   display: flex;
@@ -46,7 +47,7 @@ aside > div{
 }
 aside .btn_box{
   position: relative;
-  width: 60px;
+  width: 55px;
   height: 187px;
   background-color: var(--color-YellowDown);
   border-radius: 50px;
@@ -56,11 +57,16 @@ aside .btn{
   position: absolute;
   top: 13px;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, 0);
   width: 34px;
   background-color: #fff;
   border-radius: 50px;
   height: 65px;
   filter: drop-shadow(0 8px 8px rgba(0, 0, 0, .2));
   cursor: pointer;
+  transition: .3s;
+}
+
+aside .btn_box.show .btn{
+  transform: translate(-50%, 150%);
 }
