@@ -98,6 +98,9 @@ section._02{
   position: relative;
   height: 100vh;
 }
+section._02 .tbx{
+  height: 100%;
+}
 section._02 .wrap{
   height: 100%;
   display: flex;
@@ -112,7 +115,18 @@ section._02 .profile_group{
   width: 100%;
 }
 section._02 .img_part{
+  position: relative;
   transform: rotateY(0);
+}
+section._02 .img_part .img-box._01{
+  opacity: 1;
+}
+section._02 .img_part .img-box._02{
+  opacity: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;right: 0;
+  transform: rotateY(180deg);
 }
 section._02 .des_part{
   position: relative;
@@ -149,7 +163,6 @@ section._02 .des_group{
   flex-direction: column;
   gap: 16px;
   max-width: 720px;
-  /* opacity: 0; */
 }
 section._02 .des_group .tag_group{
   display: flex;
@@ -165,6 +178,7 @@ section._02 .des_group .tag_group .tag{
   padding: 8px 24px;
   border-radius: 50px;
   background-color: var(--color-Black);
+  transform: translate(0px, 100%);
 }
 section._02 .des_group h3{
   font-family: var(--font-pre);
@@ -175,6 +189,7 @@ section._02 .des_group h3{
 }
 section._02 .des_group h3 span{
   display: block;
+  transform: translate(0px, 100%);
 }
 section._02 .des_group p{
   font-family: var(--font-pre);
@@ -187,6 +202,11 @@ section._02 .des_group p{
 }
 section._02 .des_group p span{
   display: block;
+  transform: translate(0px, 100%);
+}
+
+section._03{
+  height: 100vh;
 }
 
 
