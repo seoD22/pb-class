@@ -136,6 +136,7 @@ function sec02Fix() {
       end: '+=100%',
       // pin: true,
       // markers: true,
+      toggleActions: "play none none reverse",
       invalidateOnRefresh: true,
     },
   });
