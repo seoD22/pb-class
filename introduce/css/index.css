@@ -38,20 +38,8 @@ section._01 .logo_box .img-box{
   transition: .5s;
 }
 section._01 .logo_box._01 .img-box:nth-child(2){
-  opacity: 1;
-}
-section._01 .logo_box._01 .img-box .black{
   opacity: .2;
   transition: .5s;
-}
-section._01 .logo_box._01 .img-box .white{
-  position: absolute;
-  left: 0;right: 0;
-  top: 0;bottom: 0;
-  filter: brightness(100);
-  transform: rotate(-90deg);
-  opacity: 0;
-  transition: opacity .5s;
 }
 
 .flow_section{
@@ -127,6 +115,16 @@ section._02 .img_part{
   transform: rotateY(0);
 }
 section._02 .des_part{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+section._02 .word_group{
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  transform: translateY(-50%);
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -146,17 +144,61 @@ section._02 .des_part .word span{
   position: relative;
   top: 6px;
 }
+section._02 .des_group{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 720px;
+  /* opacity: 0; */
+}
+section._02 .des_group .tag_group{
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  overflow: hidden;
+}
+section._02 .des_group .tag_group .tag{
+  font-family: var(--font-pre);
+  font-weight: 700;
+  font-size: 24px;
+  color: var(--color-Yellow);
+  padding: 8px 24px;
+  border-radius: 50px;
+  background-color: var(--color-Black);
+}
+section._02 .des_group h3{
+  font-family: var(--font-pre);
+  font-weight: 800;
+  font-size: 60px;
+  color: var(--color-Black);
+  overflow: hidden;
+}
+section._02 .des_group h3 span{
+  display: block;
+}
+section._02 .des_group p{
+  font-family: var(--font-pre);
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.2;
+  color: var(--color-Black);
+  opacity: .5;
+  overflow: hidden;
+}
+section._02 .des_group p span{
+  display: block;
+}
+
 
 /* hover event */
 @media screen and (min-width: 768px) {
   section._01 .logo_box._01 .img-box:nth-child(1):hover{
     opacity: 1;
   }
-  section._01 .logo_box._01 .img-box:nth-child(2):hover .black{
-    opacity: 0;
-  }
-  section._01 .logo_box._01 .img-box:nth-child(2):hover .white{
+  section._01 .logo_box._01 .img-box:nth-child(2):hover{
     opacity: 1;
+    filter: brightness(100);
+    transform: rotate(-90deg);
   }
   section._01 .logo_box._02 .img-box:nth-child(1):hover{
     opacity: 1;

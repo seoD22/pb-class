@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // gsap
   visual();
-  sec01Fix()
+  sec01Fix();
   sec02Fix();
 });
 
@@ -105,6 +105,12 @@ function sec01Fix() {
 function sec02Fix() {
   const section02 = document.querySelector('section._02');
   const profileImg = document.querySelector('section._02 .img_part');
+  const profileWord = document.querySelector('section._02 .word_group');
+  const profileTag01 = document.querySelector('section._02 .des_group .tag._01');
+  const profileTag02 = document.querySelector('section._02 .des_group .tag._02');
+  const profileTag03 = document.querySelector('section._02 .des_group .tag._03');
+  const profileH3 = document.querySelector('section._02 .des_group h3 span');
+  const profileTxt = document.querySelector('section._02 .des_group p span');
 
   let section02Anime = gsap.timeline({
     scrollTrigger: {
@@ -112,14 +118,27 @@ function sec02Fix() {
       start: "top top",
       end: "+=200%",
       pin: true,
-      scrub: 1,
+      // scrub: 1,
       // markers: true,
+      // onEnterBack: 'restart',
       invalidateOnRefresh: true,
     },
   });
 
   section02Anime
-  .to(profileImg, {rotationY: "180deg", duration: .5});
+  .set(profileTag01, {yPercent: 100})
+  .set(profileTag02, {yPercent: 100})
+  .set(profileTag03, {yPercent: 100})
+  .set(profileH3, {yPercent: 100})
+  .set(profileTxt, {yPercent: 100})
 
+  .addLabel("label_01")
+  .to(profileImg, {rotationY: "180deg", duration: .5, delay: 1}, "label_01")
+  .to(profileWord, {opacity: 0, duration: 1, delay: .5}, "label_01")
+  .to(profileTag01, {yPercent: 0, duration: .3, delay: .1}, "-=.5")
+  .to(profileTag02, {yPercent: 0, duration: .3}, "-=.2")
+  .to(profileTag03, {yPercent: 0, duration: .3}, "-=.2")
+  .to(profileH3, {yPercent: 0, duration: .3})
+  .to(profileTxt, {yPercent: 0, duration: .3});
 
 }
