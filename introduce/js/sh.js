@@ -120,9 +120,8 @@ function sec02Fix() {
   ScrollTrigger.create({
     trigger: section02,
     start: 'top top',
-    end: '+=200%', // 고정이 풀리는 지점
+    end: '+=300%', // 고정이 풀리는 지점
     pin: true,
-    pinSpacing: false,
     scrub: 2,
     // markers: true, // 디버그용 마커
     invalidateOnRefresh: true,
@@ -147,7 +146,7 @@ function sec02Fix() {
     .to(profileImg, {rotationY: "180deg", duration: .5}, "label_01")
     .to(profileImg_01, {opacity: 0, duration: .5}, "label_01")
     .to(profileImg_02, {opacity: 1, duration: .5}, "label_01")
-    .to(profileWord, {opacity: 0, duration: 1}, "label_01")
+    .to(profileWord, {opacity: 0, zIndex: 0, duration: 1}, "label_01")
     .to(profileTag01, {y: 0, duration: .3, delay: .1}, "-=.5")
     .to(profileTag02, {y: 0, duration: .3}, "-=.2")
     .to(profileTag03, {y: 0, duration: .3}, "-=.2")

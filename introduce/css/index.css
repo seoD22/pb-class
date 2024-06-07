@@ -138,6 +138,7 @@ section._02 .word_group{
   position: absolute;
   top: 50%;
   left: 0px;
+  z-index: 1;
   transform: translateY(-50%);
   display: flex;
   flex-direction: column;
@@ -206,9 +207,64 @@ section._02 .des_group p span{
 }
 
 section._03{
-  height: 100vh;
+  padding: 293px 0;
+  background-color: var(--color-Black);
 }
-
+section._03 .wrap{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+section._03 .cont{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 80px;
+  height: 100%;
+}
+section._03 .logo_group{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+section._03 .logo_group p{
+  font-family: var(--font-gmarket);
+  font-weight: 700;
+  font-size: 60px;
+  color: #fff;
+  text-transform: uppercase;
+}
+section._03 .contact{
+  position: relative;
+  font-family: var(--font-gmarket);
+  font-weight: 500;
+  font-size: 24px;
+  color: #fff;
+  text-align: center;
+  transition: .3s;
+  left: calc(151px + 24px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+section._03 .contact .abs{
+  text-transform: uppercase;
+}
+section._03 .contact .rel{
+  background-color: #404040;
+  border-radius: 50px;
+  padding: 8px 24px;
+  opacity: 0;
+  transition: .3s;
+}
+section._03 .contact .rel span{
+  display: block;
+  position: relative;
+  top: 2px;
+}
 
 /* hover event */
 @media screen and (min-width: 768px) {
@@ -242,4 +298,27 @@ section._03{
     background-color: var(--color-Green);
   }
 
+  section._02 .des_group .tag_group .tag:hover{
+    color: #fff;
+  }
+  section._02 .des_group .tag_group .tag:nth-child(1):hover{
+    background-color: var(--color-Green);
+  }
+  section._02 .des_group .tag_group .tag:nth-child(2):hover{
+    background-color: var(--color-Red);
+  }
+  section._02 .des_group .tag_group .tag:nth-child(3):hover{
+    background-color: var(--color-Blue);
+  }
+
+  section._03 .contact:hover{
+    left: 0;
+  }
+  section._03 .contact:hover .rel{
+    opacity: 1;
+  }
+  section._03 .contact .rel:hover{
+    background-color: var(--color-Yellow);
+    color: var(--color-Black);
+  }
 }
