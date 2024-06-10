@@ -1,0 +1,12 @@
+footer{
+  padding: 16px 0;
+  background-color: #1E1E1E;
+  text-align: center;
+}
+footer p{
+  font-family: var(--font-pre);
+  font-weight: 400;
+  font-size: 14px;
+  color: #fff;
+  opacity: 0.5;
+}

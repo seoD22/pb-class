@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
   visual();
   sec01Fix();
   sec02Fix();
+  sec03Anime()
 });
 
 
@@ -116,18 +117,18 @@ function sec02Fix() {
   const profileTxt = document.querySelector('section._02 .des_group p span');
 
 
-  // 첫 번째 ScrollTrigger 설정 - 섹션 고정
+  // 섹션 고정
   ScrollTrigger.create({
     trigger: section02,
     start: 'top top',
-    end: '+=300%', // 고정이 풀리는 지점
+    end: '+=200%', // 고정이 풀리는 지점
     pin: true,
     scrub: 2,
     // markers: true, // 디버그용 마커
     invalidateOnRefresh: true,
   });
 
-  // 두 번째 ScrollTrigger 설정 - 애니메이션
+  // 애니메이션
   let section02Anime = gsap.timeline({
     scrollTrigger: {
       trigger: section02_tbx,
@@ -140,7 +141,6 @@ function sec02Fix() {
     },
   });
 
-  // 애니메이션 시퀀스 추가
   section02Anime
     .addLabel("label_01")
     .to(profileImg, {rotationY: "180deg", duration: .5}, "label_01")
@@ -152,4 +152,29 @@ function sec02Fix() {
     .to(profileTag03, {y: 0, duration: .3}, "-=.2")
     .to(profileH3, {y: 0, duration: .3})
     .to(profileTxt, {y: 0, duration: .3});
+}
+
+function sec03Anime() {
+  const section03 = document.querySelector('section._03')
+  const logo = document.querySelector('section._03 .logo_group')
+  const contact = document.querySelector('section._03 .contact')
+
+  // 애니메이션
+  let section03Anime = gsap.timeline({
+    scrollTrigger: {
+      trigger: section03,
+      start: 'top top+=20%',
+      end: '+=100%',
+      // pin: true,
+      // markers: true,
+      toggleActions: "play none none reverse",
+      invalidateOnRefresh: true,
+    },
+  });
+
+  section03Anime
+    .addLabel("label_01")
+    .to(logo, {y: 0, duration: .3}, "label_01")
+    .to(contact, {y: 0, duration: .3}, "-=70%")
+
 }
