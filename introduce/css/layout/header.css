@@ -7,7 +7,6 @@ header{
   z-index: 1;
 }
 header nav{
-  max-width: 425px;
   margin-left: auto;
   padding: 2.5% 0;
 }
@@ -15,7 +14,8 @@ header ul{
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
+  gap: 25px;
   text-transform: uppercase;
   font-family: var(--font-gmarket);
   font-weight: 700;

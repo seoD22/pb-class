@@ -4,6 +4,12 @@ document.addEventListener('DOMContentLoaded', function() {
       loading();
   });
 
+  // 네비게이션
+  navi();
+
+  // 네비게이션 포폴 버튼
+  // naviPortfolio()
+
   // 사이드 버튼
   asideBtnEvent();
 
@@ -41,6 +47,34 @@ function loading() {
   }, 1500);
   
 };
+
+// 네비게이션
+function navi() {
+  $('header .nav').click(function () {
+    let idx = $(this).index();
+    // console.log(idx);
+    gsap.to(window,{
+        scrollTo: {
+            y: $('.move').eq(idx),
+            offsetY: 0
+        },
+        duration: 1,
+        ease: 'power2.inOut'
+    })
+  });
+}
+
+// 네비게이션 포폴 버튼
+function naviPortfolio() {
+  const html = document.querySelector('html');
+  const navBtn = document.querySelector('header .work');
+  const asideBtn = document.querySelector('aside');
+
+  navBtn.addEventListener('click', (e) => {
+    asideBtn.classList.toggle('show');
+    html.classList.toggle('show');
+  })
+}
 
 // 사이드 버튼
 function asideBtnEvent() {
@@ -261,8 +295,6 @@ function portfolioSwiper() {
 
   v5motion.pause();
 }
-
-
 
 // gsap anime
 function visual() {
