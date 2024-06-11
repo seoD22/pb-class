@@ -219,7 +219,7 @@ function portfolioSwiper() {
     .addLabel('label_01')
     .to(v4top, { opacity: 1, duration: .8}, "label_01" )
     .to(v4tag, { opacity: 1, duration: .8}, "label_01" )
-    .to(v4bar, { width: '100%', delay: .2}, "label_01" )
+    .to(v4bar, { width: '80%', delay: .2}, "label_01" )
     .to(v4Tit, { opacity: 1, xPercent: 0, duration: .8, delay: .2}, "label_01")
     .to(v4Btn, { opacity: 1, xPercent: 0, duration: .8}, "-=50%" )
 
@@ -244,7 +244,7 @@ function portfolioSwiper() {
     .addLabel('label_01')
     .to(v5top, { opacity: 1, duration: .8}, "label_01" )
     .to(v5tag, { opacity: 1, duration: .8}, "label_01" )
-    .to(v5bar, { width: '100%', delay: .2}, "label_01" )
+    .to(v5bar, { width: '50%', delay: .2}, "label_01" )
     .to(v5Tit, { opacity: 1, xPercent: 0, duration: .8, delay: .2}, "label_01")
     .to(v5Btn, { opacity: 1, xPercent: 0, duration: .8}, "-=50%" )
 

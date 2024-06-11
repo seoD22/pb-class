@@ -292,6 +292,7 @@ section._03 .git{
   top: 0;bottom: 0;
   z-index: 1;
   background-color: var(--color-Black);
+  display: none;
 }
 .portfolio .wrap{
   max-width: 1040px;
@@ -433,6 +434,9 @@ section._03 .git{
   background-color: #fff;
   transition-duration: 0.2s;
   border-radius: 5px;
+}
+html.show .portfolio{
+  display: block;
 }
 
 /* hover event */
