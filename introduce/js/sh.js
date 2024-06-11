@@ -57,13 +57,24 @@ function asideBtnEvent() {
 function portfolioSwiper() {
   var swiper = new Swiper(".port_swiper", {
     direction: "vertical",
-    slidesPerView: 1.4,
+    slidesPerView: 1,
     spaceBetween: 30,
     centeredSlides: true,
     loop: true,
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 1.2,
+      },
+      1600: {
+        slidesPerView: 1.4,
+      },
+      1900: {
+        slidesPerView: 1.7,
+      },
     },
     on: {
       slideChange: function() {
