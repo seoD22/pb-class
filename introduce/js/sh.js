@@ -368,7 +368,7 @@ function sec03Anime() {
   let section03Anime = gsap.timeline({
     scrollTrigger: {
       trigger: section03,
-      start: 'top top+=20%',
+      start: 'top top+=30%',
       end: '+=100%',
       // pin: true,
       // markers: true,
