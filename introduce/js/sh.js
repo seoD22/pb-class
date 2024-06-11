@@ -67,15 +67,191 @@ function portfolioSwiper() {
     },
     on: {
       slideChange: function() {
-
         // 페이징
-        // $('.portfolio .pagi .num.cur_').text(`0${this.realIndex+1}`);
         $('.portfolio .pagi .lineWrap span').css('top', `${(this.realIndex) * 20}%`);
-      }
-    }
+        
+      },
 
+      slideChangeTransitionEnd: function () {
+        if(this.realIndex == 0){
+          v1motion.play();
+
+          // 초기화
+          v2motion.progress(0);
+          v2motion.pause();
+
+          v5motion.progress(0);
+          v5motion.pause();
+          
+        }else if(this.realIndex == 1){
+            v2motion.play();
+
+            // 초기화
+            v1motion.progress(0);
+            v1motion.pause();
+
+            v3motion.progress(0);
+            v3motion.pause();
+
+        }else if(this.realIndex == 2){
+          v3motion.play();
+
+          // 초기화
+          v2motion.progress(0);
+          v2motion.pause();
+
+          v4motion.progress(0);
+          v4motion.pause();
+
+        }else if(this.realIndex == 3){
+          v4motion.play();
+
+          // 초기화
+          v5motion.progress(0);
+          v5motion.pause();
+
+          v3motion.progress(0);
+          v3motion.pause();
+        }else if(this.realIndex == 4){
+          v5motion.play();
+
+          // 초기화
+          v1motion.progress(0);
+          v1motion.pause();
+
+          v4motion.progress(0);
+          v4motion.pause();
+        }
+      },
+    }
   });
+
+  // 스와이퍼 anime
+  let v1Tit = '.portfolio .swiper-slide._01 .port_des h3';
+  let v1Btn = '.portfolio .swiper-slide._01 .port_des .btn';
+  let v1top = '.portfolio .swiper-slide._01 .top';
+  let v1tag = '.portfolio .swiper-slide._01 .tag_box';
+  let v1bar = '.portfolio .swiper-slide._01 .top .bar';
+
+  gsap.set(v1Tit, { opacity: 0, xPercent: -20 });
+  gsap.set(v1Btn, { opacity: 0, xPercent: -20 });
+  gsap.set(v1top, { opacity: 0 });
+  gsap.set(v1tag, { opacity: 0 });
+  gsap.set(v1bar, { width: 0 });
+
+  let v1motion = gsap.timeline();
+
+  v1motion
+    .addLabel('label_01')
+    .to(v1top, { opacity: 1, duration: .8}, "label_01" )
+    .to(v1tag, { opacity: 1, duration: .8}, "label_01" )
+    .to(v1bar, { width: '100%', delay: .2}, "label_01" )
+    .to(v1Tit, { opacity: 1, xPercent: 0, duration: .8, delay: .2}, "label_01")
+    .to(v1Btn, { opacity: 1, xPercent: 0, duration: .8}, "-=50%" )
+
+
+  // visual2
+  let v2Tit = '.portfolio .swiper-slide._02 .port_des h3';
+  let v2Btn = '.portfolio .swiper-slide._02 .port_des .btn';
+  let v2top = '.portfolio .swiper-slide._02 .top';
+  let v2tag = '.portfolio .swiper-slide._02 .tag_box';
+  let v2bar = '.portfolio .swiper-slide._02 .top .bar';
+
+  gsap.set(v2Tit, { opacity: 0, xPercent: -20 });
+  gsap.set(v2Btn, { opacity: 0, xPercent: -20 });
+  gsap.set(v2top, { opacity: 0 });
+  gsap.set(v2tag, { opacity: 0 });
+  gsap.set(v2bar, { width: 0 });
+
+  let v2motion = gsap.timeline();
+
+  v2motion
+    .addLabel('label_01')
+    .to(v2top, { opacity: 1, duration: .8}, "label_01" )
+    .to(v2tag, { opacity: 1, duration: .8}, "label_01" )
+    .to(v2bar, { width: '100%', delay: .2}, "label_01" )
+    .to(v2Tit, { opacity: 1, xPercent: 0, duration: .8, delay: .2}, "label_01")
+    .to(v2Btn, { opacity: 1, xPercent: 0, duration: .8}, "-=50%" )
+
+  v2motion.pause();
+
+  // visual3
+  let v3Tit = '.portfolio .swiper-slide._03 .port_des h3';
+  let v3Btn = '.portfolio .swiper-slide._03 .port_des .btn';
+  let v3top = '.portfolio .swiper-slide._03 .top';
+  let v3tag = '.portfolio .swiper-slide._03 .tag_box';
+  let v3bar = '.portfolio .swiper-slide._03 .top .bar';
+
+  gsap.set(v3Tit, { opacity: 0, xPercent: -20 });
+  gsap.set(v3Btn, { opacity: 0, xPercent: -20 });
+  gsap.set(v3top, { opacity: 0 });
+  gsap.set(v3tag, { opacity: 0 });
+  gsap.set(v3bar, { width: 0 });
+
+  let v3motion = gsap.timeline();
+
+  v3motion
+    .addLabel('label_01')
+    .to(v3top, { opacity: 1, duration: .8}, "label_01" )
+    .to(v3tag, { opacity: 1, duration: .8}, "label_01" )
+    .to(v3bar, { width: '100%', delay: .2}, "label_01" )
+    .to(v3Tit, { opacity: 1, xPercent: 0, duration: .8, delay: .2}, "label_01")
+    .to(v3Btn, { opacity: 1, xPercent: 0, duration: .8}, "-=50%" )
+
+  v3motion.pause();
+
+  // visual4
+  let v4Tit = '.portfolio .swiper-slide._04 .port_des h3';
+  let v4Btn = '.portfolio .swiper-slide._04 .port_des .btn';
+  let v4top = '.portfolio .swiper-slide._04 .top';
+  let v4tag = '.portfolio .swiper-slide._04 .tag_box';
+  let v4bar = '.portfolio .swiper-slide._04 .top .bar';
+
+  gsap.set(v4Tit, { opacity: 0, xPercent: -20 });
+  gsap.set(v4Btn, { opacity: 0, xPercent: -20 });
+  gsap.set(v4top, { opacity: 0 });
+  gsap.set(v4tag, { opacity: 0 });
+  gsap.set(v4bar, { width: 0 });
+
+  let v4motion = gsap.timeline();
+
+  v4motion
+    .addLabel('label_01')
+    .to(v4top, { opacity: 1, duration: .8}, "label_01" )
+    .to(v4tag, { opacity: 1, duration: .8}, "label_01" )
+    .to(v4bar, { width: '100%', delay: .2}, "label_01" )
+    .to(v4Tit, { opacity: 1, xPercent: 0, duration: .8, delay: .2}, "label_01")
+    .to(v4Btn, { opacity: 1, xPercent: 0, duration: .8}, "-=50%" )
+
+  v4motion.pause();
+
+  // visual5
+  let v5Tit = '.portfolio .swiper-slide._05 .port_des h3';
+  let v5Btn = '.portfolio .swiper-slide._05 .port_des .btn';
+  let v5top = '.portfolio .swiper-slide._05 .top';
+  let v5tag = '.portfolio .swiper-slide._05 .tag_box';
+  let v5bar = '.portfolio .swiper-slide._05 .top .bar';
+
+  gsap.set(v5Tit, { opacity: 0, xPercent: -20 });
+  gsap.set(v5Btn, { opacity: 0, xPercent: -20 });
+  gsap.set(v5top, { opacity: 0 });
+  gsap.set(v5tag, { opacity: 0 });
+  gsap.set(v5bar, { width: 0 });
+
+  let v5motion = gsap.timeline();
+
+  v5motion
+    .addLabel('label_01')
+    .to(v5top, { opacity: 1, duration: .8}, "label_01" )
+    .to(v5tag, { opacity: 1, duration: .8}, "label_01" )
+    .to(v5bar, { width: '100%', delay: .2}, "label_01" )
+    .to(v5Tit, { opacity: 1, xPercent: 0, duration: .8, delay: .2}, "label_01")
+    .to(v5Btn, { opacity: 1, xPercent: 0, duration: .8}, "-=50%" )
+
+  v5motion.pause();
 }
+
+
 
 // gsap anime
 function visual() {
