@@ -7,6 +7,9 @@ document.addEventListener('DOMContentLoaded', function() {
   // 사이드 버튼
   asideBtnEvent();
 
+  // 포트폴리오 스와이퍼
+  portfolioSwiper();
+
   // gsap
   visual();
   sec01Fix();
@@ -41,12 +44,38 @@ function loading() {
 
 // 사이드 버튼
 function asideBtnEvent() {
-  const asideBtn = document.querySelector('aside .btn_box');
+  const html = document.querySelector('html');
+  const asideBtn = document.querySelector('aside');
 
   asideBtn.addEventListener('click', (e) => {
     asideBtn.classList.toggle('show');
+    html.classList.toggle('show');
   })
 };
+
+// 포트폴리오 스와이퍼
+function portfolioSwiper() {
+  var swiper = new Swiper(".port_swiper", {
+    direction: "vertical",
+    slidesPerView: 1.4,
+    spaceBetween: 30,
+    centeredSlides: true,
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    on: {
+      slideChange: function() {
+
+        // 페이징
+        // $('.portfolio .pagi .num.cur_').text(`0${this.realIndex+1}`);
+        $('.portfolio .pagi .lineWrap span').css('top', `${(this.realIndex) * 20}%`);
+      }
+    }
+
+  });
+}
 
 // gsap anime
 function visual() {

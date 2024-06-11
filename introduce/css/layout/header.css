@@ -38,7 +38,7 @@ aside{
   left: 2.5%;
   top: 50%;
   transform: translateY(-50%);
-  z-index: 1;
+  z-index: 2;
 }
 aside > div{
   display: flex;
@@ -68,6 +68,15 @@ aside .btn{
   transition: .3s;
 }
 
-aside .btn_box.show .btn{
+aside.show .btn_box{
+  background-color: #4A4A4A;
+}
+
+aside.show .btn_box .btn{
   transform: translate(-50%, 150%);
 }
+
+aside.show img{
+  filter: grayscale(1) brightness(0.5);
+}
+
