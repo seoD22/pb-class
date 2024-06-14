@@ -20,8 +20,8 @@ html::-webkit-scrollbar-thumb {background-color: #2f3542; border-radius: 10px;}
 .block_1250{display: none;}
 .none_1250{display: block;}
 
-.block_767{display: none;}
-.none_767{display: block;}
+.block_768{display: none;}
+.none_768{display: block;}
 
 .t_white{
   color: #fff !important;
@@ -32,9 +32,9 @@ html::-webkit-scrollbar-thumb {background-color: #2f3542; border-radius: 10px;}
   .none_1250{display: none;}
 }
 
-@media screen and (max-width: 767px) {
-  .block_767{display: block;}
-  .none_767{display: none;}
+@media screen and (max-width: 768px) {
+  .block_768{display: block;}
+  .none_768{display: none;}
 }
 
 :root{

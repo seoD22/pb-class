@@ -80,3 +80,33 @@ aside.show img{
   filter: grayscale(1) brightness(0.5);
 }
 
+/* 반응형 */
+@media screen and (max-width: 480px) {
+  header ul{
+    font-size: 18px;
+  }
+
+  aside{
+    top: unset;
+    bottom: 2.5%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  aside > div{
+    flex-direction: row;
+  }
+  aside .btn_box{
+    width: 140px;
+    height: 44px;
+  }
+  aside .btn{
+    left: 13px;
+    top: 50%;
+    width: 50px;
+    height: 27px;
+    transform: translateY(-50%);
+  }
+  aside.show .btn_box .btn{
+    transform: translate(100%, -50%);
+  }
+}

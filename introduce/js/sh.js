@@ -7,20 +7,31 @@ document.addEventListener('DOMContentLoaded', function() {
   // 네비게이션
   navi();
 
-  // 네비게이션 포폴 버튼
-  // naviPortfolio()
-
   // 사이드 버튼
   asideBtnEvent();
 
   // 포트폴리오 스와이퍼
   portfolioSwiper();
 
-  // gsap
-  visual();
-  sec01Fix();
-  sec02Fix();
-  sec03Anime()
+  ScrollTrigger.matchMedia({
+    '(min-width: 769px)': function(){
+      // gsap
+      visual();
+      sec01Fix();
+      sec02Fix();
+      sec03Anime();
+    },
+
+    '(max-width: 768px)': function(){
+      // gsap
+      visualRespon();
+      // sec01Fix();
+      sec02FixRespon();
+      sec03Anime();
+    }
+  })
+
+
 });
 
 
@@ -62,18 +73,6 @@ function navi() {
         ease: 'power2.inOut'
     })
   });
-}
-
-// 네비게이션 포폴 버튼
-function naviPortfolio() {
-  const html = document.querySelector('html');
-  const navBtn = document.querySelector('header .work');
-  const asideBtn = document.querySelector('aside');
-
-  navBtn.addEventListener('click', (e) => {
-    asideBtn.classList.toggle('show');
-    html.classList.toggle('show');
-  })
 }
 
 // 사이드 버튼
@@ -300,8 +299,8 @@ function portfolioSwiper() {
 function visual() {
   const section01 = document.querySelector('section._01');
   const flowSection = document.querySelector('.flow_section');
-  const flowBox01 = document.querySelector('.flow_wrap .flow_box._01');
-  const flowBox02 = document.querySelector('.flow_wrap .flow_box._02');
+  const flowBox01 = document.querySelector('.flow_section .flow_wrap .flow_box._01');
+  const flowBox02 = document.querySelector('.flow_section .flow_wrap .flow_box._02');
 
   ScrollTrigger.create({ // sticky
     trigger: flowSection,
@@ -334,6 +333,37 @@ function visual() {
   .to(flowBox01, {opacity: 0, duration: .5}, 'label_02-=1')
   .to(flowBox02, {opacity: 0, duration: .5}, 'label_02-=1')
 
+}
+function visualRespon() {
+  const section01 = document.querySelector('section._01');
+  const sectionImg = document.querySelector('section._01 .logo_group');
+  const flowBox01 = document.querySelector('section._01 .flow_wrap .flow_box._01');
+  const flowBox02 = document.querySelector('section._01 .flow_wrap .flow_box._02');
+
+  let flowAnime = gsap.timeline({
+    scrollTrigger: {
+      trigger: section01,
+      start: "top top",
+      end: "+=250%",
+      pin: true,
+      scrub: 2,
+      // markers: true,
+      invalidateOnRefresh: true,
+    },
+  });
+
+  flowAnime
+  .set(flowBox01, {xPercent: -110})
+  .set(flowBox02, {xPercent: 110})
+
+  .to(sectionImg, {opacity: 1, duration: 5})
+  .addLabel("label_01")
+  .to(sectionImg, {opacity: 0, duration: 5, delay: 3}, 'label_01')
+  .to(flowBox01, {xPercent: 123, duration: 30,}, 'label_01-=4')
+  .to(flowBox02, {xPercent: -123, duration: 30,}, 'label_01-=4')
+  .addLabel("label_02")
+  .to(flowBox01, {opacity: 0, duration: 5}, 'label_02-=2')
+  .to(flowBox02, {opacity: 0, duration: 5}, 'label_02-=2')
 }
 
 function sec01Fix() {
@@ -373,6 +403,56 @@ function sec02Fix() {
     pin: true,
     scrub: 2,
     // markers: true, // 디버그용 마커
+    invalidateOnRefresh: true,
+  });
+
+  // 애니메이션
+  let section02Anime = gsap.timeline({
+    scrollTrigger: {
+      trigger: section02_tbx,
+      start: 'top+=20% top',
+      end: '+=100%',
+      // pin: true,
+      // markers: true,
+      toggleActions: "play none none reverse",
+      invalidateOnRefresh: true,
+    },
+  });
+
+  section02Anime
+    .addLabel("label_01")
+    .to(profileImg, {rotationY: "180deg", duration: .5}, "label_01")
+    .to(profileImg_01, {opacity: 0, duration: .5}, "label_01")
+    .to(profileImg_02, {opacity: 1, duration: .5}, "label_01")
+    .to(profileWord, {opacity: 0, zIndex: 0, duration: 1}, "label_01")
+    .to(profileTag01, {y: 0, duration: .3, delay: .1}, "-=.5")
+    .to(profileTag02, {y: 0, duration: .3}, "-=.2")
+    .to(profileTag03, {y: 0, duration: .3}, "-=.2")
+    .to(profileH3, {y: 0, duration: .3})
+    .to(profileTxt, {y: 0, duration: .3});
+}
+function sec02FixRespon() {
+  const section02 = document.querySelector('section._02');
+  const section02_tbx = document.querySelector('section._02 .tbx');
+  const profileImg = document.querySelector('section._02 .img_part');
+  const profileImg_01 = document.querySelector('section._02 .img_part .img-box._01');
+  const profileImg_02 = document.querySelector('section._02 .img_part .img-box._02');
+  const profileWord = document.querySelector('section._02 .word_group');
+  const profileTag01 = document.querySelector('section._02 .des_group .tag._01');
+  const profileTag02 = document.querySelector('section._02 .des_group .tag._02');
+  const profileTag03 = document.querySelector('section._02 .des_group .tag._03');
+  const profileH3 = document.querySelector('section._02 .des_group h3 span');
+  const profileTxt = document.querySelector('section._02 .des_group p span');
+
+
+  // 섹션 고정
+  ScrollTrigger.create({
+    trigger: section02,
+    start: 'top top',
+    end: '+=200%', // 고정이 풀리는 지점
+    pin: true,
+    scrub: 2,
+    // markers: true,
     invalidateOnRefresh: true,
   });
 
