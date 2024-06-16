@@ -1,3 +1,6 @@
+html.show{
+  overflow: hidden !important;
+}
 body{
   background-color: var(--color-Yellow);
 }
@@ -294,6 +297,8 @@ section._03 .git{
 }
 .portfolio .swiper-slide{
   position: relative;
+  display: flex;
+  align-items: center;
   transition: .3s;
 }
 .portfolio .port_des{
@@ -315,6 +320,7 @@ section._03 .git{
 }
 .portfolio .port_des .btn{
   height: 60px;
+  width: 50%;
   max-width: 252px;
   font-family: var(--font-pre);
   font-weight: 400;
@@ -522,6 +528,14 @@ html.show .portfolio{
   section._02 .des_group p{
     font-size: 20px;
   }
+
+  .portfolio .port_des h3{
+    font-size: 80px;
+  }
+  .portfolio .port_des .btn{
+    font-size: 20px;
+    max-width: 200px;
+  }
 }
 
 @media screen and (max-width: 900px) {
@@ -542,6 +556,10 @@ html.show .portfolio{
   }
   section._02 .des_group p{
     font-size: 18px;
+  }
+
+  .portfolio .port_des h3{
+    font-size: 60px;
   }
 }
 
@@ -643,6 +661,45 @@ html.show .portfolio{
   section._03 .logo_group p{
     font-size: 30px;
   }
+
+  .portfolio .wrap{
+    width: 90%;
+  }
+  .portfolio .pagination{
+    top: 2.5%;
+    right: 50%;
+    transform: translateX(50%);
+    flex-direction: row;
+  }
+  .portfolio .port_des{
+    left: 2%;
+  }
+  .portfolio .pagination .lineWrap{
+    width: 160px;
+    height: 3px;
+    margin: 0;
+  }
+  .portfolio .pagination .lineWrap span{
+    top: 0;
+    width: 20%;
+    height: 3px;
+  }
+  .portfolio .port_cont{
+    gap: 15px;
+  }
+  .portfolio .port_des h3{
+    font-size: 32px;
+  }
+  .portfolio .port_des .btn{
+    height: 55px;
+    width: 100%;
+  }
+  .portfolio .port_cont .top{
+    font-size: 16px;
+  }
+  .portfolio .tag_box{
+    font-size: 16px;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -693,5 +750,32 @@ html.show .portfolio{
   }
   section._03 .git{
     bottom: 40px;
+  }
+
+  .portfolio .port_cont .top{
+    font-size: 14px;
+    gap: 14px;
+  }
+  .portfolio .tag_box{
+    flex-wrap: wrap;
+    font-size: 14px;
+    gap: 14px;
+  }
+  .portfolio .port_des .btn{
+    font-size: 16px;
+    height: 45px;
+    max-width: 170px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .portfolio .port_des{
+    width: 100%;
+  }
+  .portfolio .port_des h3{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 90%;
   }
 }

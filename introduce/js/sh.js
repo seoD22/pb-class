@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // 포트폴리오 스와이퍼
   portfolioSwiper();
 
+  // 반응형
   ScrollTrigger.matchMedia({
     '(min-width: 769px)': function(){
       // gsap
@@ -107,10 +108,11 @@ function asideBtnNone() {
 function portfolioSwiper() {
   var swiper = new Swiper(".port_swiper", {
     direction: "vertical",
-    slidesPerView: 1,
-    spaceBetween: 30,
+    slidesPerView: 2,
+    spaceBetween: 0,
     centeredSlides: true,
     loop: true,
+    mousewheel: true,
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
@@ -118,19 +120,31 @@ function portfolioSwiper() {
     breakpoints: {
       768: {
         slidesPerView: 1.2,
+        spaceBetween: 30,
       },
       1600: {
         slidesPerView: 1.4,
+        spaceBetween: 30,
       },
       1900: {
         slidesPerView: 1.7,
+        spaceBetween: 30,
       },
     },
     on: {
       slideChange: function() {
         // 페이징
-        $('.portfolio .pagi .lineWrap span').css('top', `${(this.realIndex) * 20}%`);
-        
+        if (window.innerWidth >= 769) {
+          $('.portfolio .pagi .lineWrap span').css({
+            'left': '0',
+            'top': `${(this.realIndex) * 20}%`
+          });
+      } else {
+        $('.portfolio .pagi .lineWrap span').css({
+          'top': '0',
+          'left': `${(this.realIndex) * 20}%`
+        });
+      }
       },
 
       slideChangeTransitionEnd: function () {
