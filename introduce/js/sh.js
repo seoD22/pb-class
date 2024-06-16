@@ -106,8 +106,9 @@ function asideBtnNone() {
 
 // 포트폴리오 스와이퍼
 function portfolioSwiper() {
+  const asideBtn = document.querySelector('aside');
   // html 클래스 유무에 따라 autoplay 실행
-  $('aside').addEventListener('click', (e) => {
+  asideBtn.addEventListener('click', (e) => {
     if ($('html').hasClass('show')) {
       swiper.autoplay.start();
     } else {
