@@ -730,6 +730,9 @@ html.show .portfolio{
   section._02 .des_group p{
     font-size: 13px;
   }
+  section._02 .des_part .word{
+    font-size: 25px;
+  }
   section._03 .logo_group{
     gap: 10px;
   }
@@ -769,6 +772,15 @@ html.show .portfolio{
 }
 
 @media screen and (max-width: 320px) {
+  section._02 .img_part{
+    width: 35vh;
+  }
+  section._02 .profile_group{
+    gap: 2vh;
+  }
+  section._02 .des_part .word{
+    font-size: 22px;
+  }
   .portfolio .port_des{
     width: 100%;
   }
