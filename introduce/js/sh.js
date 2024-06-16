@@ -106,6 +106,15 @@ function asideBtnNone() {
 
 // 포트폴리오 스와이퍼
 function portfolioSwiper() {
+  // html 클래스 유무에 따라 autoplay 실행
+  $('aside').addEventListener('click', (e) => {
+    if ($('html').hasClass('show')) {
+      swiper.autoplay.start();
+    } else {
+      swiper.autoplay.stop();
+    }
+  })
+
   var swiper = new Swiper(".port_swiper", {
     direction: "vertical",
     slidesPerView: 2,
@@ -113,6 +122,8 @@ function portfolioSwiper() {
     centeredSlides: true,
     loop: true,
     mousewheel: true,
+    speed: 600,
+    autoplay: false,
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
