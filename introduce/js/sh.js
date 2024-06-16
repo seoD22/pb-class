@@ -103,7 +103,6 @@ function asideBtnNone() {
   }
 }
 
-
 // 포트폴리오 스와이퍼
 function portfolioSwiper() {
   const asideBtn = document.querySelector('aside');
@@ -522,7 +521,10 @@ function sec02FixRespon() {
     .to(profileTag02, {y: 0, duration: .3}, "-=.2")
     .to(profileTag03, {y: 0, duration: .3}, "-=.2")
     .to(profileH3, {y: 0, duration: .3})
-    .to(profileTxt, {y: 0, duration: .3});
+    .to(profileTxt, {y: 0, duration: .3})
+    .to(profileTag01, {backgroundColor: '#6974EB', color: '#fff', duration: .5, delay: .1}, "-=.5")
+    .to(profileTag02, {backgroundColor: '#EC5E44', color: '#fff', duration: .5}, "-=.2")
+    .to(profileTag03, {backgroundColor: '#3AF563', color: '#fff', duration: .5}, "-=.2");
 }
 
 function sec03Anime() {
