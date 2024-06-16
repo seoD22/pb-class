@@ -39,6 +39,7 @@ aside{
   top: 50%;
   transform: translateY(-50%);
   z-index: 2;
+  transition: opacity .3s;
 }
 aside > div{
   display: flex;
@@ -79,6 +80,9 @@ aside.show .btn_box .btn{
 aside.show img{
   filter: grayscale(1) brightness(0.5);
 }
+aside.end{
+  opacity: 0;
+}
 
 /* 반응형 */
 @media screen and (max-width: 480px) {
@@ -102,7 +106,7 @@ aside.show img{
   aside .btn{
     left: 13px;
     top: 50%;
-    width: 50px;
+    width: 40%;
     height: 27px;
     transform: translateY(-50%);
   }

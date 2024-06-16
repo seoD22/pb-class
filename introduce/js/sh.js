@@ -9,6 +9,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // 사이드 버튼
   asideBtnEvent();
+  // 사이드 버튼 사라짐
+  // 스크롤 이벤트
+  $(window).on('scroll', asideBtnNone);
 
   // 포트폴리오 스와이퍼
   portfolioSwiper();
@@ -85,6 +88,20 @@ function asideBtnEvent() {
     html.classList.toggle('show');
   })
 };
+
+// 바닥에 오면 사이트 버튼 없어짐
+function asideBtnNone() {
+  var scrollTop = $(window).scrollTop();
+  var innerHeight = $(window).innerHeight();
+  var scrollHeight = $(document).height();
+
+  if (scrollTop + innerHeight >= scrollHeight) {
+      $('aside').addClass('end');
+  } else {
+      $('aside').removeClass('end');
+  }
+}
+
 
 // 포트폴리오 스와이퍼
 function portfolioSwiper() {
