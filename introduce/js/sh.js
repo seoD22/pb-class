@@ -9,9 +9,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // 사이드 버튼
   asideBtnEvent();
-  // 사이드 버튼 사라짐
-  // 스크롤 이벤트
-  $(window).on('scroll', asideBtnNone);
 
   // 포트폴리오 스와이퍼
   portfolioSwiper();
@@ -32,6 +29,10 @@ document.addEventListener('DOMContentLoaded', function() {
       // sec01Fix();
       sec02FixRespon();
       sec03Anime();
+
+      // 사이드 버튼 사라짐
+      // 스크롤 이벤트
+      $(window).on('scroll', asideBtnNone);
     }
   })
 
